@@ -20,6 +20,9 @@ module.exports = {
             modules: true,
         },
     },
+    env: {
+        jest: true,
+    },
     extends: ['airbnb/base', 'plugin:react/recommended', 'prettier'],
     rules: {
         'valid-jsdoc': ['error'],
@@ -79,4 +82,5 @@ module.exports = {
             },
         },
     },
+    plugins: ['jest'],
 };

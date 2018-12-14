@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render the default button correctly 1`] = `
+<button
+  className="Button full only-icon"
+  disabled={false}
+  id={null}
+  onClick={[Function]}
+  type="button"
+>
+  <span>
+    
+  </span>
+</button>
+`;
+
+exports[`Button should render the disabled button correctly 1`] = `
+<button
+  className="Button full disabled only-icon"
+  disabled={true}
+  id={null}
+  onClick={[Function]}
+  type="button"
+>
+  <span>
+    
+  </span>
+</button>
+`;
+
+exports[`Button should render the ghost and disabled button correctly 1`] = `
+<button
+  className="Button disabled ghost only-icon"
+  disabled={true}
+  id={null}
+  onClick={[Function]}
+  type="button"
+>
+  <span>
+    
+  </span>
+</button>
+`;
+
+exports[`Button should render the ghost button correctly 1`] = `
+<button
+  className="Button ghost only-icon"
+  disabled={false}
+  id={null}
+  onClick={[Function]}
+  type="button"
+>
+  <span>
+    
+  </span>
+</button>
+`;

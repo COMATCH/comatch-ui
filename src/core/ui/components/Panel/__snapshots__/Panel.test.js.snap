@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel should render correctly 1`] = `
+<section
+  className="Panel primary without-content"
+  id={null}
+>
+  
+</section>
+`;
