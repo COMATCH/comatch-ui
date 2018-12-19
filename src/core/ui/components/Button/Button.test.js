@@ -42,14 +42,14 @@ describe('Button', () => {
     });
 
     it('should have the correct passed props', () => {
-        const testFunction = () => '';
+        const mockFunction = jest.fn();
         const props = {
             className: 'test className',
             disabled: true,
             ghost: true,
             href: 'test href',
             id: 'test id',
-            onClick: testFunction,
+            onClick: mockFunction,
             target: 'test target',
             text: 'test text',
             type: 'submit',
@@ -61,27 +61,25 @@ describe('Button', () => {
         expect(button.prop('ghost')).toEqual(true);
         expect(button.prop('href')).toEqual('test href');
         expect(button.prop('id')).toEqual('test id');
-        expect(button.prop('onClick')).toEqual(testFunction);
+        expect(button.prop('onClick')).toEqual(mockFunction);
         expect(button.prop('target')).toEqual('test target');
         expect(button.prop('text')).toEqual('test text');
         expect(button.prop('type')).toEqual('submit');
     });
 
-    it('should render the correct text', () => {
+    it('should render the text', () => {
         const props = {
             text: 'text',
         };
         const button = mount(<Button {...props} />);
-        expect(button.prop('text')).toEqual('text');
         expect(button.find('span').text()).toEqual('text');
     });
 
-    it('should render the correct icon', () => {
+    it('should render the icon', () => {
         const props = {
             icon: 'icon',
         };
         const button = mount(<Button {...props} />);
-        expect(button.prop('icon')).toEqual('icon');
         expect(button.find('span').text()).toEqual('icon');
     });
 
