@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import noop from 'lodash/noop';
 import { Button } from './Button';
 import '../../../config/tests/setup';
@@ -132,7 +132,7 @@ describe('Button', () => {
 
     describe('when href prop is empty string', () => {
         it('should render a button element', () => {
-            const button = shallow(<Button />);
+            const button = mount(<Button />);
             expect(button.find('button').exists()).toBe(true);
         });
 
@@ -140,7 +140,7 @@ describe('Button', () => {
             describe('and the button is clicked', () => {
                 it('should run the passed onClick function', () => {
                     const mockFunction = jest.fn();
-                    const button = shallow(<Button onClick={mockFunction} />);
+                    const button = mount(<Button onClick={mockFunction} />);
                     button.find('button').simulate('click');
                     expect(mockFunction.mock.calls.length).toEqual(1);
                 });
@@ -165,7 +165,7 @@ describe('Button', () => {
                 href: 'test href',
                 iconAfterText: true,
             };
-            const button = shallow(<Button {...props} />);
+            const button = mount(<Button {...props} />);
             expect(button.find('a').exists()).toBe(true);
         });
 
@@ -173,7 +173,7 @@ describe('Button', () => {
             describe('and the button is clicked', () => {
                 it('should run the passed onClick function', () => {
                     const mockFunction = jest.fn();
-                    const button = shallow(<Button onClick={mockFunction} />);
+                    const button = mount(<Button onClick={mockFunction} />);
                     button.find('button').simulate('click');
                     expect(mockFunction.mock.calls.length).toEqual(1);
                 });
