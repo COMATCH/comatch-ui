@@ -17,7 +17,7 @@ export const svgStyling = ({ onlyIcon, iconAfterText }) => `
     }
 `;
 
-export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText }) => `
+export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText, textOnly }) => `
     border: 1px solid;
     border-radius: 3px;
     display: inline-block;
@@ -74,6 +74,8 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
             color: ${palette.midGray} !important;
         }
     ` : ''}
+
+    ${textOnly ? `border-color: transparent` : ''}
 `;
 
 export const StyledWrapperButton = styled.button`

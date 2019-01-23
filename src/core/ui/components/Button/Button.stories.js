@@ -74,4 +74,12 @@ storiesOf('Button', module)
                 {'<Button icon={<FontAwesomeIcon icon={faTimes} />} ghost={true} />'}
             </Highlight>
         </>
+    ))
+    .add('with textOnly and ghost style', () => (
+        <>
+            <Button icon={<FontAwesomeIcon icon={faTimes} />} ghost={true} textOnly={true} />
+            <Highlight className="html">
+                {'<Button icon={<FontAwesomeIcon icon={faTimes} />} ghost={true} textOnly={true} />'}
+            </Highlight>
+        </>
     ));

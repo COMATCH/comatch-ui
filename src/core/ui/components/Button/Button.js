@@ -39,6 +39,10 @@ const propTypes = {
      */
     text: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    /**
+     * If true Button has a trasnparent border
+     */
+    textOnly: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -53,6 +57,7 @@ const defaultProps = {
     target: null,
     text: '',
     type: 'button',
+    textOnly: false,
 };
 
 function renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps } = {}) {
@@ -103,6 +108,7 @@ export const Button = ({
 
     ghost,
     disabled,
+    textOnly,
 
     text,
     type,
@@ -143,6 +149,7 @@ export const Button = ({
 
         styledProps: {
             disabled,
+            textOnly,
             ghost,
             full: !ghost,
             onlyIcon: !text,
