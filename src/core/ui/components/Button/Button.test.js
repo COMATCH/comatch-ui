@@ -26,6 +26,11 @@ describe('Button', () => {
         expect(button).toMatchSnapshot();
     });
 
+    it('should render the button with tooltipText correctly', () => {
+        const button = renderer.create(<Button tooltipText="Testing tooltip text" />).toJSON();
+        expect(button).toMatchSnapshot();
+    });
+
     it('should have the correct default props', () => {
         const button = mount(<Button />);
         expect(button.prop('className')).toEqual('');
@@ -39,6 +44,7 @@ describe('Button', () => {
         expect(button.prop('target')).toEqual(null);
         expect(button.prop('text')).toEqual('');
         expect(button.prop('type')).toEqual('button');
+        expect(button.prop('tooltipText')).toEqual('');
     });
 
     it('should have the correct passed props', () => {
@@ -52,6 +58,7 @@ describe('Button', () => {
             onClick: mockFunction,
             target: 'test target',
             text: 'test text',
+            tooltipText: 'test tooltip text',
             type: 'submit',
         };
 
@@ -65,6 +72,7 @@ describe('Button', () => {
         expect(button.prop('target')).toEqual('test target');
         expect(button.prop('text')).toEqual('test text');
         expect(button.prop('type')).toEqual('submit');
+        expect(button.prop('tooltipText')).toEqual('test tooltip text');
     });
 
     it('should render the text', () => {
@@ -81,6 +89,24 @@ describe('Button', () => {
         };
         const button = mount(<Button {...props} />);
         expect(button.find('span').text()).toEqual('icon');
+    });
+
+    describe('when setting the textTooltip prop (default and custom value)', () => {
+        it('should not render the tooltip', () => {
+            const button = mount(<Button />);
+    
+            expect(button.find('div.TooltipText')).toHaveLength(0);
+        });
+
+        it('should render the tooltip text', () => {
+            const props = {
+                tooltipText: 'test tooltip text',
+            };
+            const button = mount(<Button {...props} />);
+    
+            expect(button.find('div.TooltipText')).toHaveLength(1);
+            expect(button.find('div.TooltipText').text()).toEqual('test tooltip text');
+        });
     });
 
     describe('when iconAfterText prop is default', () => {

@@ -74,4 +74,12 @@ storiesOf('Button', module)
                 {'<Button icon={<FontAwesomeIcon icon={faTimes} />} ghost={true} />'}
             </Highlight>
         </>
+    ))
+    .add('with tooltipText', () => (
+        <>
+            <Button text="Hello world" tooltipText="Tooltip Text" />
+            <Highlight className="html">
+                {'<Button text="Hello world" tooltipText="Tooltip Text" />'}
+            </Highlight>
+        </>
     ));

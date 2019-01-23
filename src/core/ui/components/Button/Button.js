@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
 import classNames from 'classnames';
 
+import { Badge } from '../Badge';
 import { StyledWrapperButton, StyledWrapperLink } from './StyledWrapper';
 // import './Button.scss';
 
@@ -38,6 +39,10 @@ const propTypes = {
      * Text content of `Button`
      */
     text: PropTypes.string,
+    /**
+     * Text content of `Button's tooltip`
+     */
+    tooltipText: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
 };
 
@@ -52,10 +57,11 @@ const defaultProps = {
     onClick: noop,
     target: null,
     text: '',
+    tooltipText: '',
     type: 'button',
 };
 
-function renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps } = {}) {
+function renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps, tooltipText } = {}) {
     const finalOnClick = disabled ? (evt) => evt.preventDefault() : onClick;
     const rel = target && 'noopener noreferrer';
     return (
@@ -68,11 +74,17 @@ function renderLinkButton({ classes, content, disabled, href, id, onClick, targe
             rel={rel}
             onClick={finalOnClick}>
             {content}
+            {
+                !!tooltipText
+                && (
+                    <Badge className="TooltipText" text={tooltipText} size="xs" color="darkGray" />
+                )
+            }
         </StyledWrapperLink>
     );
 }
 
-function renderHtmlButton({ classes, content, id, onClick, type, styledProps } = {}) {
+function renderHtmlButton({ classes, content, id, onClick, type, styledProps, tooltipText } = {}) {
     return (
         <StyledWrapperButton
             {...styledProps}
@@ -81,6 +93,12 @@ function renderHtmlButton({ classes, content, id, onClick, type, styledProps } =
             type={type}
             onClick={onClick}>
             {content}
+            {
+                !!tooltipText
+                && (
+                    <Badge className="TooltipText" text={tooltipText} size="xs" color="darkGray" />
+                )
+            }
         </StyledWrapperButton>
     );
 }
@@ -105,6 +123,7 @@ export const Button = ({
     disabled,
 
     text,
+    tooltipText,
     type,
     icon,
     iconAfterText,
@@ -136,6 +155,7 @@ export const Button = ({
 
         type,
         content,
+        tooltipText,
 
         disabled,
 
