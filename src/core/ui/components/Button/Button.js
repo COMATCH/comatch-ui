@@ -94,7 +94,21 @@ function renderHtmlButton({ classes, content, id, onClick, type, styledProps } =
  * additional security.
  */
 
-export const Button = ({ className, disabled, ghost, href, id, icon, iconAfterText, onClick, target, text, type }) => {
+export const Button = ({
+    id,
+    className,
+    href,
+    target,
+    onClick,
+
+    ghost,
+    disabled,
+
+    text,
+    type,
+    icon,
+    iconAfterText,
+}) => {
     const classes = classNames('Button', className, {
         full: !ghost,
         disabled,
@@ -113,17 +127,32 @@ export const Button = ({ className, disabled, ghost, href, id, icon, iconAfterTe
             {text}
         </span>
     );
-    const styledProps = {
+
+    const calculatedProps = {
+        id,
+        classes,
+        href,
+        target,
+
+        type,
+        content,
+
         disabled,
-        ghost,
-        full: !ghost,
-        onlyIcon: !text,
-        iconAfterText: text && iconAfterText,
+
+        onClick,
+
+        styledProps: {
+            disabled,
+            ghost,
+            full: !ghost,
+            onlyIcon: !text,
+            iconAfterText: text && iconAfterText,
+        },
     };
 
     return href
-        ? renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps })
-        : renderHtmlButton({ classes, content, id, onClick, type, styledProps });
+        ? renderLinkButton(calculatedProps)
+        : renderHtmlButton(calculatedProps);
 };
 
 Button.propTypes = propTypes;
