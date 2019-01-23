@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
 import classNames from 'classnames';
 
-import './Button.scss';
+import { StyledWrapperButton, StyledWrapperLink } from './StyledWrapper';
+// import './Button.scss';
 
 const propTypes = {
     /**
@@ -54,21 +55,33 @@ const defaultProps = {
     type: 'button',
 };
 
-function renderLinkButton(classes, content, disabled, href, id, onClick, target) {
+function renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps } = {}) {
     const finalOnClick = disabled ? (evt) => evt.preventDefault() : onClick;
     const rel = target && 'noopener noreferrer';
     return (
-        <a className={classes} href={href} target={target} id={id} rel={rel} onClick={finalOnClick}>
+        <StyledWrapperLink
+            {...styledProps}
+            className={classes}
+            href={href}
+            target={target}
+            id={id}
+            rel={rel}
+            onClick={finalOnClick}>
             {content}
-        </a>
+        </StyledWrapperLink>
     );
 }
 
-function renderHtmlButton(classes, content, disabled, id, onClick, type) {
+function renderHtmlButton({ classes, content, id, onClick, type, styledProps } = {}) {
     return (
-        <button className={classes} id={id} type={type} onClick={onClick} disabled={disabled}>
+        <StyledWrapperButton
+            {...styledProps}
+            className={classes}
+            id={id}
+            type={type}
+            onClick={onClick}>
             {content}
-        </button>
+        </StyledWrapperButton>
     );
 }
 
@@ -100,10 +113,17 @@ export const Button = ({ className, disabled, ghost, href, id, icon, iconAfterTe
             {text}
         </span>
     );
+    const styledProps = {
+        disabled,
+        ghost,
+        full: !ghost,
+        onlyIcon: !text,
+        iconAfterText: text && iconAfterText,
+    };
 
     return href
-        ? renderLinkButton(classes, content, disabled, href, id, onClick, target)
-        : renderHtmlButton(classes, content, disabled, id, onClick, type);
+        ? renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps })
+        : renderHtmlButton({ classes, content, id, onClick, type, styledProps });
 };
 
 Button.propTypes = propTypes;
