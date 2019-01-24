@@ -91,11 +91,11 @@ describe('Button', () => {
         expect(button.find('span').text()).toEqual('icon');
     });
 
-    describe('when setting the textTooltip prop (default and custom value)', () => {
+    describe('when setting the tooltipText prop (default and custom value)', () => {
         it('should not render the tooltip', () => {
             const button = mount(<Button />);
     
-            expect(button.find('div.TooltipText')).toHaveLength(0);
+            expect(button.find('div.Button__tooltip-text')).toHaveLength(0);
         });
 
         it('should render the tooltip text', () => {
@@ -104,8 +104,8 @@ describe('Button', () => {
             };
             const button = mount(<Button {...props} />);
     
-            expect(button.find('div.TooltipText')).toHaveLength(1);
-            expect(button.find('div.TooltipText').text()).toEqual('test tooltip text');
+            expect(button.find('div.Button__tooltip-text')).toHaveLength(1);
+            expect(button.find('div.Button__tooltip-text').text()).toEqual('test tooltip text');
         });
     });
 

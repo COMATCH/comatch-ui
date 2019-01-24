@@ -5,7 +5,6 @@ import classNames from 'classnames';
 
 import { Badge } from '../Badge';
 import { StyledWrapper } from './StyledWrapper';
-// import './Button.scss';
 
 const propTypes = {
     /**
@@ -40,7 +39,7 @@ const propTypes = {
      */
     text: PropTypes.string,
     /**
-     * Text content of `Button's tooltip`
+     * Text content of `Button`'s tooltip
      */
     tooltipText: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
@@ -136,7 +135,7 @@ export const Button = ({
             {
                 !!tooltipText
                 && (
-                    <Badge className="TooltipText" text={tooltipText} size="xs" color="darkGray" />
+                    <Badge className="Button__tooltip-text" text={tooltipText} size="xs" color="darkGray" />
                 )
             }
         </StyledWrapper>
