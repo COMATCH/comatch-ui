@@ -1,23 +1,7 @@
 import styled from 'styled-components';
 import { palette, typography } from '../../../styles/variables';
 
-export const svgStyling = ({ onlyIcon, iconAfterText }) => `
-    ${onlyIcon ? 'padding: 8px 12px;' : ''}
-
-    svg {
-        ${onlyIcon ? 'margin: 0;' : 'margin-right: 5px'}
-
-        ${iconAfterText ? `
-            float: right;
-            position: relative;
-            top: 2px;
-            margin-left: 5px;
-            margin-right: 0;
-        ` : ''}
-    }
-`;
-
-export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText, textOnly }) => `
+export const StyledWrapper = styled.button`
     border: 1px solid;
     border-radius: 3px;
     display: inline-block;
@@ -32,8 +16,25 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
     padding: 8px 15px; // makes the height 40px
     transition: background-color 250ms ease-out, border-color 250ms ease-out, color 250ms ease-out;
 
-    ${svgStyling({ onlyIcon, iconAfterText })}
-    ${iconAfterText ? 'white-space: initial;' : ''}
+    ${({ iconAfterText }) => iconAfterText ? 'white-space: initial;' : ''}
+
+    // SVG styling:
+    ${({ onlyIcon, iconAfterText }) => `
+        // Some .Button adjustments
+        ${onlyIcon ? 'padding: 8px 12px;' : ''}
+
+        svg {
+            ${onlyIcon ? 'margin: 0;' : 'margin-right: 5px'}
+
+            ${iconAfterText ? `
+                float: right;
+                position: relative;
+                top: 2px;
+                margin-left: 5px;
+                margin-right: 0;
+            ` : ''}
+        }
+    `}
 
     // If buttons follow each other in a row
     // set a standardized whitespace between them
@@ -41,7 +42,7 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
         margin-left: 9px;
     }
 
-    ${full ? `
+    ${({ full, disabled }) => full ? `
         background-color: ${disabled ? `${palette.lightGray} !important` : palette.primary};
         border-color: ${disabled ? `${palette.midGray} !important` : palette.primary};
         color: ${palette.white};
@@ -52,7 +53,7 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
         }
     ` : ''}
 
-    ${ghost ? `
+    ${({ ghost, disabled }) => ghost ? `
         background-color: ${disabled ? `${palette.white} !important` : palette.white};
         border-color: ${palette.primary};
         color: ${palette.primary};
@@ -64,7 +65,7 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
         }
     ` : ''}
 
-    ${disabled ? `
+    ${({ disabled }) => disabled ? `
         border-color: ${palette.midGray} !important;
         cursor: not-allowed;
         pointer-events: none;
@@ -74,14 +75,5 @@ export const generateStyling = ({ full, ghost, disabled, onlyIcon, iconAfterText
             color: ${palette.midGray} !important;
         }
     ` : ''}
-
-    ${textOnly ? `border-color: transparent` : ''}
-`;
-
-export const StyledWrapperButton = styled.button`
-    ${generateStyling}
-`;
-
-export const StyledWrapperLink = styled.a`
-    ${generateStyling}
+    ${({ textOnly }) => textOnly ? 'border-color: transparent' : ''}
 `;

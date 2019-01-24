@@ -41,6 +41,12 @@ storiesOf('Badge', module)
             <Highlight className="html">{'<Badge text="Badge text" size="xs" color="white" />'}</Highlight>
         </>
     ))
+    .add('with xs size and darkGray background-color', () => (
+        <>
+            <Badge text="Badge text" size="xs" color="darkGray" />
+            <Highlight className="html">{'<Badge text="Badge text" size="xs" color="darkGray" />'}</Highlight>
+        </>
+    ))
     .add('with sm size and lightblue background-color', () => (
         <>
             <Badge text="Badge text" size="sm" color="lightblue" />
@@ -75,5 +81,11 @@ storiesOf('Badge', module)
         <>
             <Badge text="Badge text" size="sm" color="white" />
             <Highlight className="html">{'<Badge text="Badge text" size="sm" color="white" />'}</Highlight>
+        </>
+    ))
+    .add('with sm size and darkGray background-color', () => (
+        <>
+            <Badge text="Badge text" size="sm" color="darkGray" />
+            <Highlight className="html">{'<Badge text="Badge text" size="sm" color="darkGray" />'}</Highlight>
         </>
     ));

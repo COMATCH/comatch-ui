@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import noop from 'lodash/noop';
 import classNames from 'classnames';
 
-import { StyledWrapperButton, StyledWrapperLink } from './StyledWrapper';
+import { StyledWrapper } from './StyledWrapper';
 // import './Button.scss';
 
 const propTypes = {
@@ -60,36 +60,6 @@ const defaultProps = {
     textOnly: false,
 };
 
-function renderLinkButton({ classes, content, disabled, href, id, onClick, target, styledProps } = {}) {
-    const finalOnClick = disabled ? (evt) => evt.preventDefault() : onClick;
-    const rel = target && 'noopener noreferrer';
-    return (
-        <StyledWrapperLink
-            {...styledProps}
-            className={classes}
-            href={href}
-            target={target}
-            id={id}
-            rel={rel}
-            onClick={finalOnClick}>
-            {content}
-        </StyledWrapperLink>
-    );
-}
-
-function renderHtmlButton({ classes, content, id, onClick, type, styledProps } = {}) {
-    return (
-        <StyledWrapperButton
-            {...styledProps}
-            className={classes}
-            id={id}
-            type={type}
-            onClick={onClick}>
-            {content}
-        </StyledWrapperButton>
-    );
-}
-
 /**
  * A `Button` component with different stylistic variations. By default the styling is `full`,
  * but `ghost` is an alternative version with reversed colors.
@@ -115,13 +85,16 @@ export const Button = ({
     icon,
     iconAfterText,
 }) => {
-    const classes = classNames('Button', className, {
-        full: !ghost,
+    const styledProps = {
         disabled,
         ghost,
-        'only-icon': !text,
-        'icon-after-text': text && iconAfterText,
-    });
+        textOnly,
+        full: !ghost,
+        onlyIcon: !text,
+        iconAfterText: text && iconAfterText,
+
+        ...(href && { as: 'a' }),
+    };
     const content = iconAfterText ? (
         <span>
             {text}
@@ -136,30 +109,32 @@ export const Button = ({
 
     const calculatedProps = {
         id,
-        classes,
-        href,
-        target,
-
-        type,
-        content,
-
-        disabled,
-
         onClick,
-
-        styledProps: {
-            disabled,
-            textOnly,
-            ghost,
+        className: classNames('Button', className, {
             full: !ghost,
-            onlyIcon: !text,
-            iconAfterText: text && iconAfterText,
-        },
+            disabled,
+            ghost,
+            'only-icon': !text,
+            'icon-after-text': text && iconAfterText,
+        }),
+
+        ...(href ? {
+            href,
+            target,
+            rel: target && 'noopener noreferrer',
+            ...(disabled && {
+                onClick: (evt) => evt.preventDefault(),
+            }),
+        } : {
+            type,
+        }),
     };
 
-    return href
-        ? renderLinkButton(calculatedProps)
-        : renderHtmlButton(calculatedProps);
+    return (
+        <StyledWrapper {...styledProps} {...calculatedProps}>
+            {content}
+        </StyledWrapper>
+    );
 };
 
 Button.propTypes = propTypes;

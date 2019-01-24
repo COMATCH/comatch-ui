@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './Badge.scss';
+import { StyledWrapper } from './StyledWrapper';
+// import './Badge.scss';
 
-export const allowedColors = ['green', 'orange', 'gray', 'white', 'blue', 'lightblue'];
+export const allowedColors = ['green', 'orange', 'gray', 'white', 'blue', 'lightblue', 'darkGray'];
 
 const propTypes = {
     /**
@@ -36,10 +37,10 @@ const defaultProps = {
 export const Badge = ({ className, color, icon, size, text }) => {
     const classes = classNames('Badge', className, color, size);
     return (
-        <div className={classes}>
+        <StyledWrapper className={classes} color={color} size={size}>
             {icon}
             {text}
-        </div>
+        </StyledWrapper>
     );
 };
 
