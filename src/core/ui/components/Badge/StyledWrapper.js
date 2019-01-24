@@ -58,7 +58,7 @@ export const getColorBasedOnProps = ({ color }) => {
                 border-color: ${palette.darkGray};
                 color: ${palette.white};
             `;
-        
+
         case 'white':
             return `
                 background-color: ${palette.white};

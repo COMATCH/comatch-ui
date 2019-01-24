@@ -27,7 +27,7 @@ describe('Button', () => {
     });
 
     it('should render the textOnly and ghost button correctly', () => {
-        const button = renderer.create(<Button ghost={true} textOnly={true} />).toJSON();
+        const button = renderer.create(<Button textOnly={true} />).toJSON();
         expect(button).toMatchSnapshot();
     });
 

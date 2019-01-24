@@ -53,9 +53,9 @@ export const StyledWrapper = styled.button`
         }
     ` : ''}
 
-    ${({ ghost, disabled }) => ghost ? `
+    ${({ textOnly, ghost, disabled }) => (ghost || textOnly) ? `
         background-color: ${disabled ? `${palette.white} !important` : palette.white};
-        border-color: ${palette.primary};
+        border-color: ${textOnly ? 'transparent' : `${palette.primary}`};
         color: ${palette.primary};
 
         &:hover {
@@ -75,5 +75,4 @@ export const StyledWrapper = styled.button`
             color: ${palette.midGray} !important;
         }
     ` : ''}
-    ${({ textOnly }) => textOnly ? 'border-color: transparent' : ''}
 `;

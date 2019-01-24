@@ -40,7 +40,7 @@ const propTypes = {
     text: PropTypes.string,
     type: PropTypes.oneOf(['button', 'submit', 'reset']),
     /**
-     * If true Button has a trasnparent border
+     * If true Button has a transparent border
      */
     textOnly: PropTypes.bool,
 };
@@ -89,7 +89,7 @@ export const Button = ({
         disabled,
         ghost,
         textOnly,
-        full: !ghost,
+        full: !ghost && !textOnly,
         onlyIcon: !text,
         iconAfterText: text && iconAfterText,
 
@@ -111,7 +111,7 @@ export const Button = ({
         id,
         onClick,
         className: classNames('Button', className, {
-            full: !ghost,
+            full: !ghost && !textOnly,
             disabled,
             ghost,
             'only-icon': !text,
