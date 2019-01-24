@@ -94,7 +94,6 @@ describe('Button', () => {
     describe('when setting the tooltipText prop (default and custom value)', () => {
         it('should not render the tooltip', () => {
             const button = mount(<Button />);
-
             expect(button.find('div.Button__tooltip-text')).toHaveLength(0);
         });
 
@@ -103,7 +102,6 @@ describe('Button', () => {
                 tooltipText: 'test tooltip text',
             };
             const button = mount(<Button {...props} />);
-
             expect(button.find('div.Button__tooltip-text')).toHaveLength(1);
             expect(button.find('div.Button__tooltip-text').text()).toEqual('test tooltip text');
         });
