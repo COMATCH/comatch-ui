@@ -2,7 +2,7 @@
 
 exports[`Button should render the button with tooltipText correctly 1`] = `
 <button
-  className="Button full only-icon sc-bwzfXH cbZEuo"
+  className="Button full only-icon sc-bwzfXH gSKDyA"
   disabled={false}
   id={null}
   onClick={[Function]}
@@ -23,7 +23,7 @@ exports[`Button should render the button with tooltipText correctly 1`] = `
 
 exports[`Button should render the default button correctly 1`] = `
 <button
-  className="Button full only-icon sc-bwzfXH cbZEuo"
+  className="Button full only-icon sc-bwzfXH gSKDyA"
   disabled={false}
   id={null}
   onClick={[Function]}
@@ -37,7 +37,7 @@ exports[`Button should render the default button correctly 1`] = `
 
 exports[`Button should render the disabled button correctly 1`] = `
 <button
-  className="Button full disabled only-icon sc-bwzfXH cMOUqQ"
+  className="Button full disabled only-icon sc-bwzfXH jRfnYX"
   disabled={true}
   id={null}
   onClick={[Function]}
@@ -51,7 +51,7 @@ exports[`Button should render the disabled button correctly 1`] = `
 
 exports[`Button should render the ghost and disabled button correctly 1`] = `
 <button
-  className="Button disabled ghost only-icon sc-bwzfXH bgSGOE"
+  className="Button disabled ghost only-icon sc-bwzfXH bJLgSh"
   disabled={true}
   id={null}
   onClick={[Function]}
@@ -65,7 +65,7 @@ exports[`Button should render the ghost and disabled button correctly 1`] = `
 
 exports[`Button should render the ghost button correctly 1`] = `
 <button
-  className="Button ghost only-icon sc-bwzfXH eKcREg"
+  className="Button ghost only-icon sc-bwzfXH iQTybm"
   disabled={false}
   id={null}
   onClick={[Function]}
