@@ -3,11 +3,6 @@
 .CheckboxGroupInput {
     margin-bottom: $co-inputs-margin-bottom;
 
-    .CheckboxInput__input ~ .CheckboxInput__label {
-        top: 3px;
-        position: relative;
-    }
-
     &:not(.inline) {
         .InputLabel {
             width: 100%;

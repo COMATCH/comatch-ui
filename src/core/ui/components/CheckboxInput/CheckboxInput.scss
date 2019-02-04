@@ -1,5 +1,15 @@
 @import '../../../styles/variables.scss';
 
+.inline .CheckboxInput__input ~ .CheckboxInput__label {
+    top: 1px;
+    position: relative;
+}
+
+.CheckboxInput__input ~ .CheckboxInput__label {
+    top: 3px;
+    position: relative;
+}
+
 .CheckboxInput {
     display: inline-block;
 
