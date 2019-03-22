@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './InputLabel.scss';
+import { StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
     /**
@@ -43,15 +43,15 @@ const defaultProps = {
 
 export const InputLabel = ({ className, htmlFor, id, required, span, text }) =>
     span ? (
-        <span id={id} className={classNames('InputLabel', className)}>
+        <StyledWrapper id={id} className={classNames('InputLabel', className)}>
             {text}
             {required && '*'}
-        </span>
+        </StyledWrapper>
     ) : (
-        <label id={id} className={classNames('InputLabel', className)} htmlFor={htmlFor}>
+        <StyledWrapper isLabel as="label" id={id} className={classNames('InputLabel', className)} htmlFor={htmlFor}>
             {text}
             {required && '*'}
-        </label>
+        </StyledWrapper>
     );
 
 InputLabel.defaultProps = defaultProps;
