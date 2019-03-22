@@ -18,6 +18,7 @@ const palette = pick(sassVariables, [
     'green',
     'lightGreen',
     'darkGreen',
+    'red',
     'lightRed',
     'darkRed',
     'lightOrange',

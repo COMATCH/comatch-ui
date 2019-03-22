@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './InputError.scss';
+import { StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
     /**
@@ -17,7 +17,7 @@ const defaultProps = {};
  */
 
 export const InputError = ({ text }) => (
-    <span className="InputError">{text}</span>
+    <StyledWrapper className="InputError">{text}</StyledWrapper>
 );
 
 InputError.defaultProps = defaultProps;
