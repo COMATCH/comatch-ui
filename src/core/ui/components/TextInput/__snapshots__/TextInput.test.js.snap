@@ -108,7 +108,7 @@ exports[`TextInput should render correctly with an InputError 1`] = `
     value=""
   />
   <span
-    className="InputError"
+    className="InputError sc-bdVaJa camiNS"
   >
     Testing InputError Message
   </span>
