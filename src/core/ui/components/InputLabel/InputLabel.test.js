@@ -19,7 +19,7 @@ describe('InputLabel', () => {
 
     it('should render the component with text passed as props', () => {
         const item = shallow(<InputLabel text={text} />);
-        expect(item.find('label').text()).toEqual(text);
+        expect(item.text()).toEqual(text);
     });
 
     it('should render default props if extra props are being passed', () => {
@@ -44,10 +44,10 @@ describe('InputLabel', () => {
     it('should have asterisk after the text if the required prop is set to true', () => {
         const item = shallow(<InputLabel text={text} />);
         item.setProps({ required: true });
-        expect(item.find('label').text()).toEqual(`${text}*`);
+        expect(item.text()).toEqual(`${text}*`);
     });
     it('should render a <span> instead of <label> if span prop is set to true', () => {
-        const item = shallow(<InputLabel text={text} />);
+        const item = mount(<InputLabel text={text} />);
         item.setProps({ span: true });
         expect(item.find('label').length).toEqual(0);
         expect(item.find('span').length).toEqual(1);

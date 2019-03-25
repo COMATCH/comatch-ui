@@ -62,7 +62,7 @@ exports[`DateInput should render correctly with a Label 1`] = `
       id={null}
     >
       <label
-        className="InputLabel"
+        className="InputLabel sc-bdVaJa iThGRf"
         htmlFor={null}
         id={null}
       >
