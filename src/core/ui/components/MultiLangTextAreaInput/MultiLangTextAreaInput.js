@@ -7,7 +7,7 @@ import { flagDeBase64 } from './images/flagDeBase64';
 import { flagUkBase64 } from './images/flagUkBase64';
 import { flagFrBase64 } from './images/flagFrBase64';
 
-import './MultiLangTextAreaInput.scss';
+import { StyledWrapper } from './StyledWrapper';
 
 export class MultiLangTextAreaInput extends Component {
     static propTypes = {
@@ -77,7 +77,7 @@ export class MultiLangTextAreaInput extends Component {
         const { activeLanguage, name, onChange, value, ...props } = this.props;
         const classes = classNames('Input', 'MultiLangTextAreaInput', `active-lang-${activeLanguage}`);
         return (
-            <div className={classes}>
+            <StyledWrapper className={classes}>
                 {LANGUAGE_CODES.map((language, key) => {
                     const { value: multiLangInputValue } = this.props;
                     const inputData = multiLangInputValue.find(({ lang }) => lang === language);
@@ -94,7 +94,7 @@ export class MultiLangTextAreaInput extends Component {
                         />
                     );
                 })}
-            </div>
+            </StyledWrapper>
         );
     }
 }

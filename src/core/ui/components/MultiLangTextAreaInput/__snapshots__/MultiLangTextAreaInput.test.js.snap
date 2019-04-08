@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiLangTextAreaInput should render without crashing 1`] = `
+<div
+  className="Input MultiLangTextAreaInput active-lang-undefined sc-bdVaJa WoCCW"
+>
+  <div
+    className="Input TextAreaInput lang-en block with-icon"
+    id={null}
+  >
+    <textarea
+      className="TextAreaInput__input"
+      maxLength={null}
+      name="undefined.en.value"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      rows={5}
+      value=""
+    />
+    <img
+      alt="English flag"
+      className="TextAreaInput__icon"
+      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTQiIGhlaWdodD0iNDYiIHZpZXdCb3g9IjAgMCA1NCA0NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGRlZnM+PHBhdGggZD0iTTI1IDIwaDI1djIwTDI1IDIwem0wIDB2MjBIMGwyNS0yMHptMCAwSDBWMGwyNSAyMHptMCAwVjBoMjVMMjUgMjB6IiBpZD0iYSIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMwMDI0N0QiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIgM3Y0MGg1MFYzeiIvPjxwYXRoIGQ9Ik0yIDNsNTAgNDBtMC00MEwyIDQzIiBzdHJva2U9IiNGRkYiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMiAzKSI+PG1hc2sgaWQ9ImIiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PHBhdGggZD0iTTAgMGw1MCA0MG0wLTQwTDAgNDAiIHN0cm9rZT0iI0NGMTQyQiIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iIG1hc2s9InVybCgjYikiLz48L2c+PHBhdGggZD0iTTI3IDN2NDBNMiAyM2g1MCIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjEwIiBmaWxsPSIjMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNMjcgM3Y0ME0yIDIzaDUwIiBzdHJva2U9IiNDRjE0MkIiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPg=="
+    />
+  </div>
+  <div
+    className="Input TextAreaInput lang-de block with-icon"
+    id={null}
+  >
+    <textarea
+      className="TextAreaInput__input"
+      maxLength={null}
+      name="undefined.de.value"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      rows={5}
+      value=""
+    />
+    <img
+      alt="German flag"
+      className="TextAreaInput__icon"
+      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA1MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsLXJ1bGU9Im5vbnplcm8iIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0wIDBoNTB2NDBIMHoiLz48cGF0aCBmaWxsPSIjRDAwIiBkPSJNMCAxMy4zMzNoNTBWNDBIMHoiLz48cGF0aCBmaWxsPSIjRkZDRTAwIiBkPSJNMCAyNi42NjdoNTBWNDBIMHoiLz48L2c+PC9zdmc+"
+    />
+  </div>
+  <div
+    className="Input TextAreaInput lang-fr block with-icon"
+    id={null}
+  >
+    <textarea
+      className="TextAreaInput__input"
+      maxLength={null}
+      name="undefined.fr.value"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      rows={5}
+      value=""
+    />
+    <img
+      alt="French flag"
+      className="TextAreaInput__icon"
+      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA1MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsLXJ1bGU9Im5vbnplcm8iIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiNFRDI5MzkiIGQ9Ik0wIDBoNTB2NDBIMHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMCAwaDMzLjMzM3Y0MEgweiIvPjxwYXRoIGZpbGw9IiMwMDIzOTUiIGQ9Ik0wIDBoMTYuNjY3djQwSDB6Ii8+PC9nPjwvc3ZnPg=="
+    />
+  </div>
+</div>
+`;

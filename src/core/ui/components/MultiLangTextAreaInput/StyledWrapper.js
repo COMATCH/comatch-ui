@@ -1,7 +1,6 @@
-.MultiLangTextAreaInput {
-    // Hide inactive languages using visibility,
-    // this way their values are still submitted
-    // as their display is not set to none.
+import styled from 'styled-components';
+
+export const StyledWrapper = styled.div`
     &.active-lang-en {
         .TextAreaInput:not(.lang-en) {
             visibility: hidden;
@@ -30,4 +29,4 @@
         width: 20px;
         height: 16px;
     }
-}
+`;
