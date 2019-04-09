@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { lorem } from 'faker';
+import { mount } from 'enzyme';
 import { StickyBanner } from './StickyBanner';
-import { shallow, mount } from 'enzyme';
 
 import '../../../config/tests/setup';
 
