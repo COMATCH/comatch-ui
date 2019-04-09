@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StickyBanner should render correctly 1`] = `
+<section
+  className="StickyBanner"
+>
+  <div
+    className="StickyBanner__content"
+  />
+</section>
+`;
