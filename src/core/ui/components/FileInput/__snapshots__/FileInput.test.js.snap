@@ -5,19 +5,20 @@ exports[`FileInput should render correctly 1`] = `
   className="Input FileInput sc-bxivhb jPHirh"
 >
   <input
+    accept=".json"
     multiple={false}
     onChange={[Function]}
     type="file"
   />
   <button
-    className="Button rectangle full only-icon sc-htpNat bJyeSx"
+    className="Button rectangle full sc-htpNat bsQTyy"
     disabled={false}
     id={null}
     onClick={[Function]}
     type="button"
   >
     <span>
-      
+      Button Text
     </span>
   </button>
 </div>

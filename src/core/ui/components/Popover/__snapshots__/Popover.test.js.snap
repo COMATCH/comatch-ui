@@ -12,6 +12,7 @@ exports[`Popover should render correctly 1`] = `
     className="svg-inline--fa fa-question-circle fa-w-16 Popover__toggle Popover__icon"
     data-icon="question-circle"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
