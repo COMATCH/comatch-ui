@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should render empty table correctly 1`] = `
+<div
+  className="Table primary"
+>
+  <table
+    className="Table__table"
+  >
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Table should render table cellData correctly 1`] = `
+<div
+  className="Table primary"
+>
+  <table
+    className="Table__table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Athens
+        </td>
+        <td>
+          Venizelou
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Berlin
+        </td>
+        <td>
+          Freistr
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Table should render table with data correctly 1`] = `
+<div
+  className="Table arbitrary-class-name primary"
+>
+  <table
+    className="Table__table"
+  >
+    <thead>
+      <tr>
+        <th>
+          City
+        </th>
+        <th>
+          Street
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Athens
+        </td>
+        <td>
+          Venizelou
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Berlin
+        </td>
+        <td>
+          Freistr
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Table should render table with heading array correctly 1`] = `
+<div
+  className="Table primary"
+>
+  <table
+    className="Table__table"
+  >
+    <thead>
+      <tr>
+        <th>
+          City
+        </th>
+        <th>
+          Street
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Table should render table with secondary class correctly 1`] = `
+<div
+  className="Table secondary"
+>
+  <table
+    className="Table__table"
+  >
+    <tbody />
+  </table>
+</div>
+`;
