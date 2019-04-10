@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabNavigation should render correctly 1`] = `
+<nav
+  className="TabNavigation"
+>
+  <ul
+    className="TabNavigation__list"
+  >
+    <li
+      className="TabNavigation__list-item active"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 1
+      </button>
+    </li>
+    <li
+      className="TabNavigation__list-item"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 2
+      </button>
+    </li>
+    <li
+      className="TabNavigation__list-item"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 3
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`TabNavigation should render correctly with default activeTabIndex 1`] = `
+<nav
+  className="TabNavigation"
+>
+  <ul
+    className="TabNavigation__list"
+  >
+    <li
+      className="TabNavigation__list-item"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 1
+      </button>
+    </li>
+    <li
+      className="TabNavigation__list-item"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 2
+      </button>
+    </li>
+    <li
+      className="TabNavigation__list-item active"
+      onClick={[Function]}
+    >
+      <button>
+        Tab 3
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
