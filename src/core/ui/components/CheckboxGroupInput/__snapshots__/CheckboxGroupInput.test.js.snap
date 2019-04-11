@@ -1,0 +1,910 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroupInput should render the options correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
+  id={null}
+>
+  
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render the options correctly 2`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
+  id={null}
+>
+  
+  <header
+    className="SectionHeader size-xs"
+  >
+    <span>
+      <h6
+        className="SectionHeader__title"
+      >
+        Category 1
+      </h6>
+    </span>
+    <div
+      className="SectionHeader__controls"
+    />
+  </header>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with checkboxesPerRow correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-2 sc-ifAKCX kaoULA"
+  id={null}
+>
+  
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with display inline correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 inline sc-ifAKCX hJBCfa"
+  id={null}
+>
+  
+  <div
+    className="Input CheckboxInput inline sc-bxivhb hkoirp"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput inline sc-bxivhb hkoirp"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with inputError correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 has-error sc-ifAKCX bRgrpd"
+  id={null}
+>
+  
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <span
+    className="InputError sc-bwzfXH bZudyR"
+  >
+    sample-inputError
+  </span>
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with inputError correctly 2`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 has-error sc-ifAKCX bRgrpd"
+  id={null}
+>
+  
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <span
+    className="InputError sc-bwzfXH bZudyR"
+  >
+    sample-inputError
+  </span>
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with label/title correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
+  id={null}
+>
+  <label
+    className="InputLabel sc-bdVaJa iThGRf"
+    htmlFor={null}
+    id={null}
+  >
+    sample-label
+  </label>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with label/title correctly 2`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
+  id={null}
+>
+  <label
+    className="InputLabel sc-bdVaJa iThGRf"
+    htmlFor={null}
+    id={null}
+  >
+    <span>
+      sample-label
+    </span>
+  </label>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`CheckboxGroupInput should render with with label/title and required '*' correctly 1`] = `
+<div
+  className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
+  id={null}
+>
+  <label
+    className="InputLabel sc-bdVaJa iThGRf"
+    htmlFor={null}
+    id={null}
+  >
+    <span>
+      sample-label
+    </span>
+    *
+  </label>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option1"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="Input CheckboxInput block sc-bxivhb bJyOBc"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        name="checkbox-sample-name"
+        onChange={[Function]}
+        type="checkbox"
+        value="option2"
+      />
+      <div
+        className="CheckboxInput__input sc-htpNat jpWaUF"
+        role="checkbox"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
+          data-icon="check"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <span
+        className="InputLabel CheckboxInput__label sc-bdVaJa eCYGDq"
+        id={null}
+      >
+        Option 1
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;
