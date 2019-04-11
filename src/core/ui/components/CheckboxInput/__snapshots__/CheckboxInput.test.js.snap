@@ -22,6 +22,7 @@ exports[`CheckboxInput should render correctly 1`] = `
         className="svg-inline--fa fa-check fa-w-16 CheckboxInput__tick"
         data-icon="check"
         data-prefix="fas"
+        focusable="false"
         role="img"
         style={Object {}}
         viewBox="0 0 512 512"
