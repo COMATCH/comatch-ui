@@ -10,10 +10,6 @@ describe('StickyBanner', () => {
     it('should render correctly', () => {
         const rendered = renderer.create(<StickyBanner />);
         expect(rendered.toJSON()).toMatchSnapshot();
-
-        // already covered in the snapshot
-        // const contentNode = rendered.root.findByProps({className: 'StickyBanner__content'});
-        // expect(contentNode.props.className).toEqual('StickyBanner__content');
     });
 
     it('should render the child', () => {
@@ -27,11 +23,6 @@ describe('StickyBanner', () => {
         const instance = rendered.root;
         const childNode = instance.findByProps({className});
         expect(childNode.props.className).toEqual(className);
-
-        // const item = shallow(<StickyBanner />);
-        // expect(item.hasClass('StickyBanner')).toEqual(true);
-        // const node = item.find('.StickyBanner__content');
-        // expect(node.length).toEqual(1);
     });
 
     it('should has animated class if scrollTopVisibilityThreshold passed with value', () => {
@@ -101,7 +92,6 @@ describe('StickyBanner', () => {
 
         // any non-zero value for scrollTopVisibilityThreshold is sufficient to attach the scroll event listener
         const wrapper = mount(<StickyBanner scrollTopVisibilityThreshold={123} />);
-
         wrapper.unmount();
         expect(document.removeEventListener.mock.calls.length).toEqual(1);
     });
