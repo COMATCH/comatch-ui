@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailInput should render correctly 1`] = `
+<div
+  className="Input TextInput block"
+  id={null}
+>
+  
+  <input
+    autoComplete={null}
+    className="TextInput__input"
+    disabled={null}
+    max={null}
+    maxLength={null}
+    min={null}
+    name="email-name-sample"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="email"
+    value=""
+  />
+  
+</div>
+`;
