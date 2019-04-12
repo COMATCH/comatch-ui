@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flyout should render correctly 1`] = `
+<div
+  className="Flyout sc-bxivhb jrcNjb"
+>
+  <div
+    className="Flyout__button-wrapper sc-htpNat cSppWP"
+    onClick={[Function]}
+  >
+    Flyout
+  </div>
+</div>
+`;
+
+exports[`Flyout should render with button content correctly 1`] = `
+<div
+  className="Flyout sc-bxivhb jrcNjb"
+>
+  <div
+    className="Flyout__button-wrapper sc-htpNat cSppWP"
+    onClick={[Function]}
+  >
+    <span>
+      sample-button-text
+    </span>
+  </div>
+</div>
+`;
