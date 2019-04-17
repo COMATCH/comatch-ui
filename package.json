@@ -8,6 +8,7 @@
         "generate-docs": "node generateDocs.js",
         "deploy-storybook": "storybook-to-ghpages",
         "test": "jest",
+        "test-and-coverage": "jest --collectCoverage",
         "update-snapshots": "jest --updateSnapshot",
         "lint": "./node_modules/.bin/eslint .",
         "preversion": "yarn test",
