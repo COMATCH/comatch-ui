@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './ProgressBar.scss';
+import { InputLabel } from '../InputLabel';
+import { StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
     displayProgressLabel: PropTypes.bool,
@@ -14,17 +15,27 @@ const propTypes = {
         }
         return false;
     },
+    /** Label/title of the progress bar */
+    label: PropTypes.string,
+    /** Position of the label/title of the progress bar */
+    labelPosition: PropTypes.oneOf(['right', 'left']),
     progressiveColoring: PropTypes.bool,
     progressLabel: PropTypes.string,
-    secondaryColor: PropTypes.bool,
+    /** Progress bar from left to right */
+    reverse: PropTypes.bool,
+    /** Coloring variants of the progress bar and it's labels */
+    variant: PropTypes.oneOf(['standard', 'light', 'dark']),
 };
 
 const defaultProps = {
     displayProgressLabel: true,
     greyBackground: false,
+    label: '',
+    labelPosition: 'right',
     progressiveColoring: false,
     progressLabel: '',
-    secondaryColor: false,
+    reverse: false,
+    variant: 'standard',
 };
 
 function renderProgressLabel(displayProgressLabel, progressLabel, progress) {
@@ -38,39 +49,67 @@ function renderProgressLabel(displayProgressLabel, progressLabel, progress) {
 export const ProgressBar = ({
     displayProgressLabel,
     greyBackground,
+    label,
+    labelPosition,
+    variant,
     progress,
     progressiveColoring,
     progressLabel,
-    secondaryColor,
+    reverse,
 }) => {
     const progressStyle = { transform: `scaleX(${progress / 100})` };
 
     // per design specs, label is displayed
-    // - at the right of the progress limit for progress < 80,
-    // - at the left of the progress limit for progress >= 80,
-    const labelOnLeft = progress >= 80;
+    // - at the right of the progress limit for progress < 40,
+    // - at the left of the progress limit for progress >= 40,
+    const progressLabelOnLeft = progress >= 40;
 
-    const labelStyle = labelOnLeft ? { right: `calc(${100 - progress}% + 8px)` } : { left: `calc(${progress}% + 8px)` };
+    // styles for standard progress bar
+    const progressLabelStandardPosition = progressLabelOnLeft
+        ? { right: `calc(${100 - progress}% + 8px)` }
+        : { left: `calc(${progress}% + 8px)` };
+
+    // styles for progress reverse bar
+    const progressLabelReversePosition = progressLabelOnLeft
+        ? { right: `calc(${progress}% - 38px)` }
+        : { left: `calc(${100 - progress}% - 38px)` };
+
+    const progressLabelPosition = !reverse ? progressLabelStandardPosition : progressLabelReversePosition;
+
+    const progressLabelClass = classNames('ProgressBar__progress-label', {
+        'ProgressBar__progress-label-left': progressLabelOnLeft,
+        'ProgressBar__progress--label-light': variant === 'light',
+        'ProgressBar__progress--label-dark': variant === 'dark',
+    });
 
     const classes = classNames('ProgressBar', {
-        'ProgressBar--danger': progressiveColoring && progress <= 59,
-        'ProgressBar--warning': progressiveColoring && progress >= 60 && progress <= 74,
-        'ProgressBar--secondaryColor': secondaryColor,
+        'ProgressBar--danger': progressiveColoring && progress <= 39,
+        'ProgressBar--warning': progressiveColoring && progress >= 40 && progress <= 74,
         'ProgressBar--greyBackground': greyBackground,
     });
 
-    const progressClasses = classNames('ProgressBar__progress', { full: progress >= 100 });
+    const progressClasses = classNames('ProgressBar__progress', {
+        full: progress >= 100,
+        reverse,
+        light: variant === 'light',
+        dark: variant === 'dark',
+    });
+
+    const labelClasses = classNames('ProgressBar__label', {
+        'ProgressBar__label--left': labelPosition === 'left',
+        'ProgressBar__label--light': variant === 'light',
+    });
 
     return (
-        <div className={classes}>
-            <div className={progressClasses} style={progressStyle} />
-            <div
-                className={`ProgressBar__progress-label ${labelOnLeft && 'ProgressBar__progress-label-left'}`}
-                style={labelStyle}
-            >
-                {renderProgressLabel(displayProgressLabel, progressLabel, progress)}
+        <StyledWrapper>
+            <InputLabel text={label} className={labelClasses} />
+            <div className={classes}>
+                <div className={progressClasses} style={progressStyle} />
+                <div className={progressLabelClass} style={progressLabelPosition}>
+                    {renderProgressLabel(displayProgressLabel, progressLabel, progress)}
+                </div>
             </div>
-        </div>
+        </StyledWrapper>
     );
 };
 

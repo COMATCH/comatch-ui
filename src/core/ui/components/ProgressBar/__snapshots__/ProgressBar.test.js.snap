@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar should render correctly 1`] = `
+<div
+  className="sc-bwzfXH gJKGMk"
+>
+  <label
+    className="InputLabel ProgressBar__label sc-bdVaJa iThGRf"
+    htmlFor={null}
+    id={null}
+  >
+    
+  </label>
+  <div
+    className="ProgressBar"
+  >
+    <div
+      className="ProgressBar__progress"
+      style={
+        Object {
+          "transform": "scaleX(NaN)",
+        }
+      }
+    />
+    <div
+      className="ProgressBar__progress-label"
+      style={
+        Object {
+          "left": "calc(undefined% + 8px)",
+        }
+      }
+    >
+      undefined%
+    </div>
+  </div>
+</div>
+`;

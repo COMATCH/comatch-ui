@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { ORIENTATION } from './config';
 import { StyledWrapper } from './StyledWrapper';
-
-export const ORIENTATION = {
-    HORIZONTAL: 'horizontal',
-    VERTICAL: 'vertical',
-    RESPONSIVE: 'responsive',
-};
 
 const propTypes = {
     breakpoint: PropTypes.oneOf(['tablet', 'desktop', 'desktopLarge']),

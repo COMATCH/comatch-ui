@@ -12,6 +12,7 @@ $co-color-black: #3e3e3e;
 $co-color-white: #fff;
 $co-color-light-blue: #edfbff;
 $co-color-primary: #0095b3;
+$co-color-light-primary: rgba(0, 149, 179, 0.3);
 $co-color-secondary: #056679;
 $co-color-light-gray: #f3f3f3;
 $co-color-mid-gray: #c0c0c0;
@@ -33,6 +34,7 @@ $co-color-yellow: #fad248;
     white: $co-color-white;
     lightBlue: $co-color-light-blue;
     primary: $co-color-primary;
+    lightPrimary: $co-color-light-primary;
     secondary: $co-color-secondary;
     lightGray: $co-color-light-gray;
     midGray: $co-color-mid-gray;
@@ -43,7 +45,7 @@ $co-color-yellow: #fad248;
     darkGreen: $co-color-dark-green;
     red: $co-color-red;
     lightRed: $co-color-light-red;
-    darkRed :$co-color-dark-red;
+    darkRed: $co-color-dark-red;
     lightOrange: $co-color-light-orange;
     orange: $co-color-orange;
     darkOrange: $co-color-dark-orange;
@@ -57,8 +59,8 @@ $co-color-primary-text: $co-color-black;
 $co-color-secondary-text: $co-color-gray;
 
 :export {
-  primaryText: $co-color-primary-text;
-  secondaryText: $co-color-secondary-text;
+    primaryText: $co-color-primary-text;
+    secondaryText: $co-color-secondary-text;
 }
 
 /**
@@ -70,10 +72,10 @@ $co-color-xing: #005959;
 $co-color-linkedin: #0074a8;
 
 :export {
-  fb: $co-color-fb;
-  twitter: $co-color-twitter;
-  xing: $co-color-xing;
-  linkedin: $co-color-linkedin;
+    fb: $co-color-fb;
+    twitter: $co-color-twitter;
+    xing: $co-color-xing;
+    linkedin: $co-color-linkedin;
 }
 
 /**
@@ -86,11 +88,11 @@ $co-input-box-shadow-focus: 0 0 4px 0 rgba(1, 156, 185, 1), inset 0 0 2px 0 rgba
 $co-input-box-shadow-error: 0 0 4px 0 rgba(173, 25, 25, 1), inset 0 0 2px 0 rgba(193, 193, 193, 0.5);
 
 :export {
-  inputsMarginBottom: $co-inputs-margin-bottom;
-  labelsMarginBottom: $co-labels-margin-bottom;
-  inputBoxShadow: $co-input-box-shadow;
-  inputBoxShadowFocus: $co-input-box-shadow-focus;
-  inputBoxShadowError: $co-input-box-shadow-error;
+    inputsMarginBottom: $co-inputs-margin-bottom;
+    labelsMarginBottom: $co-labels-margin-bottom;
+    inputBoxShadow: $co-input-box-shadow;
+    inputBoxShadowFocus: $co-input-box-shadow-focus;
+    inputBoxShadowError: $co-input-box-shadow-error;
 }
 
 /**
@@ -106,14 +108,14 @@ $lg-width-max: 1199px;
 $xl-width: 1200px;
 
 :export {
-  xsMaxWidth: $xs-width-max;
-  smWidth: $sm-width;
-  smMaxWidth: $sm-width-max;
-  mdWidth: $md-width;
-  mdMaxWidth: $md-width-max;
-  lgWidth: $lg-width;
-  lgMaxWidth: $lg-width-max;
-  xlWidth: $xl-width;
+    xsMaxWidth: $xs-width-max;
+    smWidth: $sm-width;
+    smMaxWidth: $sm-width-max;
+    mdWidth: $md-width;
+    mdMaxWidth: $md-width-max;
+    lgWidth: $lg-width;
+    lgMaxWidth: $lg-width-max;
+    xlWidth: $xl-width;
 }
 
 /**
@@ -134,18 +136,18 @@ $co-line-height-xl: 26px;
 $co-line-height-xxl: 30px;
 
 :export {
-  fontXs: $co-font-xs;
-  fontSm: $co-font-sm;
-  fontMd: $co-font-md;
-  fontLg: $co-font-lg;
-  fontXl: $co-font-xl;
-  fontXxl: $co-font-xxl;
-  lineHeightXs: $co-line-height-xs;
-  lineHeightSm: $co-line-height-sm;
-  lineHeightMd: $co-line-height-xl;
-  lineHeightLg: $co-line-height-xl;
-  lineHeightXl: $co-line-height-xl;
-  lineHeightXxl: $co-line-height-xxl;
+    fontXs: $co-font-xs;
+    fontSm: $co-font-sm;
+    fontMd: $co-font-md;
+    fontLg: $co-font-lg;
+    fontXl: $co-font-xl;
+    fontXxl: $co-font-xxl;
+    lineHeightXs: $co-line-height-xs;
+    lineHeightSm: $co-line-height-sm;
+    lineHeightMd: $co-line-height-xl;
+    lineHeightLg: $co-line-height-xl;
+    lineHeightXl: $co-line-height-xl;
+    lineHeightXxl: $co-line-height-xxl;
 }
 
 /**

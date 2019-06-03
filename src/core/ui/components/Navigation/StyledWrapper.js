@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../../styles/mixins';
-import { ORIENTATION } from './Navigation';
+import { ORIENTATION } from './config';
 
 function getDisplayBasedOnOrientation(orientation, mobile = true) {
     switch (orientation) {
