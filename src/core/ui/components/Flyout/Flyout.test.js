@@ -63,7 +63,7 @@ describe('Flyout', () => {
         expect(flyoutContent.length).toEqual(0);
     });
 
-    it('should close the flyout when click on content wrapper itself', () => {
+    it('should close the flyout when clicking on content wrapper itself', () => {
 
         const className = lorem.word();
 
