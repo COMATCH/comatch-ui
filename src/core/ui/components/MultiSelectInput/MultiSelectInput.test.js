@@ -7,11 +7,7 @@ describe('MultiSelectInput', () => {
     it('should render correctly (without label)', () => {
         const props = {
             name: 'multi-select-input-name',
-            options: [
-                { value: 'option-1', label: 'Option 1' },
-                // { value: 'option-2', label: 'Option 2' },
-                // { value: 'option-3', label: 'Option 3' },
-            ],
+            options: [{ value: 'option-1', label: 'Option 1' }],
         };
         const multiSelectInput = renderer.create(<MultiSelectInput {...props} />).toJSON();
 
