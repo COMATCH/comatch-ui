@@ -30,6 +30,7 @@ export { SectionHeader } from './core/ui/components/SectionHeader';
 export { SelectInput } from './core/ui/components/SelectInput';
 export { Separator } from './core/ui/components/Separator';
 export { Spinner } from './core/ui/components/Spinner';
+export { Splash } from './core/ui/components/Splash';
 export { StarRatingInput } from './core/ui/components/StarRatingInput';
 export { StepProgressBar } from './core/ui/components/StepProgressBar';
 export { StickyBanner } from './core/ui/components/StickyBanner';

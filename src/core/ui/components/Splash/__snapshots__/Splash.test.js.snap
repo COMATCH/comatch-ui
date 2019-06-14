@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Splash should render a Splash (with Subtitle) correctly 1`] = `
+<div
+  className="Splash sc-htpNat edLUgX"
+>
+  <div
+    className="sc-bdVaJa hjJLsw"
+  >
+    Subtitle
+  </div>
+</div>
+`;
+
+exports[`Splash should render a Splash (with Title) correctly 1`] = `
+<div
+  className="Splash sc-htpNat edLUgX"
+>
+  <div
+    className="sc-bwzfXH fLSkyy"
+  >
+    Title
+  </div>
+</div>
+`;
+
+exports[`Splash should render the default Splash correctly 1`] = `null`;
