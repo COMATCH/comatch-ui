@@ -1,6 +1,7 @@
 import React from 'react';
 import Highlight from 'react-highlight';
 import { storiesOf } from '@storybook/react';
+import { ORIENTATION } from './config';
 import { Splash } from './Splash';
 
 storiesOf('Splash', module)
@@ -38,67 +39,37 @@ storiesOf('Splash', module)
             </Highlight>
         </>
     ))
-    .add('column', () => (
+    .add(ORIENTATION.HORIZONTAL, () => (
         <>
-            <Splash orientation="column" primary title={<div>Title</div>} subtitle="Subtitle" />
+            <Splash orientation={ORIENTATION.HORIZONTAL} primary title={<div>Title</div>} subtitle="Subtitle" />
             <Highlight className="html">
-                {'<Splash orientation="column" primary title={<div>Title</div>} subtitle="Subtitle" />'}
+                {'<Splash orientation={ORIENTATION.HORIZONTAL} primary title={<div>Title</div>} subtitle="Subtitle" />'}
             </Highlight>
         </>
     ))
-    .add('column-reverse', () => (
+    .add(ORIENTATION.VERTICAL, () => (
         <>
-            <Splash orientation="column-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />
+            <Splash orientation={ORIENTATION.VERTICAL} primary title={<div>Title</div>} subtitle="Subtitle" />
             <Highlight className="html">
-                {'<Splash orientation="column-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />'}
+                {'<Splash orientation={ORIENTATION.VERTICAL} primary title={<div>Title</div>} subtitle="Subtitle" />'}
             </Highlight>
         </>
     ))
-    .add('row', () => (
+    .add(`inline ${ORIENTATION.HORIZONTAL}`, () => (
         <>
-            <Splash orientation="row" primary title={<div>Title</div>} subtitle="Subtitle" />
+            <Splash inline orientation={ORIENTATION.HORIZONTAL} primary title={<div>Title</div>} subtitle="Subtitle" />
             <Highlight className="html">
-                {'<Splash orientation="row" primary title={<div>Title</div>} subtitle="Subtitle" />'}
+                {'<Splash inline orientation={ORIENTATION.HORIZONTAL}' +
+                    'primary title={<div>Title</div>} subtitle="Subtitle" />'}
             </Highlight>
         </>
     ))
-    .add('row-reverse', () => (
+    .add(`inline ${ORIENTATION.VERTICAL}`, () => (
         <>
-            <Splash orientation="row-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />
+            <Splash inline orientation={ORIENTATION.VERTICAL} primary title={<div>Title</div>} subtitle="Subtitle" />
             <Highlight className="html">
-                {'<Splash orientation="row-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />'}
-            </Highlight>
-        </>
-    ))
-    .add('inline column', () => (
-        <>
-            <Splash inline orientation="column" primary title={<div>Title</div>} subtitle="Subtitle" />
-            <Highlight className="html">
-                {'<Splash inline orientation="column" primary title={<div>Title</div>} subtitle="Subtitle" />'}
-            </Highlight>
-        </>
-    ))
-    .add('inline column-reverse', () => (
-        <>
-            <Splash inline orientation="column-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />
-            <Highlight className="html">
-                {'<Splash inline orientation="column-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />'}
-            </Highlight>
-        </>
-    ))
-    .add('inline row', () => (
-        <>
-            <Splash inline orientation="row" primary title={<div>Title</div>} subtitle="Subtitle" />
-            <Highlight className="html">
-                {'<Splash inline orientation="row" primary title={<div>Title</div>} subtitle="Subtitle" />'}
-            </Highlight>
-        </>
-    ))
-    .add('inline row-reverse', () => (
-        <>
-            <Splash inline orientation="row-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />
-            <Highlight className="html">
-                {'<Splash inline orientation="row-reverse" primary title={<div>Title</div>} subtitle="Subtitle" />'}
+                {'<Splash inline orientation={ORIENTATION.VERTICAL}' +
+                    'primary title={<div>Title</div>} subtitle="Subtitle" />'}
             </Highlight>
         </>
     ));

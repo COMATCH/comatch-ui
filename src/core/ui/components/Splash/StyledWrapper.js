@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { palette, typography } from '../../../styles/variables';
+import { ORIENTATION } from './config';
 
 function generateSubTitleStyling() {
     return `
@@ -31,14 +32,7 @@ const StyledTitle = styled.div`${generateTitleStyling}`;
 
 function generateStyling({ inline, orientation, primary, secondary }) {
     let color = palette.black;
-    const flexDirection = [
-        'column',
-        'column-reverse',
-        'row',
-        'row-reverse',
-    ].includes(orientation)
-        ? orientation
-        : 'column';
+    const flexDirection = orientation === ORIENTATION.HORIZONTAL ? 'row' : 'column';
     let orientationLogic = 'align-items: center;';
 
     if (primary) {
@@ -52,13 +46,6 @@ function generateStyling({ inline, orientation, primary, secondary }) {
             align-items: baseline;
             ${StyledTitle} ~ ${StyledSubtitle} {
                 margin-left: 5px;
-            }
-        `;
-    } else if (flexDirection === 'row-reverse') {
-        orientationLogic = `
-            align-items: baseline;
-            ${StyledTitle} ~ ${StyledSubtitle} {
-                margin-right: 5px;
             }
         `;
     }

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { ORIENTATION } from './config';
 import { StyledSubtitle, StyledTitle, StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
     className: PropTypes.string,
     id: PropTypes.string,
     inline: PropTypes.bool,
-    orientation: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
+    orientation: PropTypes.oneOf(Object.values(ORIENTATION)),
     primary: PropTypes.bool,
     secondary: PropTypes.bool,
     subtitle: PropTypes.node,
@@ -18,7 +19,7 @@ const defaultProps = {
     className: null,
     id: null,
     inline: false,
-    orientation: 'column',
+    orientation: ORIENTATION.HORIZONTAL,
     primary: false,
     secondary: false,
     subtitle: null,
