@@ -94,6 +94,7 @@ The PropTypes of all components of the library are documented in their respectiv
 -   [StarRatingInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/StarRatingInput/StarRatingInput.md)
 -   [StepProgressBar](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/StepProgressBar/StepProgressBar.md)
 -   [StickyBanner](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/StickyBanner/StickyBanner.md)
+-   [Splash](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/Splash/Splash.md)
 -   [Table](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/Table/Table.md)
 -   [TabNavigation](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/TabNavigation/TabNavigation.md)
 -   [TextAreaInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/TextAreaInput/TextAreaInput.md)
