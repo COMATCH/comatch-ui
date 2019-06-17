@@ -7,19 +7,19 @@ exports[`MultiSelectInput should render correctly (with inputError) 1`] = `
 >
   
   <div
-    className="css-10nd86i MultiSelectInput__input"
+    className="MultiSelectInput__input css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-1n4pbi4"
+      className=" css-1n4pbi4"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hmthh9"
+        className=" css-1hmthh9"
       >
         <div
-          className="css-1492t68"
+          className=" css-1wa3eu0-placeholder"
         >
           Select...
         </div>
@@ -52,6 +52,7 @@ exports[`MultiSelectInput should render correctly (with inputError) 1`] = `
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,
@@ -81,14 +82,14 @@ exports[`MultiSelectInput should render correctly (with inputError) 1`] = `
         </div>
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <span
-          className="css-1hyfx7x"
+          className=" css-1hyfx7x"
         />
         <div
           aria-hidden="true"
-          className="css-1c73l9k"
+          className=" css-1c73l9k"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -136,19 +137,19 @@ exports[`MultiSelectInput should render correctly (with label and required *) 1`
     *
   </label>
   <div
-    className="css-10nd86i MultiSelectInput__input"
+    className="MultiSelectInput__input css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-1n4pbi4"
+      className=" css-1n4pbi4"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hmthh9"
+        className=" css-1hmthh9"
       >
         <div
-          className="css-1492t68"
+          className=" css-1wa3eu0-placeholder"
         >
           Select...
         </div>
@@ -181,6 +182,7 @@ exports[`MultiSelectInput should render correctly (with label and required *) 1`
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,
@@ -210,14 +212,14 @@ exports[`MultiSelectInput should render correctly (with label and required *) 1`
         </div>
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <span
-          className="css-1hyfx7x"
+          className=" css-1hyfx7x"
         />
         <div
           aria-hidden="true"
-          className="css-1c73l9k"
+          className=" css-1c73l9k"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -260,19 +262,19 @@ exports[`MultiSelectInput should render correctly (with label) 1`] = `
     multi-select-input-label
   </label>
   <div
-    className="css-10nd86i MultiSelectInput__input"
+    className="MultiSelectInput__input css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-1n4pbi4"
+      className=" css-1n4pbi4"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hmthh9"
+        className=" css-1hmthh9"
       >
         <div
-          className="css-1492t68"
+          className=" css-1wa3eu0-placeholder"
         >
           Select...
         </div>
@@ -305,6 +307,7 @@ exports[`MultiSelectInput should render correctly (with label) 1`] = `
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,
@@ -334,14 +337,14 @@ exports[`MultiSelectInput should render correctly (with label) 1`] = `
         </div>
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <span
-          className="css-1hyfx7x"
+          className=" css-1hyfx7x"
         />
         <div
           aria-hidden="true"
-          className="css-1c73l9k"
+          className=" css-1c73l9k"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -378,19 +381,19 @@ exports[`MultiSelectInput should render correctly (without label) 1`] = `
 >
   
   <div
-    className="css-10nd86i MultiSelectInput__input"
+    className="MultiSelectInput__input css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
-      className="css-1n4pbi4"
+      className=" css-1n4pbi4"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
     >
       <div
-        className="css-1hmthh9"
+        className=" css-1hmthh9"
       >
         <div
-          className="css-1492t68"
+          className=" css-1wa3eu0-placeholder"
         >
           Select...
         </div>
@@ -423,6 +426,7 @@ exports[`MultiSelectInput should render correctly (without label) 1`] = `
                   "boxSizing": "content-box",
                   "color": "inherit",
                   "fontSize": "inherit",
+                  "label": "input",
                   "opacity": 1,
                   "outline": 0,
                   "padding": 0,
@@ -452,14 +456,14 @@ exports[`MultiSelectInput should render correctly (without label) 1`] = `
         </div>
       </div>
       <div
-        className="css-1wy0on6"
+        className=" css-1wy0on6"
       >
         <span
-          className="css-1hyfx7x"
+          className=" css-1hyfx7x"
         />
         <div
           aria-hidden="true"
-          className="css-1c73l9k"
+          className=" css-1c73l9k"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
