@@ -3,6 +3,28 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { StyledSubtitle, StyledTitle, StyledWrapper } from './StyledWrapper';
 
+const propTypes = {
+    className: PropTypes.string,
+    id: PropTypes.string,
+    inline: PropTypes.bool,
+    orientation: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
+    primary: PropTypes.bool,
+    secondary: PropTypes.bool,
+    subtitle: PropTypes.node,
+    title: PropTypes.node,
+};
+
+const defaultProps = {
+    className: null,
+    id: null,
+    inline: false,
+    orientation: 'column',
+    primary: false,
+    secondary: false,
+    subtitle: null,
+    title: null,
+};
+
 const Splash = ({
     className,
     id,
@@ -26,26 +48,7 @@ const Splash = ({
     </StyledWrapper>
 );
 
-Splash.propTypes = {
-    className: PropTypes.string,
-    id: PropTypes.string,
-    inline: PropTypes.bool,
-    orientation: PropTypes.oneOf(['column', 'column-reverse', 'row', 'row-reverse']),
-    primary: PropTypes.bool,
-    secondary: PropTypes.bool,
-    subtitle: PropTypes.node,
-    title: PropTypes.node,
-};
-
-Splash.defaultProps = {
-    className: null,
-    id: null,
-    inline: false,
-    orientation: 'column',
-    primary: false,
-    secondary: false,
-    subtitle: null,
-    title: null,
-};
+Splash.propTypes = propTypes;
+Splash.defaultProps = defaultProps;
 
 export { Splash };
