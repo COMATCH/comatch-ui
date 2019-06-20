@@ -121,7 +121,7 @@ export const StyledWrapper = styled(
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     white-space: nowrap;
     padding: 8px 15px; // makes the height 40px
     transition: background-color 250ms ease-out, border-color 250ms ease-out, color 250ms ease-out;
