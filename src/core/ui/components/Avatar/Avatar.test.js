@@ -14,13 +14,13 @@ describe('Avatar', () => {
 
     it('should have the correct default props', () => {
         const avatar = mount(<Avatar />);
-        expect(avatar.prop('badge')).toEqual(null);
+        expect(avatar.prop('badgeChildren')).toEqual(null);
         expect(avatar.prop('className')).toEqual(null);
         expect(avatar.prop('diameter')).toEqual(45);
         expect(avatar.prop('id')).toEqual(null);
+        expect(avatar.prop('popoverChildren')).toEqual(null);
+        expect(avatar.prop('popoverPosition')).toEqual('bottom');
         expect(avatar.prop('src')).toEqual(null);
-        expect(avatar.prop('tooltip')).toEqual(null);
-        expect(avatar.prop('tooltipPosition')).toEqual('bottom');
     });
 
     describe('creates the expected nodes/dom elements', () => {
@@ -35,18 +35,18 @@ describe('Avatar', () => {
 
         it('should create a <StyledBadgeWrapper /> with appropriate src', () => {
             const badge = <img id="badge" src={badgeBase64} />;
-            const avatar = mount(<Avatar badge={badge} src={comatchLogoBase64} />);
+            const avatar = mount(<Avatar badgeChildren={badge} src={comatchLogoBase64} />);
 
-            expect(avatar.prop('badge')).toEqual(badge);
+            expect(avatar.prop('badgeChildren')).toEqual(badge);
             expect(avatar.prop('src')).toEqual(comatchLogoBase64);
             expect(avatar.find('.Avatar__Badge')).toBeTruthy();
             expect(avatar.find('.Avatar__Badge #badge')).toBeTruthy();
         });
 
-        it('should create a <Popover /> (tooltip) with appropriate src', () => {
-            const avatar = mount(<Avatar tooltip="Tooltip text" src={comatchLogoBase64} />);
+        it('should create a <Popover /> (popover) with appropriate src', () => {
+            const avatar = mount(<Avatar popoverChildren="popover text" src={comatchLogoBase64} />);
 
-            expect(avatar.prop('tooltip')).toEqual('Tooltip text');
+            expect(avatar.prop('popoverChildren')).toEqual('popover text');
             expect(avatar.prop('src')).toEqual(comatchLogoBase64);
             expect(avatar.find('.Popover')).toBeTruthy();
         });

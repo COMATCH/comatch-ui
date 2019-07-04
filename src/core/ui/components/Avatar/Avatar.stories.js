@@ -33,41 +33,41 @@ storiesOf('Avatar', module)
     ))
     .add('with src & badge', () => (
         <>
-            <Avatar badge={<img src={badgeBase64} />} src={comatchLogoBase64} />
+            <Avatar badgeChildren={<img src={badgeBase64} />} src={comatchLogoBase64} />
             <Highlight className="html">
-                {'<Avatar badge={<img src={badgeBase64} />} src={comatchLogoBase64} />'}
+                {'<Avatar badgeChildren={<img src={badgeBase64} />} src={comatchLogoBase64} />'}
             </Highlight>
         </>
     ))
     .add('with src & badge & custom size', () => (
         <>
             <AvatarCollection>
-                <Avatar badge={<img src={badgeBase64} />} src={comatchLogoBase64} />
-                <Avatar badge={<img src={badgeBase64} />} diameter={75} src={comatchLogoBase64} />
-                <Avatar badge={<img src={badgeBase64} />} diameter={100} src={comatchLogoBase64} />
-                <Avatar badge={<img src={badgeBase64} />} diameter={150} src={comatchLogoBase64} />
+                <Avatar badgeChildren={<img src={badgeBase64} />} src={comatchLogoBase64} />
+                <Avatar badgeChildren={<img src={badgeBase64} />} diameter={75} src={comatchLogoBase64} />
+                <Avatar badgeChildren={<img src={badgeBase64} />} diameter={100} src={comatchLogoBase64} />
+                <Avatar badgeChildren={<img src={badgeBase64} />} diameter={150} src={comatchLogoBase64} />
             </AvatarCollection>
             <Highlight className="html">
-                {'<Avatar badge={<img src={badgeBase64} />} src={comatchLogoBase64} />' +
-                    '\n<Avatar badge={<img src={badgeBase64} />} diameter={75} src={comatchLogoBase64} />' +
-                    '\n<Avatar badge={<img src={badgeBase64} />} diameter={100} src={comatchLogoBase64} />' +
-                    '\n<Avatar badge={<img src={badgeBase64} />} diameter={150} src={comatchLogoBase64} />'}
+                {'<Avatar badgeChildren={<img src={badgeBase64} />} src={comatchLogoBase64} />' +
+                    '\n<Avatar badgeChildren={<img src={badgeBase64} />} diameter={75} src={comatchLogoBase64} />' +
+                    '\n<Avatar badgeChildren={<img src={badgeBase64} />} diameter={100} src={comatchLogoBase64} />' +
+                    '\n<Avatar badgeChildren={<img src={badgeBase64} />} diameter={150} src={comatchLogoBase64} />'}
             </Highlight>
         </>
     ))
-    .add('with src & tooltip', () => (
+    .add('with src & popover', () => (
         <>
             <AvatarCollection>
-                <Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." />
-                <Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="left" />
-                <Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="right" />
-                <Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="top" />
+                <Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." />
+                <Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="left" />
+                <Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="right" />
+                <Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="top" />
             </AvatarCollection>
             <Highlight className="html">
-                {'<Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." />' +
-                    '\n<Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="left" />' +
-                    '\n<Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="right" />' +
-                    '\n<Avatar src={comatchLogoBase64} tooltip="Some tooltip text..." tooltipPosition="top" />'}
+                {'<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." />' +
+                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="left" />' +
+                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="right" />' +
+                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="top" />'}
             </Highlight>
         </>
     ));

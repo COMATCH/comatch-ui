@@ -5,33 +5,33 @@ import { Popover } from '../Popover';
 import { StyledBadgeWrapper, StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
-    badge: PropTypes.node,
+    badgeChildren: PropTypes.node,
     className: PropTypes.string,
     diameter: PropTypes.number,
     id: PropTypes.string,
+    popoverChildren: PropTypes.node,
+    popoverPosition: Popover.propTypes.position,
     src: PropTypes.string,
-    tooltip: PropTypes.node,
-    tooltipPosition: Popover.propTypes.position,
 };
 
 const defaultProps = {
-    badge: null,
+    badgeChildren: null,
     className: null,
     diameter: 45,
     id: null,
+    popoverChildren: null,
+    popoverPosition: 'bottom',
     src: null,
-    tooltip: null,
-    tooltipPosition: 'bottom',
 };
 
-const Avatar = ({ badge, className, diameter, id, src, tooltip, tooltipPosition }) =>
+const Avatar = ({ badgeChildren, className, diameter, id, popoverChildren, popoverPosition, src }) =>
     !!src && (
         <StyledWrapper className={classnames('Avatar', className)} diameter={diameter} {...(id && { id })}>
             <img alt="Avatar" src={src} />
-            {!!badge && <StyledBadgeWrapper className="Avatar__Badge">{badge}</StyledBadgeWrapper>}
-            {!!tooltip && (
-                <Popover position={tooltipPosition} toggle={<span />}>
-                    {tooltip}
+            {!!badgeChildren && <StyledBadgeWrapper className="Avatar__Badge">{badgeChildren}</StyledBadgeWrapper>}
+            {!!popoverChildren && (
+                <Popover position={popoverPosition} toggle={<span />}>
+                    {popoverChildren}
                 </Popover>
             )}
         </StyledWrapper>
