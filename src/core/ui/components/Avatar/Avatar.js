@@ -27,7 +27,7 @@ const defaultProps = {
 const Avatar = ({ badge, className, diameter, id, src, tooltip, tooltipPosition }) =>
     !!src && (
         <StyledWrapper className={classnames('Avatar', className)} diameter={diameter} {...(id && { id })}>
-            <img src={src} />
+            <img alt="Avatar" src={src} />
             {!!badge && <StyledBadgeWrapper className="Avatar__Badge">{badge}</StyledBadgeWrapper>}
             {!!tooltip && (
                 <Popover position={tooltipPosition} toggle={<span />}>
