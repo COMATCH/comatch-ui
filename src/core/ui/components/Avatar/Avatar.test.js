@@ -18,6 +18,8 @@ describe('Avatar', () => {
         expect(avatar.prop('diameter')).toEqual(45);
         expect(avatar.prop('id')).toEqual(null);
         expect(avatar.prop('src')).toEqual(null);
+        expect(avatar.prop('tooltip')).toEqual(null);
+        expect(avatar.prop('tooltipPosition')).toEqual('bottom');
     });
 
     // describe('Avatar_SIZES & Avatar_TYPES mapping', () => {

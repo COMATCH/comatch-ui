@@ -38,6 +38,19 @@ const StyledWrapper = styled(Node)`
         position: absolute;
         right: -5px;
     }
+
+    .Popover {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &__content {
+            min-width: 150px;
+            text-align: center;
+        }
+    }
 `;
 
 export { StyledBadgeWrapper, StyledTooltipWrapper, StyledWrapper };

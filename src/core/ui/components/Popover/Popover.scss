@@ -18,6 +18,8 @@
         box-shadow: 0 0 4px 0 rgba(119, 119, 119, 0.2);
         border: 1px solid $co-color-mid-gray;
         font-size: $co-font-sm;
+        max-width: 250px;
+        min-width: 250px;
         opacity: 0;
         padding: 10px;
         position: absolute;
@@ -25,10 +27,9 @@
         transform: scale(0.75) translateY(-50%) translateZ(0);
         transition: opacity 400ms cubic-bezier(0.45, 1.8, 0.5, 0.75), transform 400ms cubic-bezier(0.45, 1.8, 0.5, 0.75);
         will-change: opacity, transform;
-        width: 250px;
         z-index: 1;
 
-        &[aria-hidden="true"] {
+        &[aria-hidden='true'] {
             pointer-events: none;
             z-index: -1;
         }

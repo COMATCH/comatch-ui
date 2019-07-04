@@ -12,6 +12,8 @@ prop | type | default | required | description
 **diameter** | `Number` | `45` | :x: | 
 **id** | `String` | `null` | :x: | 
 **src** | `String` | `null` | :x: | 
+**tooltip** | `ReactNode` | `null` | :x: | 
+**tooltipPosition** | `(custom validator)` | `'bottom'` | :x: | 
 
 
 
