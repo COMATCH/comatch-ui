@@ -65,9 +65,12 @@ storiesOf('Avatar', module)
             </AvatarCollection>
             <Highlight className="html">
                 {'<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." />' +
-                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="left" />' +
-                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="right" />' +
-                    '\n<Avatar src={comatchLogoBase64} popoverChildren="Some tooltip text..." popoverPosition="top" />'}
+                    '\n<Avatar src={comatchLogoBase64} ' +
+                    'popoverChildren="Some tooltip text..." popoverPosition="left" />' +
+                    '\n<Avatar src={comatchLogoBase64} ' +
+                    'popoverChildren="Some tooltip text..." popoverPosition="right" />' +
+                    '\n<Avatar src={comatchLogoBase64} ' +
+                    'popoverChildren="Some tooltip text..." popoverPosition="top" />'}
             </Highlight>
         </>
     ));
