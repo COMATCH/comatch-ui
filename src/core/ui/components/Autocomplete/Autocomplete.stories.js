@@ -213,7 +213,7 @@ storiesOf('Autocomplete', module)
                 {'<Autocomplete'
                     + '\nlabel="Person\'s name"'
                     + '\nname="person-name"'
-                    + `\noOptionsMessage={({ inputValue }) => \`Nothing found for "\${inputValue}"\`}`
+                    + `\nnoOptionsMessage={({ inputValue }) => \`Nothing found for "\${inputValue}"\`}`
                     + '\noptions={[]} />'}
             </Highlight>
         </>

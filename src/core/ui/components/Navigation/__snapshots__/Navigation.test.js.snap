@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation should render the default Navigation correctly 1`] = `
+<nav
+  className="Navigation horizontal sc-bdVaJa igpFTH"
+  orientation="horizontal"
+>
+  <ul />
+</nav>
+`;

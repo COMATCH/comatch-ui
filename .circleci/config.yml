@@ -15,9 +15,7 @@ jobs:
             - source-{{ .Branch }}-{{ .Revision }}
             - source-{{ .Branch }}-
             - source-
-
       - checkout
-
       - save_cache:
           key: source-{{ .Branch }}-{{ .Revision }}
           paths:
@@ -62,14 +60,13 @@ jobs:
           key: source-{{ .Branch }}-{{ .Revision }}
       - restore_cache:
           key: depens-{{ checksum "package.json" }}
-
       - run: yarn build
-
       - persist_to_workspace:
-          root: ~/repo
-          paths:
-            - dist
-            - package.json
+         root: ~/repo
+         paths:
+           - dist
+           - package.json
+
 workflows:
   version: 2
   test_lint_and_build:
