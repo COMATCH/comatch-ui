@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberInput tests given render the default NumberInput component should create and compare snapshot 1`] = `
+<div
+  className="Input TextInput NumberInput block"
+  id={null}
+>
+  
+  <input
+    autoComplete={null}
+    className="TextInput__input"
+    disabled={null}
+    max={null}
+    maxLength={null}
+    min={null}
+    name="text-area-input"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="number"
+    value=""
+  />
+  
+</div>
+`;
+
+exports[`NumberInput tests given required props with inputError and label pops should render correctly with a Label 1`] = `
+<div
+  className="Input TextInput NumberInput block"
+  id={null}
+>
+  <label
+    className="InputLabel sc-bdVaJa iThGRf"
+    htmlFor={null}
+    id={null}
+  >
+    Testing Label
+  </label>
+  <input
+    autoComplete={null}
+    className="TextInput__input"
+    disabled={null}
+    max={null}
+    maxLength={null}
+    min={null}
+    name="text-area-input"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="number"
+    value=""
+  />
+  
+</div>
+`;
+
+exports[`NumberInput tests given required props with inputError and label pops should render correctly with an InputError 1`] = `
+<div
+  className="Input TextInput NumberInput block has-error"
+  id={null}
+>
+  
+  <input
+    autoComplete={null}
+    className="TextInput__input"
+    disabled={null}
+    max={null}
+    maxLength={null}
+    min={null}
+    name="text-area-input"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="number"
+    value=""
+  />
+  <span
+    className="InputError sc-bwzfXH bZudyR"
+  >
+    Testing InputError Message
+  </span>
+</div>
+`;
