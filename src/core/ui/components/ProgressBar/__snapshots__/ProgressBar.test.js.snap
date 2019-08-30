@@ -18,7 +18,7 @@ exports[`ProgressBar should render correctly 1`] = `
       className="ProgressBar__progress"
       style={
         Object {
-          "transform": "scaleX(NaN)",
+          "transform": "scaleX(0)",
         }
       }
     />
@@ -26,11 +26,11 @@ exports[`ProgressBar should render correctly 1`] = `
       className="ProgressBar__progress-label"
       style={
         Object {
-          "left": "calc(undefined% + 8px)",
+          "left": "calc(0% + 8px)",
         }
       }
     >
-      undefined%
+      0%
     </div>
   </div>
 </div>

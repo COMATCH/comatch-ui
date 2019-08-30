@@ -67,7 +67,9 @@
         "file-loader": "^4.0.0",
         "jest": "^24.8.0",
         "jest-coverage-badges": "^1.1.2",
+        "jest-prop-type-error": "^1.1.0",
         "prettier": "^1.17.0",
+        "prop-types": "^15.7.2",
         "react-docgen": "^2.21.0",
         "react-docgen-markdown-renderer": "^1.1.0",
         "react-test-renderer": "16.9.0",
@@ -92,6 +94,9 @@
             "json-summary",
             "text",
             "lcov"
+        ],
+        "setupFiles": [
+            "jest-prop-type-error"
         ]
     }
 }
