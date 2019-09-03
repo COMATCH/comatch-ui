@@ -34,6 +34,7 @@ const defaultProps = {
     labelPosition: 'right',
     progressiveColoring: false,
     progressLabel: '',
+    progress: 0,
     reverse: false,
     variant: 'standard',
 };

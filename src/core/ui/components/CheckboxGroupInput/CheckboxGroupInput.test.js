@@ -51,7 +51,7 @@ describe('CheckboxGroupInput', () => {
 
         const checkBoxGroupWithNodeTitle = renderer
             .create(
-                <CheckboxGroupInput name="checkbox-sample-name" options={options} label={<span>sample-label</span>} />,
+                <CheckboxGroupInput name="checkbox-sample-name" options={options} title='sample-title' />,
             )
             .toJSON();
 
@@ -64,7 +64,7 @@ describe('CheckboxGroupInput', () => {
                 <CheckboxGroupInput
                     name="checkbox-sample-name"
                     options={options}
-                    label={<span>sample-label</span>}
+                    label='sample-label'
                     required={true}
                 />,
             )

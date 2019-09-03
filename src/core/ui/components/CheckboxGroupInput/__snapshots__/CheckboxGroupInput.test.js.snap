@@ -705,15 +705,7 @@ exports[`CheckboxGroupInput should render with label/title correctly 2`] = `
   className="Input CheckboxGroupInput per-row-1 sc-ifAKCX hkLpQG"
   id={null}
 >
-  <label
-    className="InputLabel sc-bdVaJa iThGRf"
-    htmlFor={null}
-    id={null}
-  >
-    <span>
-      sample-label
-    </span>
-  </label>
+  
   <div
     className="Input CheckboxInput block sc-bxivhb bJyOBc"
     id={null}
@@ -814,9 +806,7 @@ exports[`CheckboxGroupInput should render with with label/title and required '*'
     htmlFor={null}
     id={null}
   >
-    <span>
-      sample-label
-    </span>
+    sample-label
     *
   </label>
   <div

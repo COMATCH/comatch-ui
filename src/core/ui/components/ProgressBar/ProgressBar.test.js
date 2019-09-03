@@ -1,5 +1,5 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
 import { ProgressBar } from './ProgressBar';
@@ -19,7 +19,7 @@ const props = {
 
 describe('ProgressBar', () => {
     it('should render correctly', () => {
-        const wrapper = create(<ProgressBar />).toJSON();
+        const wrapper = renderer.create(<ProgressBar />).toJSON();
         expect(wrapper).toMatchSnapshot();
     });
 
