@@ -12,22 +12,24 @@ import './ModalWindow.scss';
 const propTypes = {
     className: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-    closeButtonText: PropTypes.string.isRequired,
+    closeButtonText: PropTypes.string,
     hideHeader: PropTypes.bool,
     onClose: PropTypes.func.isRequired,
     onSuccess: PropTypes.func,
     footerChildren: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
     isOpen: PropTypes.bool.isRequired,
-    successButtonText: PropTypes.string.isRequired,
+    successButtonText: PropTypes.string,
     title: PropTypes.string,
 };
 
 const defaultProps = {
     className: '',
     children: null,
+    closeButtonText: '',
     hideHeader: false,
     footerChildren: null,
     onSuccess: noop,
+    successButtonText: '',
     title: '',
 };
 
