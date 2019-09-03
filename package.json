@@ -38,13 +38,15 @@
         "react-select": "^3.0.4",
         "react-slidedown": "^2.0.5",
         "redux": "^4.0.1",
-        "styled-components": "^4.0.2"
+        "styled-components": "^4.0.2",
+        "typescript": "^3.6.2"
     },
     "devDependencies": {
         "@babel/core": "^7.4.4",
         "@babel/plugin-proposal-class-properties": "^7.4.4",
         "@babel/preset-env": "^7.4.4",
         "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.3.3",
         "@storybook/addon-actions": "^5.1.8",
         "@storybook/react": "^5.1.8",
         "@storybook/storybook-deployer": "^2.8.1",
