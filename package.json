@@ -38,7 +38,7 @@
         "react-select": "^3.0.4",
         "react-slidedown": "^2.0.5",
         "redux": "^4.0.1",
-        "styled-components": "^4.0.2",
+        "styled-components": "^4.3.2",
         "typescript": "^3.6.2"
     },
     "devDependencies": {
@@ -50,7 +50,14 @@
         "@storybook/addon-actions": "^5.1.8",
         "@storybook/react": "^5.1.8",
         "@storybook/storybook-deployer": "^2.8.1",
+        "@types/classnames": "^2.2.9",
+        "@types/enzyme": "^3.10.3",
         "@types/jest": "24.0.18",
+        "@types/node": "^12.7.3",
+        "@types/react": "^16.9.2",
+        "@types/react-highlight": "^0.12.1",
+        "@types/storybook__react": "^4.0.2",
+        "@types/styled-components": "^4.1.18",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "10.0.1",
         "babel-jest": "^24.8.0",
@@ -78,6 +85,7 @@
         "regenerator-runtime": "^0.12.1",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
+        "ts-loader": "^6.0.4",
         "webpack": "^4.30.0",
         "webpack-cli": "^3.3.2",
         "webpack-node-externals": "^1.7.2"

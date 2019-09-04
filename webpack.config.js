@@ -34,10 +34,10 @@ module.exports = {
             {
                 test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-                },
+                loaders: ['babel-loader', 'ts-loader'],
+                // options: {
+                //     presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                // },
             },
             {
                 test: /\.scss$/,
@@ -58,4 +58,7 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    }
 };
