@@ -6,7 +6,7 @@
             "dom.iterable",
             "esnext"
         ],
-        "allowJs": false,
+        "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -21,7 +21,7 @@
         "baseUrl": "./src",
         "sourceMap": true,
         "outDir": "./ts",
-        "declaration": true
+        "declaration": false,
     },
     "include": [
         "src"

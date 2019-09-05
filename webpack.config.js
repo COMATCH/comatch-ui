@@ -36,7 +36,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.ts(x?)$/,
+                test: /\.(j|t)s(x?)$/,
                 exclude: /node_modules/,
                 use: [
                     {
@@ -45,16 +45,6 @@ module.exports = {
                     },
                     {
                         loader: 'ts-loader',
-                    }
-                ]
-            },
-            {
-                test: /\.js(x?)$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: babelOptions
                     }
                 ]
             },
