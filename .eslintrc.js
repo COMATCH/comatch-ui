@@ -79,6 +79,7 @@ module.exports = {
         'import/resolver': {
             node: {
                 paths: [path.resolve(__dirname, 'src')],
+                extensions: ['.ts', '.tsx', '.js', '.jsx'],
             },
         },
     },
