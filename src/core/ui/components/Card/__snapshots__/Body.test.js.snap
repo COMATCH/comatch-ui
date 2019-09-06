@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.Body should render a customized Body correctly 1`] = `
+<div
+  className="Body ABody sc-bdVaJa lcCQJK"
+  id="a-body"
+>
+  <div>
+    some content...
+  </div>
+</div>
+`;
+
+exports[`Card.Body should render the default Body correctly 1`] = `
+<div
+  className="Body sc-bdVaJa jJZBvK"
+>
+  body
+</div>
+`;

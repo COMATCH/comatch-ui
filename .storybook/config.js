@@ -1,5 +1,5 @@
 import React from 'react';
-import { addDecorator, configure } from '@storybook/react';
+import { addDecorator, addParameters, configure } from '@storybook/react';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
@@ -10,5 +10,11 @@ function loadStories() {
 }
 
 addDecorator((story) => <Provider store={store}>{story()}</Provider>);
+addParameters({
+    options: {
+        hierarchySeparator: /\/|\./, // matches a . or /
+        hierarchyRootSeparator: /\|/, // matches a |
+    },
+});
 
 configure(loadStories, module);

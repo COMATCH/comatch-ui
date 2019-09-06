@@ -26,6 +26,7 @@ const palette = pick(sassVariables, [
     'darkOrange',
     'yellow',
     'lightPrimary',
+    'transparent',
 ]);
 
 const textPalette = {

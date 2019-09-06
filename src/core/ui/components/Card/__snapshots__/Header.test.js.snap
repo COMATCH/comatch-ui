@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card.Header should render a customized Header correctly 1`] = `
+<div
+  className="Header sc-bxivhb iczkCS"
+>
+  <div
+    className="Splash TitleAndSubtitle sc-gzVnrw bpmeZP"
+  >
+    <div
+      className="Title sc-bZQynM bPbNzY"
+    >
+      Header
+    </div>
+    <div
+      className="Subtitle sc-EHOje jUaBYT"
+    >
+      Header subtitle
+    </div>
+  </div>
+  <div
+    className="Children sc-bwzfXH uTxCW"
+  >
+    header
+  </div>
+  <div
+    className="Controls sc-htpNat cPrsnq"
+  >
+    <button
+      className="Button rectangle full only-icon sc-iwsKbI dlgvgE"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Card.Header should render the default Header correctly 1`] = `
+<div
+  className="Header sc-bxivhb iczkCS"
+>
+  <div
+    className="Children sc-bwzfXH uTxCW"
+  >
+    header
+  </div>
+</div>
+`;

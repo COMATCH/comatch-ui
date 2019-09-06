@@ -1,2 +1,2 @@
-export { ORIENTATION } from './config';
+export { ORIENTATION, SIZE } from './config';
 export * from './Splash';

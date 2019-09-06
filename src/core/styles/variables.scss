@@ -28,6 +28,7 @@ $co-color-light-orange: #fff6ec;
 $co-color-orange: #f7b05e;
 $co-color-dark-orange: #dc7700;
 $co-color-yellow: #fad248;
+$co-color-transparent: transparent;
 
 :export {
     black: $co-color-black;
@@ -50,6 +51,7 @@ $co-color-yellow: #fad248;
     orange: $co-color-orange;
     darkOrange: $co-color-dark-orange;
     yellow: $co-color-yellow;
+    transparent: $co-color-transparent;
 }
 
 /**

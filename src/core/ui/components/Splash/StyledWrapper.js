@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { palette, typography } from '../../../styles/variables';
-import { ORIENTATION } from './config';
+import { ORIENTATION, SIZE_TO_PIXELS } from './config';
 
 function generateSubTitleStyling() {
     return `
@@ -27,10 +27,14 @@ function generateTitleStyling() {
     `;
 }
 
-const StyledSubtitle = styled.div`${generateSubTitleStyling}`;
-const StyledTitle = styled.div`${generateTitleStyling}`;
+const StyledSubtitle = styled.div`
+    ${generateSubTitleStyling}
+`;
+const StyledTitle = styled.div`
+    ${generateTitleStyling}
+`;
 
-function generateStyling({ inline, orientation, primary, secondary }) {
+function generateStyling({ inline, orientation, primary, secondary, size }) {
     let color = palette.black;
     const flexDirection = orientation === ORIENTATION.HORIZONTAL ? 'row' : 'column';
     let orientationLogic = 'align-items: center;';
@@ -61,10 +65,26 @@ function generateStyling({ inline, orientation, primary, secondary }) {
             color: ${color};
             font-weight: bold;
         }
+
+        ${
+            !SIZE_TO_PIXELS[size]
+                ? ''
+                : `
+            ${StyledTitle} {
+                ${SIZE_TO_PIXELS[size].title};
+            }
+
+            ${StyledSubtitle} {
+                ${SIZE_TO_PIXELS[size].subtitle};
+            }
+        `
+        }
     `;
 }
 
-const StyledWrapper = styled(forwardRef(({ inline, orientation, primary, secondary, ...rest }, ref) => <div {...rest} ref={ref} />))`
+const StyledWrapper = styled(
+    forwardRef(({ inline, orientation, primary, secondary, size, ...rest }, ref) => <div {...rest} ref={ref} />),
+)`
     ${generateStyling}
 `;
 
