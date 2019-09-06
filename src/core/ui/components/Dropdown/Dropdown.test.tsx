@@ -1,3 +1,5 @@
+import '../../../config/tests/setup';
+
 import { Dropdown } from './Dropdown';
 import React from 'react';
 import { shallow } from 'enzyme';
