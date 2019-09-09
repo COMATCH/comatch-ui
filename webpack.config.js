@@ -1,6 +1,10 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
+const babelOptions = {
+    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+};
+
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
@@ -32,12 +36,17 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(j|t)s(x?)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react'],
-                },
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: babelOptions
+                    },
+                    {
+                        loader: 'ts-loader',
+                    }
+                ]
             },
             {
                 test: /\.scss$/,
@@ -58,4 +67,7 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    }
 };
