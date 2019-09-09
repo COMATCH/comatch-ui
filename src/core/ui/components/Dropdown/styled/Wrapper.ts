@@ -18,14 +18,14 @@ const Wrapper = styled.div<WrapperProps & WithCssGeneratorFunc>`
 
     ${(props) => {
         const { generateCss = () => '' } = props;
-        return `${generateCss(props)}`;
+        return `${generateCss({ ...props, theme })}`;
     }}
 
     ${Control} {
         ${(props) => {
-        const { generateControlCss = () => '' } = props;
-        return `${generateControlCss(props)}`;
-    }}
+            const { generateControlCss = () => '' } = props;
+            return `${generateControlCss({ ...props, theme })}`;
+        }}
     }
 
     ${Items} {
@@ -37,16 +37,16 @@ const Wrapper = styled.div<WrapperProps & WithCssGeneratorFunc>`
         width: 100%;
 
         ${(props) => {
-        const { generateItemsCss = () => '', showItems } = props;
+            const { generateItemsCss = () => '', showItems } = props;
 
-        return `
+            return `
                 box-shadow: ${theme.shadows[showItems ? 1 : 0]};
                 opacity: ${showItems ? 1 : 0};
                 z-index: ${showItems ? 1 : -1};
 
-                ${generateItemsCss(props)}
+                ${generateItemsCss({ ...props, theme })}
             `;
-    }}
+        }}
     }
 `;
 
