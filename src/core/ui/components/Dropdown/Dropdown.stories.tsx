@@ -9,7 +9,7 @@ import { StyledWrapper, ItemStyledWrapper } from '../DropdownMenu/StyledWrapper'
 const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
 const itemsString = items.map((item) => `"${String(item)}"`);
 const itemComponents = (
-    <StyledWrapper>
+    <StyledWrapper style={{ width: '40%' }}>
         {items.map((item, index) => (
             <ItemStyledWrapper key={index}>{item}</ItemStyledWrapper>
         ))}
@@ -44,6 +44,19 @@ storiesOf('Dropdown', module)
             </Highlight>
         </React.Fragment>
     ))
+    .add('with Dropdown list max-height', () => (
+        <React.Fragment>
+            <Dropdown items={itemComponents} maxHeight={'100px'}>
+                <Button text="Select Option" />
+            </Dropdown>
+            <Highlight className="html">
+                {`<Dropdown\n`}
+                {`    items={[${itemsString}]}\n`}
+                {`    maxHeight={${'100px'}}\n`}
+                {`/>`}
+            </Highlight>
+        </React.Fragment>
+    ))
     .add('with overridden style for Wrapper', () => (
         <React.Fragment>
             <Dropdown items={itemComponents} generateCss={() => 'width: 25%; background: #93b9bd; text-align: center;'}>
@@ -57,7 +70,7 @@ storiesOf('Dropdown', module)
             </Highlight>
         </React.Fragment>
     ))
-    .add('with merged style for Dropdown items', () => (
+    .add('with overridden style for Dropdown items', () => (
         <React.Fragment>
             <Dropdown
                 items={itemComponents}
