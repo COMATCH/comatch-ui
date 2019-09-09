@@ -38,8 +38,8 @@ storiesOf('Dropdown', module)
             </Dropdown>
             <Highlight className="html">
                 {`<Dropdown\n`}
-                {`    items={[${itemsString}]}\n`}
-                {`    closeOnItemClick={${false}}\n`}
+                {`\titems={[${itemsString}]}\n`}
+                {`\tcloseOnItemClick={${false}}\n`}
                 {`/>`}
             </Highlight>
         </React.Fragment>
@@ -51,8 +51,8 @@ storiesOf('Dropdown', module)
             </Dropdown>
             <Highlight className="html">
                 {`<Dropdown\n`}
-                {`    items={[${itemsString}]}\n`}
-                {`    maxHeight={${'100px'}}\n`}
+                {`\titems={[${itemsString}]}\n`}
+                {`\tmaxHeight={${'100px'}}\n`}
                 {`/>`}
             </Highlight>
         </React.Fragment>
@@ -64,8 +64,8 @@ storiesOf('Dropdown', module)
             </Dropdown>
             <Highlight className="html">
                 {`<Dropdown\n`}
-                {`    items={[${itemsString}]}\n`}
-                {`    generateCss={${() => 'width: 25%; background: #93b9bd; text-align: center;'}}\n`}
+                {`\titems={[${itemsString}]}\n`}
+                {`\tgenerateCss={${() => 'width: 25%; background: #93b9bd; text-align: center;'}}\n`}
                 {`/>`}
             </Highlight>
         </React.Fragment>
@@ -80,8 +80,8 @@ storiesOf('Dropdown', module)
             </Dropdown>
             <Highlight className="html">
                 {`<Dropdown\n`}
-                {`    items={[${itemsString}]}\n`}
-                {`    generateItemsCss={${() => 'transition: opacity 500ms ease-in, box-shadow 500ms ease-in;'}\n`}
+                {`\titems={[${itemsString}]}\n`}
+                {`\tgenerateItemsCss={${() => 'transition: opacity 500ms ease-in, box-shadow 500ms ease-in;'}\n`}
                 {`/>`}
             </Highlight>
         </React.Fragment>
