@@ -2,7 +2,7 @@ import { Control, Items, Wrapper } from './styled';
 import React, { useRef, useState } from 'react';
 
 import { DropdownProps } from './types';
-import { classNameAndId } from '../../../general';
+import { classNameAndId } from '../../../utils';
 import { useOnClickOutside } from '../../../hooks';
 
 function Dropdown(props: DropdownProps) {
