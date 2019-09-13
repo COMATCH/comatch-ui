@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberInput tests given render the default NumberInput component should create and compare snapshot 1`] = `
+<div
+  className="Input TextInput NumberInput block"
+  id={null}
+>
+  
+  <input
+    autoComplete={null}
+    className="TextInput__input"
+    disabled={null}
+    max={null}
+    maxLength={null}
+    min={null}
+    name="text-area-input"
+    onBlur={[Function]}
+    onChange={[MockFunction]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    type="number"
+    value=""
+  />
+  
+</div>
+`;
