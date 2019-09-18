@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionHeader tests given render the default SectionHeader component should render and check snapshot correctly 1`] = `
+<header
+  className="SectionHeader size-xl"
+>
+  <span>
+    <h1
+      className="SectionHeader__title"
+    >
+      
+    </h1>
+  </span>
+  <div
+    className="SectionHeader__controls"
+  />
+</header>
+`;
