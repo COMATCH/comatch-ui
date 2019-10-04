@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioInput tests should create and compare snapshot 1`] = `
+<div
+  className="RadioInput block"
+  id={null}
+>
+  <label>
+    <input
+      checked={null}
+      disabled={false}
+      id={null}
+      name="some name"
+      onChange={[Function]}
+      type="radio"
+      value=""
+    />
+    <div
+      className="RadioInput__input"
+      role="radio"
+    />
+    
+  </label>
+  
+</div>
+`;
