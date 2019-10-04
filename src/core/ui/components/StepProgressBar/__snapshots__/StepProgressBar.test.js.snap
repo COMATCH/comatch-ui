@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepProgressBar tests should render and matched values in snapshot 1`] = `
+<div
+  className="sc-EHOje bsmZDm StepProgressBar StepProgressBar__nb-steps-4 StepProgressBar__step-active-4"
+>
+  <div
+    className="sc-ifAKCX GHHLr StepProgressBar__line"
+  >
+    <div
+      className="sc-bxivhb cSxQvU StepProgressBar__progress"
+    />
+  </div>
+  <div
+    className="sc-htpNat SegEG StepProgressBar__step StepProgressBar__step1"
+  >
+    <div
+      className="sc-bdVaJa haIpKu StepProgressBar__circle"
+    />
+    <div
+      className="sc-bwzfXH lfzIFG StepProgressBar__step-text"
+    >
+      this is the first step
+    </div>
+  </div>
+  <div
+    className="sc-htpNat SegEG StepProgressBar__step StepProgressBar__step2"
+  >
+    <div
+      className="sc-bdVaJa haIpKu StepProgressBar__circle"
+    />
+    <div
+      className="sc-bwzfXH lfzIFG StepProgressBar__step-text"
+    >
+      this is the second step
+    </div>
+  </div>
+  <div
+    className="sc-htpNat SegEG StepProgressBar__step StepProgressBar__step3"
+  >
+    <div
+      className="sc-bdVaJa haIpKu StepProgressBar__circle"
+    />
+    <div
+      className="sc-bwzfXH lfzIFG StepProgressBar__step-text"
+    >
+      this is the third step
+    </div>
+  </div>
+  <div
+    className="sc-htpNat SegEG StepProgressBar__step StepProgressBar__step4 active"
+  >
+    <div
+      className="sc-bdVaJa haIpKu StepProgressBar__circle"
+    />
+    <div
+      className="sc-bwzfXH lfzIFG StepProgressBar__step-text"
+    >
+      this is the fourth and last step
+    </div>
+  </div>
+</div>
+`;
