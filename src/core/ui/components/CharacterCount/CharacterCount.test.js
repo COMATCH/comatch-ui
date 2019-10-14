@@ -1,9 +1,8 @@
 import '../../../config/tests/setup';
-
-import { CharacterCount } from './CharacterCount';
 import React from 'react';
-import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
+import { CharacterCount } from './CharacterCount';
 
 describe('CharacterCount', () => {
     it('should render correctly', () => {

@@ -1,10 +1,9 @@
 import '../../../config/tests/setup';
-
 import React from 'react';
-import { TextAreaInput } from './TextAreaInput';
 import { mount } from 'enzyme';
 import noop from 'lodash/noop';
 import renderer from 'react-test-renderer';
+import { TextAreaInput } from './TextAreaInput';
 
 describe('TextAreaInput', () => {
     const REQUIRED_PROPS = {

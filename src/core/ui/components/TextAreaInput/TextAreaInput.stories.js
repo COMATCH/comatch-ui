@@ -1,8 +1,7 @@
 import React, { Component, useState } from 'react';
-
-import { TextAreaInput } from './TextAreaInput';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
+import { TextAreaInput } from './TextAreaInput';
 
 const handleChange = (event) => action('changed')(event.target.name, event.target.value);
 

@@ -1,13 +1,11 @@
 import './TextAreaInput.scss';
-
 import React, { useState } from 'react';
-
-import { CharacterCount } from '../CharacterCount';
-import { InputError } from '../InputError';
-import { InputLabel } from '../InputLabel';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'lodash/noop';
+import { CharacterCount } from '../CharacterCount';
+import { InputError } from '../InputError';
+import { InputLabel } from '../InputLabel';
 
 const propTypes = {
     /**
