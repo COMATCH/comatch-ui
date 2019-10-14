@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterCount should render correctly 1`] = `
+<div
+  className=""
+>
+  Remaining characters:
+   
+  2000
+</div>
+`;

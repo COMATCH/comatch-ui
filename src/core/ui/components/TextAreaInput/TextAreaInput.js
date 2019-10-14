@@ -1,17 +1,18 @@
-import React from 'react';
+import './TextAreaInput.scss';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'lodash/noop';
-import { InputLabel } from '../InputLabel';
+import { CharacterCount } from '../CharacterCount';
 import { InputError } from '../InputError';
-
-import './TextAreaInput.scss';
+import { InputLabel } from '../InputLabel';
 
 const propTypes = {
     /**
      * Additional class names
      */
     className: PropTypes.string,
+    characterCountLabel: PropTypes.node,
     display: PropTypes.oneOf(['block', 'inline']),
     /**
      * SVG icon
@@ -33,10 +34,12 @@ const propTypes = {
     required: PropTypes.bool,
     rows: PropTypes.number,
     value: PropTypes.string,
+    withCharacterCount: PropTypes.bool,
 };
 
 const defaultProps = {
     className: null,
+    characterCountLabel: null,
     display: 'block',
     icon: null,
     id: null,
@@ -50,14 +53,12 @@ const defaultProps = {
     required: false,
     rows: 5,
     value: '',
+    withCharacterCount: false,
 };
-
-/**
- * A `<textarea>` input.
- */
 
 export const TextAreaInput = ({
     className,
+    characterCountLabel,
     display,
     htmlPlaceholder,
     icon,
@@ -73,21 +74,30 @@ export const TextAreaInput = ({
     required,
     rows,
     value,
+    withCharacterCount,
 }) => {
+    const [currentLength, onCurrentLengthChange] = useState(value.length);
     const classes = classNames('Input', 'TextAreaInput', className, display, {
         'has-error': inputError,
         'with-icon': icon,
         'with-html-placeholder': htmlPlaceholder,
     });
-
     const showHtmlPlaceholder = htmlPlaceholder && !value;
+
+    const onChangeHandler = (event) => {
+        const { value: currentValue = '' } = event.target;
+
+        onCurrentLengthChange(currentValue.length);
+        onChange(event);
+    };
+
     return (
         <div id={id} className={classes}>
             {label && <InputLabel text={label} required={required} />}
             <textarea
                 className="TextAreaInput__input"
                 value={value}
-                onChange={onChange}
+                onChange={onChangeHandler}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 placeholder={placeholder}
@@ -98,6 +108,14 @@ export const TextAreaInput = ({
             {icon}
             {inputError && <InputError text={inputError} />}
             {showHtmlPlaceholder && <div className="html-placeholder">{htmlPlaceholder}</div>}
+            {!!withCharacterCount && !!maxLength && (
+                <CharacterCount
+                    className="TextAreaInput__CharacterCount"
+                    currentCount={currentLength}
+                    label={characterCountLabel}
+                    maxLength={maxLength}
+                />
+            )}
         </div>
     );
 };
