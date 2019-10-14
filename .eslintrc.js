@@ -31,7 +31,6 @@ module.exports = {
         'import/extensions': ['off', 'never'],
         'import/no-absolute-path': 0,
         'import/no-extraneous-dependencies': 0,
-        'import/order': ['error', { groups: ['index', 'sibling', 'parent', 'internal', 'external', 'builtin'] }],
         indent: ['error', 4, { SwitchCase: 1 }],
         'object-shorthand': ['error', 'always', { avoidQuotes: false }],
         'no-underscore-dangle': [
