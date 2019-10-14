@@ -10,12 +10,37 @@ exports[`TextAreaInput should render correctly 1`] = `
     maxLength={null}
     name="testing-name"
     onBlur={[Function]}
-    onChange={[MockFunction]}
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder=""
     rows={5}
     value=""
   />
+</div>
+`;
+
+exports[`TextAreaInput should render correctly with a Character Counter 1`] = `
+<div
+  className="Input TextAreaInput block"
+  id={null}
+>
+  <textarea
+    className="TextAreaInput__input"
+    maxLength={2000}
+    name="testing-name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder=""
+    rows={5}
+    value=""
+  />
+  <div
+    className="TextAreaInput__CharacterCount"
+  >
+     
+    2000
+  </div>
 </div>
 `;
 
@@ -25,7 +50,7 @@ exports[`TextAreaInput should render correctly with a Label 1`] = `
   id={null}
 >
   <label
-    className="InputLabel sc-bdVaJa iThGRf"
+    className="InputLabel sc-bwzfXH bIVinQ"
     htmlFor={null}
     id={null}
   >
@@ -36,7 +61,7 @@ exports[`TextAreaInput should render correctly with a Label 1`] = `
     maxLength={null}
     name="testing-name"
     onBlur={[Function]}
-    onChange={[MockFunction]}
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder=""
     rows={5}
@@ -55,7 +80,7 @@ exports[`TextAreaInput should render correctly with an HTML Placeholder 1`] = `
     maxLength={null}
     name="testing-name"
     onBlur={[Function]}
-    onChange={[MockFunction]}
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder=""
     rows={5}
@@ -81,7 +106,7 @@ exports[`TextAreaInput should render correctly with an Icon 1`] = `
     maxLength={null}
     name="testing-name"
     onBlur={[Function]}
-    onChange={[MockFunction]}
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder=""
     rows={5}
@@ -101,14 +126,14 @@ exports[`TextAreaInput should render correctly with an InputError 1`] = `
     maxLength={null}
     name="testing-name"
     onBlur={[Function]}
-    onChange={[MockFunction]}
+    onChange={[Function]}
     onFocus={[Function]}
     placeholder=""
     rows={5}
     value=""
   />
   <span
-    className="InputError sc-bwzfXH bZudyR"
+    className="InputError sc-bdVaJa camiNS"
   >
     Testing errror
   </span>

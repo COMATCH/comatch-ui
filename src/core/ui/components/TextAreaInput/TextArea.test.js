@@ -1,10 +1,10 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import noop from 'lodash/noop';
-import { mount } from 'enzyme';
 import '../../../config/tests/setup';
 
+import React from 'react';
 import { TextAreaInput } from './TextAreaInput';
+import { mount } from 'enzyme';
+import noop from 'lodash/noop';
+import renderer from 'react-test-renderer';
 
 describe('TextAreaInput', () => {
     const REQUIRED_PROPS = {
@@ -92,62 +92,74 @@ describe('TextAreaInput', () => {
     });
 
     it('should render correctly with a Label', () => {
-        const inputWithLabel = (
-            <TextAreaInput
-                {...REQUIRED_PROPS}
-                label={OPTIONAL_PROPS.label}
-            />
-        );
+        const inputWithLabel = <TextAreaInput {...REQUIRED_PROPS} label={OPTIONAL_PROPS.label} />;
         const textInputComponentWithLabel = renderer.create(inputWithLabel).toJSON();
         const mountedTextInput = mount(inputWithLabel);
         const textInputContainerNode = mountedTextInput.children().at(0);
 
         expect(textInputComponentWithLabel).toMatchSnapshot();
         expect(textInputContainerNode.children()).toHaveLength(2);
-        expect(textInputContainerNode.children().at(0).name()).toBe('InputLabel');
-        expect(textInputContainerNode.children().at(1).name()).toBe('textarea');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(0)
+                .name(),
+        ).toBe('InputLabel');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(1)
+                .name(),
+        ).toBe('textarea');
     });
 
     it('should render correctly with an Icon', () => {
-        const inputWithIcon = (
-            <TextAreaInput
-                {...REQUIRED_PROPS}
-                icon={OPTIONAL_PROPS.icon}
-            />
-        );
+        const inputWithIcon = <TextAreaInput {...REQUIRED_PROPS} icon={OPTIONAL_PROPS.icon} />;
         const mountedTextInput = mount(inputWithIcon);
         const textInputContainerNode = mountedTextInput.children().at(0);
         const textInputComponentWithIcon = renderer.create(inputWithIcon).toJSON();
 
         expect(textInputComponentWithIcon).toMatchSnapshot();
         expect(textInputContainerNode.children()).toHaveLength(2);
-        expect(textInputContainerNode.children().at(0).name()).toBe('textarea');
-        expect(textInputContainerNode.children().at(1).name()).toBe('i');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(0)
+                .name(),
+        ).toBe('textarea');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(1)
+                .name(),
+        ).toBe('i');
     });
 
     it('should render correctly with an InputError', () => {
-        const inputWithInputError = (
-            <TextAreaInput
-                {...REQUIRED_PROPS}
-                inputError={OPTIONAL_PROPS.inputError}
-            />
-        );
+        const inputWithInputError = <TextAreaInput {...REQUIRED_PROPS} inputError={OPTIONAL_PROPS.inputError} />;
         const mountedTextInput = mount(inputWithInputError);
         const textInputContainerNode = mountedTextInput.children().at(0);
         const textInputComponentWithInputError = renderer.create(inputWithInputError).toJSON();
 
         expect(textInputComponentWithInputError).toMatchSnapshot();
         expect(textInputContainerNode.children()).toHaveLength(2);
-        expect(textInputContainerNode.children().at(0).name()).toBe('textarea');
-        expect(textInputContainerNode.children().at(1).name()).toBe('InputError');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(0)
+                .name(),
+        ).toBe('textarea');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(1)
+                .name(),
+        ).toBe('InputError');
     });
 
     it('should render correctly with an HTML Placeholder', () => {
         const inputWitPlaceholder = (
-            <TextAreaInput
-                {...REQUIRED_PROPS}
-                htmlPlaceholder={OPTIONAL_PROPS.htmlPlaceholder}
-            />
+            <TextAreaInput {...REQUIRED_PROPS} htmlPlaceholder={OPTIONAL_PROPS.htmlPlaceholder} />
         );
         const mountedTextInput = mount(inputWitPlaceholder);
         const textInputContainerNode = mountedTextInput.children().at(0);
@@ -155,7 +167,39 @@ describe('TextAreaInput', () => {
 
         expect(textInputComponentWithInputError).toMatchSnapshot();
         expect(textInputContainerNode.children()).toHaveLength(2);
-        expect(textInputContainerNode.children().at(0).name()).toBe('textarea');
-        expect(textInputContainerNode.children().at(1).hasClass('html-placeholder')).toBeTruthy();
+        expect(
+            textInputContainerNode
+                .children()
+                .at(0)
+                .name(),
+        ).toBe('textarea');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(1)
+                .hasClass('html-placeholder'),
+        ).toBeTruthy();
+    });
+
+    it('should render correctly with a Character Counter', () => {
+        const inputWitPlaceholder = <TextAreaInput {...REQUIRED_PROPS} maxLength={2000} withCharacterCount />;
+        const mountedTextInput = mount(inputWitPlaceholder);
+        const textInputContainerNode = mountedTextInput.children().at(0);
+        const textInputComponentWithInputError = renderer.create(inputWitPlaceholder).toJSON();
+
+        expect(textInputComponentWithInputError).toMatchSnapshot();
+        expect(textInputContainerNode.children()).toHaveLength(2);
+        expect(
+            textInputContainerNode
+                .children()
+                .at(0)
+                .name(),
+        ).toBe('textarea');
+        expect(
+            textInputContainerNode
+                .children()
+                .at(1)
+                .hasClass('TextAreaInput__CharacterCount'),
+        ).toBeTruthy();
     });
 });

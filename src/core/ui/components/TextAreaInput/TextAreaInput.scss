@@ -33,6 +33,10 @@
         }
     }
 
+    &__CharacterCount {
+        margin-top: 10px;
+    }
+
     // States
     &.has-error {
         .TextAreaInput__input {
@@ -80,15 +84,18 @@
 }
 
 // Defining the color of the placeholder
-.TextAreaInput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.TextAreaInput::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: $co-color-mid-gray;
     opacity: 1; /* Firefox */
 }
 
-.TextAreaInput:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.TextAreaInput:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: $co-color-mid-gray;
 }
 
-.TextAreaInput::-ms-input-placeholder { /* Microsoft Edge */
+.TextAreaInput::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: $co-color-mid-gray;
 }
