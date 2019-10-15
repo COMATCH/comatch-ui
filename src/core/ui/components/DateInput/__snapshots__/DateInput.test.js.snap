@@ -26,7 +26,7 @@ exports[`DateInput should render correctly 1`] = `
         onFocus={[Function]}
         placeholder=""
         type="text"
-        value="08.02.2019"
+        value="08.00.2019"
       />
       <svg
         aria-hidden="true"
@@ -83,7 +83,7 @@ exports[`DateInput should render correctly with a Label 1`] = `
         onFocus={[Function]}
         placeholder=""
         type="text"
-        value="08.02.2019"
+        value="08.00.2019"
       />
       <svg
         aria-hidden="true"
@@ -134,7 +134,7 @@ exports[`DateInput should render correctly with an InputError 1`] = `
         onFocus={[Function]}
         placeholder=""
         type="text"
-        value="08.02.2019"
+        value="08.00.2019"
       />
       <svg
         aria-hidden="true"
