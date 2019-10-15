@@ -2,10 +2,10 @@
 
 exports[`Flyout should render correctly 1`] = `
 <div
-  className="Flyout sc-bxivhb jrcNjb"
+  className="sc-bxivhb jrcNjb Flyout"
 >
   <div
-    className="Flyout__button-wrapper sc-htpNat cSppWP"
+    className="sc-htpNat cSppWP Flyout__button-wrapper"
     onClick={[Function]}
   >
     Flyout
@@ -15,10 +15,10 @@ exports[`Flyout should render correctly 1`] = `
 
 exports[`Flyout should render with button content correctly 1`] = `
 <div
-  className="Flyout sc-bxivhb jrcNjb"
+  className="sc-bxivhb jrcNjb Flyout"
 >
   <div
-    className="Flyout__button-wrapper sc-htpNat cSppWP"
+    className="sc-htpNat cSppWP Flyout__button-wrapper"
     onClick={[Function]}
   >
     <span>

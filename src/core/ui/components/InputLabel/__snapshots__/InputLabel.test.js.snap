@@ -2,7 +2,7 @@
 
 exports[`InputLabel should render correctly 1`] = `
 <label
-  className="InputLabel sc-bdVaJa iThGRf"
+  className="sc-bdVaJa iThGRf InputLabel"
   htmlFor={null}
   id={null}
 >
@@ -12,7 +12,7 @@ exports[`InputLabel should render correctly 1`] = `
 
 exports[`InputLabel should render the InputLabel with a <span> tag 1`] = `
 <span
-  className="InputLabel sc-bdVaJa eCYGDq"
+  className="sc-bdVaJa eCYGDq InputLabel"
   id={null}
 >
   A very random text

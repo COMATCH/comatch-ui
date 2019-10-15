@@ -1,14 +1,9 @@
-
 ## RadioBooleanInput
-
-From [`RadioBooleanInput.js`](RadioBooleanInput.js)
-
-
 
 prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
 **disabled** | `Boolean` | `false` | :x: | 
-**display** | `Enum('block','inline')` | `'block'` | :x: | 
+**display** | `Enum('block', 'inline')` | `'block'` | :x: | 
 **falseLabel** | `String` |  | :white_check_mark: | 
 **id** | `String` | `null` | :x: | 
 **inputError** | `String` | `''` | :x: | 
@@ -18,6 +13,4 @@ prop | type | default | required | description
 **required** | `Boolean` | `false` | :x: | 
 **trueLabel** | `String` |  | :white_check_mark: | 
 **value** | `Boolean` | `null` | :x: | 
-
-
 

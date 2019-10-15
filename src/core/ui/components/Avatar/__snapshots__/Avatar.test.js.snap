@@ -2,7 +2,7 @@
 
 exports[`Avatar should render the default Avatar correctly 1`] = `
 <div
-  className="Avatar sc-htpNat bOuPlg"
+  className="sc-htpNat bOuPlg Avatar"
 >
   <img
     alt="Avatar"

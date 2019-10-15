@@ -26,7 +26,9 @@ function Dropdown(props: DropdownProps) {
             setShowItems(false);
         },
         (event) => {
-            if (closeOnItemClick || !itemsNode.current || !itemsNode.current.contains(event.target as Node)) {
+            const target = event.target as Node;
+
+            if (closeOnItemClick || !itemsNode.current || !itemsNode.current.contains(target)) {
                 // Will ensure that the item within the dropdown is clicked before hiding the items
                 setTimeout(() => {
                     setShowItems(!showItems);

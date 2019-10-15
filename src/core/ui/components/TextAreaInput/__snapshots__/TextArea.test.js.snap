@@ -50,7 +50,7 @@ exports[`TextAreaInput should render correctly with a Label 1`] = `
   id={null}
 >
   <label
-    className="InputLabel sc-bwzfXH bIVinQ"
+    className="sc-bwzfXH bIVinQ InputLabel"
     htmlFor={null}
     id={null}
   >
@@ -133,7 +133,7 @@ exports[`TextAreaInput should render correctly with an InputError 1`] = `
     value=""
   />
   <span
-    className="InputError sc-bdVaJa camiNS"
+    className="sc-bdVaJa camiNS InputError"
   >
     Testing errror
   </span>

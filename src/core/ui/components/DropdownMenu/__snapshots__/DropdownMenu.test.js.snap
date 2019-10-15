@@ -2,10 +2,10 @@
 
 exports[`DropdownMenu should render correctly 1`] = `
 <div
-  className="DropdownMenu sc-htpNat fVSfgY"
+  className="sc-htpNat fVSfgY DropdownMenu"
 >
   <nav
-    className="Navigation vertical sc-bdVaJa eeaaGT"
+    className="sc-bdVaJa eeaaGT Navigation vertical"
     orientation="vertical"
   >
     <ul />

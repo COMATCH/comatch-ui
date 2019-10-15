@@ -1,7 +1,4 @@
-
 ## DateInput
-
-From [`DateInput.js`](DateInput.js)
 
 A convenience wrapper around the DatePicker component of the react-datepicker package.
 
@@ -17,7 +14,16 @@ prop | type | default | required | description
 **name** | `String` |  | :white_check_mark: | 
 **onChange** | `Function` |  | :white_check_mark: | 
 **onClick** | `Function` | `noop` | :x: | 
-**value** | `(custom validator)` | `moment()` | :x: | The value must be a moment.js object
-
-
+**value** | `(props, propName) => {
+    const prop = props[propName];
+    // eslint-disable-next-line no-underscore-dangle
+    if (prop && !prop._isAMomentObject) {
+        return new Error(
+            `Invalid prop \`${propName}\` supplied to` +
+                ` DateInput. Expected a momentjs instance, ` +
+                `but got the value ${prop} of type ${typeof prop}. Validation failed.`,
+        );
+    }
+    return false;
+}` | `moment()` | :x: | The value must be a moment.js object
 

@@ -1,7 +1,4 @@
-
 ## Paginator
-
-From [`Paginator.js`](Paginator.js)
 
 A wrapper around `react-paginate`.
 
@@ -11,6 +8,4 @@ of the `react-paginate` package, [click here](https://github.com/AdeleD/react-pa
 prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
 **className** | `String` | `null` | :x: | 
-
-
 
