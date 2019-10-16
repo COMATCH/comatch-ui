@@ -18,7 +18,7 @@ describe('DateInput', () => {
     };
 
     const OPTIONAL_PROPS = {
-        dateFormat: 'yyyy.mm.dd',
+        dateFormat: 'yyyy.MM.dd',
         inputError: 'Testing InputError Message',
         label: 'Testing Label',
         value: moment('2019-01-01T10:00:00'),
@@ -48,11 +48,11 @@ describe('DateInput', () => {
         expect(dateInputComponent.prop('locale')).toEqual(props.locale);
 
         // Defaults:
-        expect(dateInputComponent.prop('dateFormat')).toEqual('dd.mm.yyyy');
+        expect(dateInputComponent.prop('dateFormat')).toEqual('dd.MM.yyyy');
         expect(dateInputComponent.prop('inputError')).toEqual('');
         expect(dateInputComponent.prop('label')).toEqual('');
         expect(dateInputComponent.prop('onClick')).toEqual(noop);
-        expect(dateInputComponent.prop('value') instanceof moment).toBeTruthy();
+        expect(dateInputComponent.prop('value') instanceof Date).toBeTruthy();
     });
 
     it('should render with custom optional props', () => {
