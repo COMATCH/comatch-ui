@@ -18,13 +18,13 @@ A preview of all the components can be seen on the deployed version of our Story
 
 **Contents**
 
-- [<img src="./comatchUiLogo.svg" width="350" alt="COMATCH UI">](#img-src%22comatchUiLogosvg%22-width%22350%22-alt%22COMATCH-UI%22)
-  - [Description](#Description)
-  - [Documentation](#Documentation)
-    - [Setting up the project](#Setting-up-the-project)
-    - [Making a new release](#Making-a-new-release)
-    - [Structure of the project](#Structure-of-the-project)
-    - [PropTypes documentation](#PropTypes-documentation)
+- [<img src="./comatchUiLogo.svg" width="350" alt="COMATCH UI">](#img-src%22comatchuilogosvg%22-width%22350%22-alt%22comatch-ui%22)
+  - [Description](#description)
+  - [Documentation](#documentation)
+    - [Setting up the project](#setting-up-the-project)
+    - [Making a new release](#making-a-new-release)
+    - [Structure of the project](#structure-of-the-project)
+    - [PropTypes documentation](#proptypes-documentation)
 
 ### Setting up the project
 
@@ -37,8 +37,13 @@ To run this project, after cloning it, follow these steps:
 
 To make a new release you need to:
 
-1. [Run `npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
-2. Run `npm publish`, which will publish the new version of the package to the npm registry.
+1. Run `yarn generate-docs`
+2. Run `yarn test-and-coverage`
+3. [Run `npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
+4. Run `npm publish` (or `yarn release`), which will publish the new version of the package to the npm registry.
+5. Run `yarn deploy-storybook`
+
+> **NOTE:** Don't forget to merge `develop` into `master`! :)
 
 ### Structure of the project
 
@@ -72,7 +77,6 @@ The PropTypes of all components of the library are documented in their respectiv
 -   [Button](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/Button/Button.md)
 -   [CheckboxGroupInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/CheckboxGroupInput/CheckboxGroupInput.md)
 -   [CheckboxInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/CheckboxInput/CheckboxInput.md)
--   [Dropdown](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/Dropdown/Dropdown.md)
 -   [DropdownMenu](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/DropdownMenu/DropdownMenu.md)
 -   [EmailInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/EmailInput/EmailInput.md)
 -   [FileInput](https://github.com/COMATCH/comatch-ui/blob/master/src/core/ui/components/FileInput/FileInput.md)
