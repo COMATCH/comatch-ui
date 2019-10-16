@@ -29,11 +29,20 @@ const propTypes = {
      * Needed by the DatePicker
      */
     locale: PropTypes.string.isRequired,
+    /**
+     * `Date` or `moment` or `null`
+     */
     maxDate: isValidDateValue,
+    /**
+     * `Date` or `moment` or `null`
+     */
     minDate: isValidDateValue,
     name: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
     onClick: PropTypes.func,
+    /**
+     * `Date` or `moment` or `null`
+     */
     value: isValidDateValue,
 };
 
