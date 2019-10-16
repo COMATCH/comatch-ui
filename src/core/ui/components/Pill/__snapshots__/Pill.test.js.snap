@@ -2,7 +2,7 @@
 
 exports[`Pill should render the default Pill correctly 1`] = `
 <div
-  className="Pill sc-bdVaJa jySjDV"
+  className="sc-bdVaJa jySjDV Pill"
 >
   Hello World
 </div>

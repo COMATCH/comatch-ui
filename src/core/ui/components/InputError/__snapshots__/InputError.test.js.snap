@@ -2,7 +2,7 @@
 
 exports[`InputError should render correctly 1`] = `
 <span
-  className="InputError sc-bdVaJa camiNS"
+  className="sc-bdVaJa camiNS InputError"
 >
   Testing InputError
 </span>

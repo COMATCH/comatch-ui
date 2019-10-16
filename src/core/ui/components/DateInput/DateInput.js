@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import isNull from 'lodash/isNull';
 import noop from 'lodash/noop';
-import isEqual from 'lodash/isEqual';
 import DatePicker from 'react-datepicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons/faCalendarAlt';
-import moment from 'moment';
+import { getSafeDateValue, isValidDateValue } from './helpers';
 import { TextInput } from '../TextInput';
 
 import './DateInput.scss';
@@ -19,113 +17,116 @@ import './DateInput.scss';
  * https://github.com/Hacker0x01/react-datepicker/blob/master/docs/datepicker.md
  */
 
-export class DateInput extends Component {
-    static propTypes = {
-        /**
-         * A string according to which the date in the DateInput is formatted
-         */
-        dateFormat: PropTypes.string,
-        inputError: PropTypes.string,
-        label: PropTypes.string,
-        /**
-         * Needed by the DatePicker
-         */
-        locale: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        onChange: PropTypes.func.isRequired,
-        onClick: PropTypes.func,
-        // eslint-disable-next-line valid-jsdoc
-        /**
-         * The value must be a moment.js object
-         */
-        value: (props, propName) => {
-            const prop = props[propName];
-            // eslint-disable-next-line no-underscore-dangle
-            if (prop && !prop._isAMomentObject) {
-                return new Error(
-                    `Invalid prop \`${propName}\` supplied to` +
-                        ` DateInput. Expected a momentjs instance, ` +
-                        `but got the value ${prop} of type ${typeof prop}. Validation failed.`,
-                );
-            }
-            return false;
-        },
-    };
+const propTypes = {
+    /**
+     * A string according to which the date in the DateInput is formatted
+     * NOTE: Keep in mind that `DD` & `YYYY` should be lowercase...
+     */
+    dateFormat: PropTypes.string,
+    inputError: PropTypes.string,
+    label: PropTypes.string,
+    /**
+     * Needed by the DatePicker
+     */
+    locale: PropTypes.string.isRequired,
+    /**
+     * `Date` or `moment` or `null`
+     */
+    maxDate: isValidDateValue,
+    /**
+     * `Date` or `moment` or `null`
+     */
+    minDate: isValidDateValue,
+    name: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
+    /**
+     * `Date` or `moment` or `null`
+     */
+    value: isValidDateValue,
+};
 
-    static defaultProps = {
-        dateFormat: 'DD.MM.YYYY',
-        inputError: '',
-        label: '',
-        onClick: noop,
-        value: moment(),
-    };
+const defaultProps = {
+    dateFormat: 'dd.MM.yyyy',
+    inputError: '',
+    label: '',
+    maxDate: null,
+    minDate: null,
+    onClick: noop,
+    value: new Date(),
+};
 
-    state = {
-        date:
-            // eslint-disable-next-line no-underscore-dangle
-            this.props.value && this.props.value._isAMomentObject && this.props.value.isValid()
-                ? this.props.value
-                : null,
-    };
+export const DateInput = ({
+    locale,
+    inputError,
+    label,
+    maxDate,
+    minDate,
+    name,
+    onClick,
+    onChange,
+    value,
+    ...props
+}) => {
+    const [date, setDate] = useState(getSafeDateValue(value));
+    const [max, setMaxDate] = useState(getSafeDateValue(maxDate));
+    const [min, setMinDate] = useState(getSafeDateValue(minDate));
+    const popperClasses = classNames('DateInput__popper', { 'with-error': inputError });
 
-    static getDerivedStateFromProps(props, state) {
-        // `date` state needs to be updated in case the prop is changed outside of the component.
-        if (!isEqual(props.value, state.date)) {
-            return {
-                // eslint-disable-next-line no-underscore-dangle
-                date: props.value && props.value._isAMomentObject && props.value.isValid() ? props.value : null,
-            };
-        }
-
-        return null;
-    }
-
-    // Signature of handleChange is like this in this case because of the library we're using
-    handleChange = (date, event) => {
-        const { name } = this.props;
-        const value = isNull(date) ? date : date.toDate();
-
-        // in the state we set directly date, because we want either null or a moment object
-        this.setState({ date });
-
+    const handleChange = (newDate, event) => {
         // in the onChange we pass value which would be either null or a date object
-        this.props.onChange({
+        onChange({
             ...event,
             target: {
                 ...event.target,
                 name,
-                value,
+                value: newDate,
             },
         });
     };
 
-    render() {
-        const { locale, inputError, label, name, onClick, onChange, value, ...props } = this.props;
-        const popperClasses = classNames('DateInput__popper', { 'with-error': inputError });
+    // Component did update:
+    useEffect(() => {
+        // Will reset the internal date back to the passed value.
+        // This will ensure that the date is controlled from outside.
+        setDate(getSafeDateValue(value));
 
-        return (
-            <DatePicker
-                autoComplete="off"
-                customInput={
-                    <TextInput
-                        label={label}
-                        inputError={inputError}
-                        icon={<FontAwesomeIcon icon={faCalendarAlt} />}
-                        name={name}
-                        onChange={noop}
-                        onClick={onClick}
-                    />
-                }
-                locale={locale}
-                name={name}
-                nextMonthButtonLabel=""
-                onChange={this.handleChange}
-                popperClassName={popperClasses}
-                previousMonthButtonLabel=""
-                selected={this.state.date}
-                utcOffset={0}
-                {...props}
-            />
-        );
-    }
-}
+        if (maxDate !== max) {
+            setMaxDate(getSafeDateValue(maxDate));
+        }
+
+        if (minDate !== min) {
+            setMinDate(getSafeDateValue(minDate));
+        }
+    }, [value, maxDate, minDate]);
+
+    return (
+        <DatePicker
+            autoComplete="off"
+            customInput={
+                <TextInput
+                    label={label}
+                    inputError={inputError}
+                    icon={<FontAwesomeIcon icon={faCalendarAlt} />}
+                    name={name}
+                    onChange={noop}
+                    onClick={onClick}
+                />
+            }
+            locale={locale}
+            maxDate={max}
+            minDate={min}
+            name={name}
+            nextMonthButtonLabel=""
+            onChange={handleChange}
+            popperClassName={popperClasses}
+            previousMonthButtonLabel=""
+            selected={date}
+            utcOffset={0}
+            {...props}
+        />
+    );
+};
+
+DateInput.propTypes = propTypes;
+DateInput.defaultProps = defaultProps;

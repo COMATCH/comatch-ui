@@ -63,7 +63,7 @@ exports[`DateInput should render correctly with a Label 1`] = `
       id={null}
     >
       <label
-        className="InputLabel sc-bdVaJa iThGRf"
+        className="sc-bdVaJa iThGRf InputLabel"
         htmlFor={null}
         id={null}
       >
@@ -154,7 +154,7 @@ exports[`DateInput should render correctly with an InputError 1`] = `
         />
       </svg>
       <span
-        className="InputError sc-bwzfXH bZudyR"
+        className="sc-bwzfXH bZudyR InputError"
       >
         Testing InputError Message
       </span>

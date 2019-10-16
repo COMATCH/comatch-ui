@@ -1,9 +1,4 @@
-
 ## StarRatingInput
-
-From [`StarRatingInput.js`](StarRatingInput.js)
-
-
 
 prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
@@ -12,6 +7,4 @@ prop | type | default | required | description
 **onChange** | `Function` | `noop` | :x: | 
 **readOnly** | `Boolean` | `false` | :x: | 
 **value** | `Number` | `0` | :x: | 
-
-
 

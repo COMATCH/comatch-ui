@@ -25,7 +25,7 @@ exports[`RadioGroupInput tests should render and assert snapshot 1`] = `
         role="radio"
       />
       <span
-        className="InputLabel RadioInput__label sc-bdVaJa eCYGDq"
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
         id={null}
       >
         Apple
@@ -52,7 +52,7 @@ exports[`RadioGroupInput tests should render and assert snapshot 1`] = `
         role="radio"
       />
       <span
-        className="InputLabel RadioInput__label sc-bdVaJa eCYGDq"
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
         id={null}
       >
         Banana
@@ -79,7 +79,7 @@ exports[`RadioGroupInput tests should render and assert snapshot 1`] = `
         role="radio"
       />
       <span
-        className="InputLabel RadioInput__label sc-bdVaJa eCYGDq"
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
         id={null}
       >
         Peach
