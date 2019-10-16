@@ -281,6 +281,30 @@ storiesOf('SelectInput', module)
 }`}
             </Highlight>
         </>
+    ))
+    .add('with placeholder', () => (
+        <>
+            <SelectInput
+                name="fruits"
+                placeholder="My placeholder"
+                options={[
+                    { value: 'apple', label: 'Apple' },
+                    { value: 'banana', label: 'Banana' },
+                    { value: 'peach', label: 'Peach' },
+                ]}
+            />
+            <Highlight className="html">
+                {'<SelectInput' +
+                    '\n\tplaceholder="My placeholder"' +
+                    '\n\tname="fruits"' +
+                    '\n\toptions={[' +
+                    `\n\t\t{ value: 'apple', label: 'Apple' },` +
+                    `\n\t\t{ value: 'banana', label: 'Banana' },` +
+                    `\n\t\t{ value: 'peach', label: 'Peach' },` +
+                    '\n\t]}' +
+                    '\n/>'}
+            </Highlight>
+        </>
     ));
 
 class SelectInputContainer extends React.Component {

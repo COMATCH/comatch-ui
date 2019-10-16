@@ -1,9 +1,10 @@
 @import '../../../styles/variables.scss';
 
 .SelectInput {
-    font-size: $co-font-sm;
     display: inline-block;
+    font-size: $co-font-sm;
     margin-bottom: $co-inputs-margin-bottom;
+    position: relative;
 
     // common styles
     .InputLabel,
@@ -33,6 +34,18 @@
         &:focus {
             box-shadow: 0 0 4px 0 rgba(1, 156, 185, 1), inset 0 0 2px 0 rgba(193, 193, 193, 0.5);
         }
+    }
+
+    // Placeholder:
+    &__Placeholder {
+        background: transparent;
+        color: $co-color-mid-gray;
+        height: 100%;
+        left: 0;
+        padding: 9px 8px;
+        position: absolute;
+        top: 0;
+        z-index: -1;
     }
 
     // States
