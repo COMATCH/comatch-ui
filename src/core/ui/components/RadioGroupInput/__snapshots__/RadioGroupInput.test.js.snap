@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioGroupInput tests should render and assert snapshot 1`] = `
+<div
+  className="Input RadioGroupInput"
+  id={null}
+>
+  
+  <div
+    className="RadioInput block"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        disabled={false}
+        id={null}
+        name="some name"
+        onChange={[Function]}
+        type="radio"
+        value="apple"
+      />
+      <div
+        className="RadioInput__input"
+        role="radio"
+      />
+      <span
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
+        id={null}
+      >
+        Apple
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="RadioInput block"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        disabled={false}
+        id={null}
+        name="some name"
+        onChange={[Function]}
+        type="radio"
+        value="banana"
+      />
+      <div
+        className="RadioInput__input"
+        role="radio"
+      />
+      <span
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
+        id={null}
+      >
+        Banana
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="RadioInput block"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        disabled={false}
+        id={null}
+        name="some name"
+        onChange={[Function]}
+        type="radio"
+        value="peach"
+      />
+      <div
+        className="RadioInput__input"
+        role="radio"
+      />
+      <span
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
+        id={null}
+      >
+        Peach
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;

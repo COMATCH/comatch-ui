@@ -1,3 +1,5 @@
+/* eslint-disable max-classes-per-file */
+
 import React, { Component } from 'react';
 import { debounce } from 'lodash';
 import Highlight from 'react-highlight';
@@ -9,21 +11,22 @@ const options = [
     { value: 'John Wick', label: 'John Wick' },
     { value: 'Dwayne Johnson', label: 'Dwayne Johnson' },
 ];
-const optionsToString = optionsArr => optionsArr.reduce((acc, { value, label }, index) => {
-    let res = acc;
+const optionsToString = (optionsArr) =>
+    optionsArr.reduce((acc, { value, label }, index) => {
+        let res = acc;
 
-    if (index) {
-        res += ',\n';
-    }
+        if (index) {
+            res += ',\n';
+        }
 
-    res += `{ value: ${value}, label: ${label} }`;
+        res += `{ value: ${value}, label: ${label} }`;
 
-    if (index === optionsArr.length - 1) {
-        res += ']';
-    }
+        if (index === optionsArr.length - 1) {
+            res += ']';
+        }
 
-    return res;
-}, '[\n');
+        return res;
+    }, '[\n');
 
 class AutocompleteWrapper extends Component {
     constructor(props, context) {
@@ -88,10 +91,13 @@ class AutocompleteWrapperWithFakeCall extends Component {
     }, 1000);
 
     onInputChange = (event) => {
-        this.setState({
-            inputValue: event.target.value,
-            loading: true,
-        }, this.onLoadingFinish);
+        this.setState(
+            {
+                inputValue: event.target.value,
+                loading: true,
+            },
+            this.onLoadingFinish,
+        );
     };
 
     get autocompleteAdditionalProps() {
@@ -162,10 +168,10 @@ storiesOf('Autocomplete', module)
             <>
                 <AutocompleteWrapper label="Person's name" options={optionsArr} />
                 <Highlight className="html">
-                    {'<Autocomplete'
-                        + '\nlabel="Person\'s name"'
-                        + '\nname="person-name"'
-                        + `\noptions={${optionsToString(optionsArr)}} />`}
+                    {'<Autocomplete' +
+                        '\nlabel="Person\'s name"' +
+                        '\nname="person-name"' +
+                        `\noptions={${optionsToString(optionsArr)}} />`}
                 </Highlight>
             </>
         );
@@ -174,11 +180,11 @@ storiesOf('Autocomplete', module)
         <>
             <AutocompleteWrapper label="Person's name" inputValue="Dwayne Johnson" />
             <Highlight className="html">
-                {'<Autocomplete'
-                    + '\nlabel="Person\'s name"'
-                    + '\nname="person-name"'
-                    + '\ninputValue="Dwayne Johnson"'
-                    + `\noptions={${optionsToString(options)}} />`}
+                {'<Autocomplete' +
+                    '\nlabel="Person\'s name"' +
+                    '\nname="person-name"' +
+                    '\ninputValue="Dwayne Johnson"' +
+                    `\noptions={${optionsToString(options)}} />`}
             </Highlight>
         </>
     ))
@@ -193,12 +199,12 @@ storiesOf('Autocomplete', module)
                 }}
             />
             <Highlight className="html">
-                {'<Autocomplete'
-                    + '\nlabel="Person\'s name"'
-                    + '\nname="person-name"'
-                    + '\ninputValue="Dwayne Johnson"'
-                    + `\nonChange={(event) => { console.log(event); }}`
-                    + `\noptions={${optionsToString(options)}} />`}
+                {'<Autocomplete' +
+                    '\nlabel="Person\'s name"' +
+                    '\nname="person-name"' +
+                    '\ninputValue="Dwayne Johnson"' +
+                    `\nonChange={(event) => { console.log(event); }}` +
+                    `\noptions={${optionsToString(options)}} />`}
             </Highlight>
         </>
     ))
@@ -210,11 +216,11 @@ storiesOf('Autocomplete', module)
                 options={[]}
             />
             <Highlight className="html">
-                {'<Autocomplete'
-                    + '\nlabel="Person\'s name"'
-                    + '\nname="person-name"'
-                    + `\noOptionsMessage={({ inputValue }) => \`Nothing found for "\${inputValue}"\`}`
-                    + '\noptions={[]} />'}
+                {'<Autocomplete' +
+                    '\nlabel="Person\'s name"' +
+                    '\nname="person-name"' +
+                    `\noOptionsMessage={({ inputValue }) => \`Nothing found for "\${inputValue}"\`}` +
+                    '\noptions={[]} />'}
             </Highlight>
         </>
     ))
@@ -222,10 +228,10 @@ storiesOf('Autocomplete', module)
         <>
             <AutocompleteWrapperWithFakeCall label="Person's name" />
             <Highlight className="html">
-                {'<Autocomplete'
-                    + '\nlabel="Person\'s name"'
-                    + '\nname="person-name"'
-                    + `\noptions={${optionsToString(options)}} />`}
+                {'<Autocomplete' +
+                    '\nlabel="Person\'s name"' +
+                    '\nname="person-name"' +
+                    `\noptions={${optionsToString(options)}} />`}
             </Highlight>
         </>
     ))
@@ -236,11 +242,11 @@ storiesOf('Autocomplete', module)
                 loadingMessage={({ inputValue }) => `Server is searching for "${inputValue}"`}
             />
             <Highlight className="html">
-                {'<Autocomplete'
-                    + '\nlabel="Person\'s name"'
-                    + `loadingMessage={({ inputValue }) => \`Server is searching for "\${inputValue}"\`}`
-                    + '\nname="person-name"'
-                    + `\noptions={${optionsToString(options)}} />`}
+                {'<Autocomplete' +
+                    '\nlabel="Person\'s name"' +
+                    `loadingMessage={({ inputValue }) => \`Server is searching for "\${inputValue}"\`}` +
+                    '\nname="person-name"' +
+                    `\noptions={${optionsToString(options)}} />`}
             </Highlight>
         </>
     ));

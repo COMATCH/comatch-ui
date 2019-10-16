@@ -2,7 +2,7 @@
 
 exports[`Alert should render correctly 1`] = `
 <section
-  className="Alert info box with-icon sc-bdVaJa egmzGr"
+  className="sc-bdVaJa egmzGr Alert info box with-icon"
   id={null}
   role="alert"
 >

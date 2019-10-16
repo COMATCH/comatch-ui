@@ -1,12 +1,4 @@
-
 ## Separator
 
-From [`Separator.js`](Separator.js)
-
-
-
-prop | type | default | required | description
----- | :----: | :-------: | :--------: | -----------
-
-
+This component does not have any props.
 

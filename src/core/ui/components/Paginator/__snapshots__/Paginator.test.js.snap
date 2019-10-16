@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginator tests should render and assert snapshot 1`] = `
+<div
+  className="sc-bdVaJa hSgXFY Paginator"
+>
+  <ul>
+    <li
+      className="previous disabled"
+    >
+      <a
+        aria-disabled="true"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        «
+      </a>
+    </li>
+    <li
+      className="selected"
+    >
+      <a
+        aria-current="page"
+        aria-label="Page 1 is your current page"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 2"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 3"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        3
+      </a>
+    </li>
+    <li
+      className="break"
+    >
+      <a
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        …
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 8"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        8
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 9"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        9
+      </a>
+    </li>
+    <li>
+      <a
+        aria-current={null}
+        aria-label="Page 10"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        10
+      </a>
+    </li>
+    <li
+      className="next"
+    >
+      <a
+        aria-disabled="false"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        »
+      </a>
+    </li>
+  </ul>
+</div>
+`;

@@ -2,7 +2,7 @@
 
 exports[`Splash should render a Splash (with Subtitle) correctly 1`] = `
 <div
-  className="Splash sc-htpNat jArwzK"
+  className="sc-htpNat jArwzK Splash"
 >
   <div
     className="sc-bdVaJa hYHEfa"
@@ -14,7 +14,7 @@ exports[`Splash should render a Splash (with Subtitle) correctly 1`] = `
 
 exports[`Splash should render a Splash (with Title) correctly 1`] = `
 <div
-  className="Splash sc-htpNat jArwzK"
+  className="sc-htpNat jArwzK Splash"
 >
   <div
     className="sc-bwzfXH crJnMU"

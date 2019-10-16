@@ -18,7 +18,7 @@ describe('DateInput', () => {
     };
 
     const OPTIONAL_PROPS = {
-        dateFormat: 'YYYY.MM.DD',
+        dateFormat: 'yyyy.MM.dd',
         inputError: 'Testing InputError Message',
         label: 'Testing Label',
         value: moment('2019-01-01T10:00:00'),
@@ -48,11 +48,11 @@ describe('DateInput', () => {
         expect(dateInputComponent.prop('locale')).toEqual(props.locale);
 
         // Defaults:
-        expect(dateInputComponent.prop('dateFormat')).toEqual('DD.MM.YYYY');
+        expect(dateInputComponent.prop('dateFormat')).toEqual('dd.MM.yyyy');
         expect(dateInputComponent.prop('inputError')).toEqual('');
         expect(dateInputComponent.prop('label')).toEqual('');
         expect(dateInputComponent.prop('onClick')).toEqual(noop);
-        expect(dateInputComponent.prop('value') instanceof moment).toBeTruthy();
+        expect(dateInputComponent.prop('value') instanceof Date).toBeTruthy();
     });
 
     it('should render with custom optional props', () => {
@@ -103,7 +103,7 @@ describe('DateInput', () => {
         expect(dateInputContainerNode.find(InputError).length).toBeGreaterThan(0);
     });
 
-    it('should throw a propType exception if value is truthy and not a moment instance', () => {
+    it('should throw a propType exception if value is truthy and not a moment or Date instance', () => {
         /* eslint-disable no-console */
         console.error = jest.fn();
 
@@ -113,13 +113,13 @@ describe('DateInput', () => {
 
         mount(<DateInput {...props} value={lorem.word()} />);
         mount(<DateInput {...props} value={5} />);
-        mount(<DateInput {...props} value={new Date()} />);
+        mount(<DateInput {...props} value={{}} />);
 
         expect(console.error).toHaveBeenCalledTimes(3);
         /* eslint-enable no-console */
     });
 
-    it('should not throw a propType exception if a moment instance or null is passed to value', () => {
+    it('should not throw a propType exception if a moment or Date instance or null is passed to value', () => {
         /* eslint-disable no-console */
         console.error = jest.fn();
 
@@ -128,6 +128,7 @@ describe('DateInput', () => {
         };
 
         mount(<DateInput {...props} value={moment()} />);
+        mount(<DateInput {...props} value={new Date()} />);
         mount(<DateInput {...props} value={null} />);
 
         expect(console.error).toHaveBeenCalledTimes(0);

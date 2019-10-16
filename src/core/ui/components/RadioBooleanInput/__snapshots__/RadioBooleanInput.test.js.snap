@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioBooleanInput tests should render and check snapshot 1`] = `
+<div
+  className="Input RadioGroupInput"
+  id={null}
+>
+  
+  <div
+    className="RadioInput block"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        disabled={false}
+        id={null}
+        name="name"
+        onChange={[Function]}
+        type="radio"
+        value={true}
+      />
+      <div
+        className="RadioInput__input"
+        role="radio"
+      />
+      <span
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
+        id={null}
+      >
+        yes
+      </span>
+    </label>
+    
+  </div>
+  <div
+    className="RadioInput block"
+    id={null}
+  >
+    <label>
+      <input
+        checked={false}
+        disabled={false}
+        id={null}
+        name="name"
+        onChange={[Function]}
+        type="radio"
+        value={false}
+      />
+      <div
+        className="RadioInput__input"
+        role="radio"
+      />
+      <span
+        className="sc-bdVaJa eCYGDq InputLabel RadioInput__label"
+        id={null}
+      >
+        no
+      </span>
+    </label>
+    
+  </div>
+  
+</div>
+`;

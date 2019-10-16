@@ -3,7 +3,7 @@ import { addDecorator, configure } from '@storybook/react';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
-const req = require.context('../src/', true, /\.stories\.jsx?$/);
+const req = require.context('../src/', true, /\.stories\.(j|t)sx?$/);
 
 function loadStories() {
     req.keys().forEach((filename) => req(filename));

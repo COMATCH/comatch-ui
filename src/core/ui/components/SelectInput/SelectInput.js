@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'lodash/noop';
+import isFunction from 'lodash/isFunction';
 import { InputLabel } from '../InputLabel';
 import { InputError } from '../InputError';
 
@@ -20,8 +21,10 @@ const propTypes = {
         PropTypes.shape({
             value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
             label: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+            props: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         }),
     ).isRequired,
+    placeholder: PropTypes.node,
     required: PropTypes.bool,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 };
@@ -34,16 +37,35 @@ const defaultProps = {
     label: '',
     onBlur: noop,
     onChange: noop,
+    placeholder: null,
     required: false,
     value: undefined,
 };
 
-const renderOptionsElements = (optionElements) =>
-    optionElements.map((optionElement, index) => (
-        <option key={index + 1} value={optionElement.value}>
-            {optionElement.label}
-        </option>
-    ));
+const generatePlaceHolderOption = (placeholder) => {
+    const arr = [];
+
+    if (placeholder) {
+        arr.push({
+            label: '',
+            value: '',
+            props: { hidden: true },
+        });
+    }
+
+    return arr;
+};
+
+const renderOptionsElements = (optionElements, placeholder) =>
+    [...generatePlaceHolderOption(placeholder), ...optionElements].map(({ label, value, props }, index) => {
+        const additionalProps = isFunction(props) ? props({ label, value }, index) || {} : props;
+
+        return (
+            <option key={index + 1} value={value} {...additionalProps}>
+                {label}
+            </option>
+        );
+    });
 
 export const SelectInput = ({
     display,
@@ -55,13 +77,24 @@ export const SelectInput = ({
     onBlur,
     onChange,
     options,
+    placeholder,
     required,
     value,
 }) => {
+    const [currentValue, setCurrentValue] = useState(value);
     const classes = classNames('Input', 'SelectInput', display, {
         disabled,
         'has-error': inputError,
     });
+    const onChangeHandler = useCallback(
+        (event) => {
+            const { value: nextValue } = event.target;
+
+            setCurrentValue(nextValue);
+            onChange(event);
+        },
+        [onChange],
+    );
 
     return (
         <div id={id} className={classes}>
@@ -71,12 +104,13 @@ export const SelectInput = ({
                 disabled={disabled}
                 name={name}
                 onBlur={onBlur}
-                onChange={onChange}
-                value={value}
+                onChange={onChangeHandler}
+                value={currentValue}
             >
-                {renderOptionsElements(options)}
+                {renderOptionsElements(options, placeholder)}
             </select>
             {inputError && <InputError text={inputError} />}
+            {!currentValue && placeholder && <div className="SelectInput__Placeholder">{placeholder}</div>}
         </div>
     );
 };

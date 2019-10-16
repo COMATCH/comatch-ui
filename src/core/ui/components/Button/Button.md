@@ -1,7 +1,4 @@
-
 ## Button
-
-From [`Button.js`](Button.js)
 
 A `Button` component with different stylistic variations. By default the styling is `full`,
 but `ghost` is an alternative version with reversed colors.
@@ -21,13 +18,11 @@ prop | type | default | required | description
 **id** | `String` | `null` | :x: | HTML id attribute
 **onClick** | `Function` | `noop` | :x: | 
 **popupMenu** | `ReactNode` | `null` | :x: | A PopupMenu node to be toggled when clicking on the button
-**popupMenuPosition** | `Enum('top','bottom','left','right')` | `'bottom'` | :x: | The position of the PopupMenu (if such is present of course)
-**shape** | `Enum('rectangle','circle')` | `'rectangle'` | :x: | Renders the `Button` in different shapes (rectangle or circle)
+**popupMenuPosition** | `Enum('top', 'bottom', 'left', 'right')` | `'bottom'` | :x: | The position of the PopupMenu (if such is present of course)
+**shape** | `Enum('rectangle', 'circle')` | `'rectangle'` | :x: | Renders the `Button` in different shapes (rectangle or circle)
 **target** | `String` | `null` | :x: | To be used with `href`, could set for example `target="_blank"`
 **text** | `String` | `''` | :x: | Text content of `Button`
 **textOnly** | `Boolean` | `false` | :x: | If true `Button` has a transparent border
 **tooltipText** | `String` | `''` | :x: | Text content of tooltip for the `Button`
-**type** | `Enum('button','submit','reset')` | `'button'` | :x: | 
-
-
+**type** | `Enum('button', 'submit', 'reset')` | `'button'` | :x: | 
 

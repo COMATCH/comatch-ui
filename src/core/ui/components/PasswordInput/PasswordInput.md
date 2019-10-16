@@ -1,12 +1,4 @@
-
 ## PasswordInput
 
-From [`PasswordInput.js`](PasswordInput.js)
-
-
-
-prop | type | default | required | description
----- | :----: | :-------: | :--------: | -----------
-
-
+This component does not have any props.
 

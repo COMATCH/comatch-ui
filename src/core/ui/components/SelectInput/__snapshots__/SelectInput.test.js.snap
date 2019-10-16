@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectInput tests should render and check snapshot correctly 1`] = `
+<div
+  className="Input SelectInput block"
+  id={null}
+>
+  
+  <select
+    className="SelectInput__input"
+    disabled={false}
+    name="fruits"
+    onBlur={[Function]}
+    onChange={[Function]}
+  >
+    <option
+      value="apple"
+    >
+      Apple
+    </option>
+    <option
+      value="banana"
+    >
+      Banana
+    </option>
+    <option
+      value="peach"
+    >
+      Peach
+    </option>
+  </select>
+  
+</div>
+`;

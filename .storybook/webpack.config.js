@@ -4,6 +4,14 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(ts|tsx)$/,
+                use: [
+                    {
+                        loader: require.resolve('ts-loader'),
+                    },
+                ],
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
@@ -21,6 +29,9 @@ module.exports = {
                     },
                 ],
             },
-        ],
+        ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    }
 };
