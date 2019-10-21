@@ -12,6 +12,10 @@ const propTypes = {
      * Additional class names
      */
     className: PropTypes.string,
+    /**
+     * Button color, primary or secondary, default is primary.
+     */
+    color: PropTypes.string,
     disabled: PropTypes.bool,
     /**
      * Alternative styling with white background and primary colored text
@@ -68,6 +72,7 @@ const propTypes = {
 
 const defaultProps = {
     className: '',
+    color: 'primary',
     disabled: false,
     ghost: false,
     href: '',
@@ -179,6 +184,7 @@ export class Button extends PureComponent {
         const { showPopupMenu } = this.state;
         const {
             className,
+            color,
             disabled,
             ghost,
             href,
@@ -199,6 +205,7 @@ export class Button extends PureComponent {
         const textToDisplay = getText(text, textStyle);
 
         const styledWrapperProps = {
+            color,
             disabled,
             full: !ghost && !textOnly,
             ghost,

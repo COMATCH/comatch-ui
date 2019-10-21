@@ -17,18 +17,33 @@ const dropdownPropString = `<DropdownMenu items={[${items.map(item => `"${String
 storiesOf('Button', module)
     .add('with primary style', () => (
         <>
-            <Button text="Hello world" />
-            <Button text="Hello world" href="#" />
-            <Highlight className="html">{'<Button text="Hello world" />'
-                + '\n<Button text="Hello world" href="#" />'}</Highlight>
+            <Button text="Hello world" color="primary" />
+            <Button text="Hello world" href="#" color="primary" />
+            <Highlight className="html">{`
+                <Button text="Hello world" color="primary" />
+                <Button text="Hello world" href="#" color="primary" />
+            `}</Highlight>
         </>
     ))
-    .add('disabled with primary style', () => (
+    .add('with secondary style', () => (
         <>
-            <Button disabled text="Hello world" />
-            <Button disabled text="Hello world" href="#" />
-            <Highlight className="html">{'<Button disabled text="Hello world" />'
-                + '\n<Button disabled text="Hello world" href="#" />'}</Highlight>
+            <Button text="Hello world" color="secondary" />
+            <Button text="Hello world" href="#" color="secondary" />
+            <Highlight className="html">{`
+                <Button text="Hello world" color="secondary" />
+                <Button text="Hello world" href="#" color="secondary" />
+            `}</Highlight>
+        </>
+    ))
+    .add('disabled', () => (
+        <>
+            <Button disabled text="Hello world" color="primary"/>
+            <Button disabled text="Hello world" color="secondary"/>
+
+            <Highlight className="html">{`
+                <Button disabled text="Hello world" color="primary"/>
+                <Button disabled text="Hello world" color="secondary"/>
+            `}</Highlight>
         </>
     ))
     .add('with primary style and onClick handler', () => (
@@ -41,8 +56,8 @@ storiesOf('Button', module)
     ))
     .add('with ghost style', () => (
         <>
-            <Button ghost text="Hello world" />
-            <Button ghost href="#" text="Hello world" />
+            <Button ghost text="Hello world" color="primary" />
+            <Button ghost text="Hello world" color="secondary" />
             <Highlight className="html">{'<Button ghost text="Hello world" />'
                 + '\n<Button ghost href="#" text="Hello world" />'}</Highlight>
         </>
@@ -51,8 +66,10 @@ storiesOf('Button', module)
         <>
             <Button ghost disabled text="Hello world" />
             <Button ghost disabled href="#" text="Hello world" />
-            <Highlight className="html">{'<Button ghost disabled text="Hello world" />'
-                + '\n<Button ghost disabled href="# text="Hello world" />'}</Highlight>
+            <Highlight className="html">{`
+                <Button ghost disabled text="Hello world" />
+                <Button ghost disabled href="#" text="Hello world" />
+            `}</Highlight>
         </>
     ))
     .add('with icon', () => (
