@@ -15,7 +15,7 @@ const propTypes = {
     /**
      * Button color, primary or secondary, default is primary.
      */
-    color: PropTypes.string,
+    color: PropTypes.oneOf(['primary', 'secondary']),
     disabled: PropTypes.bool,
     /**
      * Alternative styling with white background and primary colored text
