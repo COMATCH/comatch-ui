@@ -4,6 +4,7 @@ import noop from 'lodash/noop';
 import classNames from 'classnames';
 
 import { Badge } from '../Badge';
+import { getText } from './helpers';
 import { PopupMenuStyledWrapper, StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
@@ -51,6 +52,10 @@ const propTypes = {
      */
     text: PropTypes.string,
     /**
+     * text style, capitalize the first letter, make it all uppercase, or keep it as provided. The default is capitalize the first letter.
+     */
+    textStyle: PropTypes.oneOf(['noChange', 'capitalizeAll', 'capitalizeFirstLetter']),
+    /**
      * If true `Button` has a transparent border
      */
     textOnly: PropTypes.bool,
@@ -75,6 +80,7 @@ const defaultProps = {
     shape: 'rectangle',
     target: null,
     text: '',
+    textStyle: 'noChange',
     textOnly: false,
     tooltipText: '',
     type: 'button',
@@ -184,10 +190,13 @@ export class Button extends PureComponent {
             shape,
             target,
             text,
+            textStyle,
             textOnly,
             tooltipText,
             type,
         } = this.props;
+
+        const textToDisplay = getText(text, textStyle);
 
         const styledWrapperProps = {
             disabled,
@@ -202,22 +211,22 @@ export class Button extends PureComponent {
         };
         const content = iconAfterText ? (
             <span>
-                {text}
+                {textToDisplay}
                 {icon}
             </span>
         ) : (
             <span>
                 {icon}
-                {text}
+                {textToDisplay}
             </span>
         );
 
         const htmlTagSpecificProps = href
             ? {
-                href,
-                rel: target && 'noopener noreferrer',
-                target,
-            }
+                  href,
+                  rel: target && 'noopener noreferrer',
+                  target,
+              }
             : { type };
 
         const props = {
@@ -240,9 +249,7 @@ export class Button extends PureComponent {
                 {!!tooltipText && (
                     <Badge className="Button__tooltip-text" text={tooltipText} size="xs" color="darkGray" />
                 )}
-                {!!popupMenu && showPopupMenu && (
-                    <PopupMenuStyledWrapper>{popupMenu}</PopupMenuStyledWrapper>
-                )}
+                {!!popupMenu && showPopupMenu && <PopupMenuStyledWrapper>{popupMenu}</PopupMenuStyledWrapper>}
             </StyledWrapper>
         );
     }
