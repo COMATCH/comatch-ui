@@ -44,49 +44,136 @@ export const generateSVGStyling = ({ iconAfterText, onlyIcon }) => `
     svg {
         ${onlyIcon ? 'margin: 0;' : 'margin-right: 5px'}
 
-        ${iconAfterText ? `
+        ${
+            iconAfterText
+                ? `
             float: right;
             position: relative;
             top: 2px;
             margin-left: 5px;
             margin-right: 0;
-        ` : ''}
+        `
+                : ''
+        }
     }
 `;
 
-export const generateFullPropsStyling = ({ disabled, full }) =>
-    full
-        ? `
-            background-color: ${disabled ? `${palette.lightGray} !important` : palette.primary};
-            border-color: ${disabled ? `${palette.midGray} !important` : palette.primary};
-            color: ${palette.white};
+const generateColors = ({ backgroundColor, borderColor, fontColor }) => {
+    return `
+        background-color: ${backgroundColor};
+        border-color: ${borderColor};
+        color: ${fontColor};
+    `;
+};
 
-            &:hover {
-                background-color: ${palette.secondary};
-                border-color: ${palette.secondary};
-            }
-        `
-        : '';
+const buttonColors = {
+    primary: {
+        regular: generateColors({
+            backgroundColor: palette.primary,
+            borderColor: palette.primary,
+            fontColor: palette.white,
+        }),
+        hover: generateColors({
+            backgroundColor: palette.secondary,
+            borderColor: palette.secondary,
+            fontColor: palette.white,
+        }),
+        disabled: generateColors({
+            backgroundColor: palette.neutralLighter,
+            borderColor: palette.neutralLight,
+            fontColor: palette.midGray,
+        }),
+    },
+    secondary: {
+        regular: generateColors({
+            backgroundColor: palette.white,
+            borderColor: palette.primary,
+            fontColor: palette.primary,
+        }),
+        hover: generateColors({
+            backgroundColor: palette.white,
+            borderColor: palette.secondary,
+            fontColor: palette.secondary,
+        }),
+        disabled: generateColors({
+            backgroundColor: palette.white,
+            borderColor: palette.neutralLight,
+            fontColor: palette.midGray,
+        }),
+    },
+    ghost: generateColors({
+        backgroundColor: palette.white,
+        borderColor: palette.primary,
+        fontColor: palette.primary,
+    }),
+    textOnly: generateColors({
+        backgroundColor: palette.white,
+        borderColor: palette.white,
+        fontColor: palette.primary,
+    }),
+};
 
-export const generateGhostStyling = ({ disabled, ghost, textOnly }) =>
-    ghost || textOnly
-        ? `
-            background-color: ${disabled ? `${palette.white} !important` : palette.white};
-            border-color: ${textOnly ? 'transparent' : `${palette.primary}`};
-            color: ${palette.primary};
+const GenerateFullButtonStyles = ({
+    isDisabled,
+    isGhost,
+    isTextOnly,
 
-            &:hover {
-                background-color: ${palette.secondary};
-                border-color: ${palette.secondary};
-                color: ${palette.white};
-            }
-        `
-        : '';
+    regularColors,
+    hoverColors,
+    activeColors,
+    disabledColors,
+    ghostColors,
+    textOnlyColors,
+}) => {
+    if (isDisabled) {
+        return disabledColors;
+    }
+    return `
+        ${(isGhost && ghostColors) || (isTextOnly && textOnlyColors) || regularColors}
+        &:hover {
+            ${hoverColors}
+        }
+        &:active {
+            ${activeColors}
+        }
+    `;
+};
+
+const GenerateButtonColors = ({ color, disabled, ghost, textOnly }) => {
+    if (color === 'primary') {
+        return GenerateFullButtonStyles({
+            isDisabled: disabled,
+            isTextOnly: textOnly,
+            isGhost: ghost,
+
+            regularColors: buttonColors.primary.regular,
+            hoverColors: buttonColors.primary.hover,
+            activeColors: buttonColors.primary.hover,
+            disabledColors: buttonColors.primary.disabled,
+            ghostColors: buttonColors.ghost,
+            textOnlyColors: buttonColors.textOnly,
+        });
+    }
+
+    if (color === 'secondary') {
+        return GenerateFullButtonStyles({
+            isDisabled: disabled,
+            isTextOnly: textOnly,
+            isGhost: ghost,
+
+            regularColors: buttonColors.secondary.regular,
+            hoverColors: buttonColors.secondary.hover,
+            activeColors: buttonColors.secondary.hover,
+            disabledColors: buttonColors.secondary.disabled,
+            ghostColors: buttonColors.ghost,
+            textOnlyColors: buttonColors.textOnly,
+        });
+    }
+};
 
 export const generateDisabledStyling = ({ disabled }) =>
     disabled
         ? `
-            border-color: ${palette.midGray} !important;
             cursor: not-allowed;
             pointer-events: none;
 
@@ -107,7 +194,7 @@ export const PopupMenuStyledWrapper = styled.div`
 
 export const StyledWrapper = styled(
     React.forwardRef(
-        ({ full, ghost, href, iconAfterText, onlyIcon, popupMenuPosition, shape, textOnly, ...rest }, ref) =>
+        ({ color, full, ghost, href, iconAfterText, onlyIcon, popupMenuPosition, shape, textOnly, ...rest }, ref) =>
             href ? <a ref={ref} href={href} {...rest} /> : <button ref={ref} {...rest} />,
     ),
 )`
@@ -159,8 +246,7 @@ export const StyledWrapper = styled(
         margin-left: 9px;
     }
 
-    ${generateFullPropsStyling}
     ${generateDisabledStyling}
     ${generateShapeStyling}
-    ${generateGhostStyling}
+    ${GenerateButtonColors}
 `;
