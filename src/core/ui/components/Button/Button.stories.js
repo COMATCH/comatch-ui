@@ -199,4 +199,21 @@ storiesOf('Button', module)
                     `\n/>`}
             </Highlight>
         </>
+    ))
+    .add('text style', () => (
+        <>
+            <Button text="text with no change" />
+            <Button text="text with no change" textStyle="noChange" />
+            <Button text="only first letter capitalized" textStyle="capitalizeFirstLetter" />
+            <Button text="all letters capitalized" textStyle="capitalizeAll" />
+
+            <Highlight className="html">
+                {`
+                    <Button text="text with no change" />
+                    <Button text="text with no change" textStyle="noChange" />
+                    <Button text="only first letter capitalized" textStyle="capitalizeFirstLetter" />
+                    <Button text="all letters capitalized" textStyle="capitalizeAll" />
+                `}
+            </Highlight>
+        </>
     ));
