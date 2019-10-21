@@ -56,7 +56,8 @@ const propTypes = {
      */
     text: PropTypes.string,
     /**
-     * text style, capitalize the first letter, make it all uppercase, or keep it as provided. The default is capitalize the first letter.
+     * text style, capitalize the first letter, make it all uppercase,
+     * or keep it as provided. The default is capitalize the first letter.
      */
     textStyle: PropTypes.oneOf(['noChange', 'capitalizeAll', 'capitalizeFirstLetter']),
     /**
@@ -230,10 +231,10 @@ export class Button extends PureComponent {
 
         const htmlTagSpecificProps = href
             ? {
-                  href,
-                  rel: target && 'noopener noreferrer',
-                  target,
-              }
+                href,
+                rel: target && 'noopener noreferrer',
+                target,
+            }
             : { type };
 
         const props = {
