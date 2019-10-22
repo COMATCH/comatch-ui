@@ -71,6 +71,8 @@ const inputs = pick(sassVariables, [
     'inputBoxShadowError',
 ]);
 
+const boxShadows = Object.values(pick(sassVariables, ['shadow_0', 'shadow_1'])).map((value) => value);
+
 const variables = {
     breakpoints,
     inputs,
@@ -80,4 +82,4 @@ const variables = {
     typography,
 };
 
-export { variables, breakpoints, inputs, palette, textPalette, socialMediaPalette, typography };
+export { variables, breakpoints, inputs, palette, textPalette, socialMediaPalette, typography, boxShadows };

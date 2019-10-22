@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
-import { palette, typography } from '../../../styles/variables';
+import { palette, typography, boxShadows } from '../../../styles/variables';
 
 const FONT_COLORS = {
     info: palette.secondary,
@@ -27,6 +27,9 @@ export const generateDisplayAndTypeStyling = ({ display, type, withIcon }) => {
                 background-color: ${BACKGROUND_COLORS[type]};
                 padding: 15px;
                 padding-bottom: 20px;
+                border-left: 5px solid;
+                border-left-color: ${FONT_COLORS[type]};
+                box-shadow: ${boxShadows[1]};
 
                 ${withIcon ? 'padding-left: 40px;' : ''}
 
