@@ -113,7 +113,7 @@ const buttonColors = {
     }),
 };
 
-const GenerateFullButtonStyles = ({
+const generateFullButtonStyles = ({
     isDisabled,
     isGhost,
     isTextOnly,
@@ -139,9 +139,9 @@ const GenerateFullButtonStyles = ({
     `;
 };
 
-const GenerateButtonColors = ({ color, disabled, ghost, textOnly }) => {
+const generateButtonColors = ({ color, disabled, ghost, textOnly }) => {
     if (color === 'primary') {
-        return GenerateFullButtonStyles({
+        return generateFullButtonStyles({
             isDisabled: disabled,
             isTextOnly: textOnly,
             isGhost: ghost,
@@ -156,7 +156,7 @@ const GenerateButtonColors = ({ color, disabled, ghost, textOnly }) => {
     }
 
     if (color === 'secondary') {
-        return GenerateFullButtonStyles({
+        return generateFullButtonStyles({
             isDisabled: disabled,
             isTextOnly: textOnly,
             isGhost: ghost,
@@ -248,5 +248,5 @@ export const StyledWrapper = styled(
 
     ${generateDisabledStyling}
     ${generateShapeStyling}
-    ${GenerateButtonColors}
+    ${generateButtonColors}
 `;
