@@ -4,6 +4,7 @@ import noop from 'lodash/noop';
 import classNames from 'classnames';
 
 import { Badge } from '../Badge';
+import { getText } from './helpers';
 import { PopupMenuStyledWrapper, StyledWrapper } from './StyledWrapper';
 
 const propTypes = {
@@ -11,6 +12,10 @@ const propTypes = {
      * Additional class names
      */
     className: PropTypes.string,
+    /**
+     * Button color, primary or secondary, default is primary.
+     */
+    color: PropTypes.oneOf(['primary', 'secondary']),
     disabled: PropTypes.bool,
     /**
      * Alternative styling with white background and primary colored text
@@ -51,6 +56,11 @@ const propTypes = {
      */
     text: PropTypes.string,
     /**
+     * text style, capitalize the first letter, make it all uppercase,
+     * or keep it as provided. The default is capitalize the first letter.
+     */
+    textStyle: PropTypes.oneOf(['noChange', 'capitalizeAll', 'capitalizeFirstLetter']),
+    /**
      * If true `Button` has a transparent border
      */
     textOnly: PropTypes.bool,
@@ -63,6 +73,7 @@ const propTypes = {
 
 const defaultProps = {
     className: '',
+    color: 'primary',
     disabled: false,
     ghost: false,
     href: '',
@@ -75,6 +86,7 @@ const defaultProps = {
     shape: 'rectangle',
     target: null,
     text: '',
+    textStyle: 'noChange',
     textOnly: false,
     tooltipText: '',
     type: 'button',
@@ -173,6 +185,7 @@ export class Button extends PureComponent {
         const { showPopupMenu } = this.state;
         const {
             className,
+            color,
             disabled,
             ghost,
             href,
@@ -184,12 +197,16 @@ export class Button extends PureComponent {
             shape,
             target,
             text,
+            textStyle,
             textOnly,
             tooltipText,
             type,
         } = this.props;
 
+        const textToDisplay = getText(text, textStyle);
+
         const styledWrapperProps = {
+            color,
             disabled,
             full: !ghost && !textOnly,
             ghost,
@@ -202,13 +219,13 @@ export class Button extends PureComponent {
         };
         const content = iconAfterText ? (
             <span>
-                {text}
+                {textToDisplay}
                 {icon}
             </span>
         ) : (
             <span>
                 {icon}
-                {text}
+                {textToDisplay}
             </span>
         );
 
@@ -240,9 +257,7 @@ export class Button extends PureComponent {
                 {!!tooltipText && (
                     <Badge className="Button__tooltip-text" text={tooltipText} size="xs" color="darkGray" />
                 )}
-                {!!popupMenu && showPopupMenu && (
-                    <PopupMenuStyledWrapper>{popupMenu}</PopupMenuStyledWrapper>
-                )}
+                {!!popupMenu && showPopupMenu && <PopupMenuStyledWrapper>{popupMenu}</PopupMenuStyledWrapper>}
             </StyledWrapper>
         );
     }

@@ -8,6 +8,7 @@
         "generate-docs": "node generateDocs.js",
         "deploy-storybook": "storybook-to-ghpages",
         "test": "jest",
+        "test:watch": "jest --watchAll",
         "test-and-coverage": "jest --collectCoverage && jest-coverage-badges --output .badges",
         "update-snapshots": "jest --updateSnapshot",
         "lint": "./node_modules/.bin/eslint .",
