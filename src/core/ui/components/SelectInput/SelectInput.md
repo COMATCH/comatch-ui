@@ -18,10 +18,14 @@ prop | type | default | required | description
 **options[].label<1>** | `String` |  | :x: | 
 **options[].label<2>** | `Number` |  | :x: | 
 **options[].label<3>** | `Boolean` |  | :x: | 
+**options[].props** | `Union<Function\|Object>` |  | :x: | 
+**options[].props<1>** | `Function` |  | :x: | 
+**options[].props<2>** | `Object` |  | :x: | 
 **options[].value** | `Union<String\|Number\|Boolean>` |  | :x: | 
 **options[].value<1>** | `String` |  | :x: | 
 **options[].value<2>** | `Number` |  | :x: | 
 **options[].value<3>** | `Boolean` |  | :x: | 
+**placeholder** | `ReactNode` | `null` | :x: | 
 **required** | `Boolean` | `false` | :x: | 
 **value** | `Union<String\|Number\|Boolean>` | `undefined` | :x: | 
 **value<1>** | `String` |  | :x: | 

@@ -9,6 +9,9 @@ prop | type | default | required | description
 **children<1>** | `Array[]<ReactNode>` |  | :x: | 
 **children<2>** | `ReactNode` |  | :x: | 
 **className** | `String` | `''` | :x: | 
+**closeOnClickOutside** | `Boolean` | `true` | :x: | 
 **delayMs** | `Number` | `250` | :x: | 
 **isOpen** | `Boolean` | `false` | :x: | 
+**onClickOutside** | `Function` | `noop` | :x: | 
+**toggle** | `Boolean` | `true` | :x: | 
 
