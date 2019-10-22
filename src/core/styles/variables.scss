@@ -139,6 +139,17 @@ $co-line-height-lg: 24px;
 $co-line-height-xl: 26px;
 $co-line-height-xxl: 30px;
 
+/**
+* Box shadows
+*/
+$co-box-shadows-0: none;
+$co-box-shadows-1: 0 2px 8px 0 rgba(0, 0, 0, 0.2);;
+
+:export {
+    shadow_0: $co-box-shadows-0;
+    shadow_1: $co-box-shadows-1;
+}
+
 :export {
     fontXs: $co-font-xs;
     fontSm: $co-font-sm;
