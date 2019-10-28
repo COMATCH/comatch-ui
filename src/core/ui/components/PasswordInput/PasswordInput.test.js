@@ -98,7 +98,9 @@ describe('PasswordInput tests', () => {
             expect(itemListBefore.props()['data-icon']).toEqual('eye-slash');
             expect(itemListBefore.hasClass('svg-inline--fa fa-eye-slash fa-w-20 ')).toBe(true);
 
-            expect(passwordInputComponent.find('.TextInput__icon.clickable').simulate('click'));
+            // simulate `click` on hide `eye` icon
+            passwordInputComponent.find('.TextInput__icon.clickable').simulate('click');
+
             // after unhiding
             const itemListAfter = passwordInputComponent.find('div').find('span').find('svg');
             expect(passwordInputComponent.find('div').find('input').props().type).toEqual('text');
