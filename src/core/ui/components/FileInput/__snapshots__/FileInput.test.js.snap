@@ -2,7 +2,7 @@
 
 exports[`FileInput should render correctly 1`] = `
 <div
-  className="Input FileInput sc-bxivhb jPHirh"
+  className="sc-bxivhb jPHirh Input FileInput"
 >
   <input
     accept="application/json"
@@ -11,7 +11,7 @@ exports[`FileInput should render correctly 1`] = `
     type="file"
   />
   <button
-    className="Button rectangle full sc-htpNat gpVMmM"
+    className="sc-htpNat jllYnJ Button rectangle full"
     disabled={false}
     id={null}
     onClick={[Function]}

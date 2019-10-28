@@ -1,12 +1,4 @@
-
 ## NumberInput
 
-From [`NumberInput.js`](NumberInput.js)
-
-
-
-prop | type | default | required | description
----- | :----: | :-------: | :--------: | -----------
-
-
+This component does not have any props.
 

@@ -48,6 +48,7 @@ describe('SelectInput tests', () => {
             ...REQUIRED_PROPS,
             ...OPTIONAL_PROPS,
         };
+
         it('should expect nodes/dom elements with `display block`', () => {
             const selectInputComponent = mount(<SelectInput {...props} />);
             expect(selectInputComponent).toHaveLength(1);
@@ -55,9 +56,17 @@ describe('SelectInput tests', () => {
             expect(selectInputComponent.find('div').hasClass('Input SelectInput block')).toBe(true);
 
             expect(selectInputComponent.find('div').find('select')).toHaveLength(1);
-            expect(selectInputComponent.find('div').find('select').hasClass(props.className)).toBe(true);
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('select')
+                    .hasClass(props.className),
+            ).toBe(true);
 
-            const listItems = selectInputComponent.find('div').find('select').find('option');
+            const listItems = selectInputComponent
+                .find('div')
+                .find('select')
+                .find('option');
             expect(listItems).toHaveLength(3);
 
             expect(listItems.at(0).props().value).toEqual('apple');
@@ -77,10 +86,23 @@ describe('SelectInput tests', () => {
             expect(selectInputComponent.find('div').hasClass('Input SelectInput inline')).toBe(true);
 
             expect(selectInputComponent.find('div').find('select')).toHaveLength(1);
-            expect(selectInputComponent.find('div').find('select').hasClass(props.className)).toBe(true);
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('select')
+                    .hasClass(props.className),
+            ).toBe(true);
 
-            expect(selectInputComponent.find('div').find('select').find('option')).toHaveLength(3);
-            const listItems = selectInputComponent.find('div').find('select').find('option');
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('select')
+                    .find('option'),
+            ).toHaveLength(3);
+            const listItems = selectInputComponent
+                .find('div')
+                .find('select')
+                .find('option');
 
             expect(listItems.at(0).props().value).toEqual('apple');
             expect(listItems.at(0).text()).toEqual('Apple');
@@ -95,20 +117,42 @@ describe('SelectInput tests', () => {
         it('should expect nodes/dom elements with `label` and `required`', () => {
             const selectInputComponent = mount(<SelectInput {...props} required label={'Select your fruit'} />);
             expect(selectInputComponent.find('div').find('label')).toHaveLength(1);
-            expect(selectInputComponent.find('div').find('label').text()).toEqual('Select your fruit*');
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('label')
+                    .text(),
+            ).toEqual('Select your fruit*');
         });
 
         it('should expect nodes/dom elements with `error`', () => {
             const selectInputComponent = mount(<SelectInput {...props} inputError={'Alarm! Meltdown Imminent!'} />);
             expect(selectInputComponent.find('div').find('span')).toHaveLength(1);
-            expect(selectInputComponent.find('div').find('span').text()).toEqual('Alarm! Meltdown Imminent!');
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('span')
+                    .text(),
+            ).toEqual('Alarm! Meltdown Imminent!');
         });
 
         it('should expect nodes/dom elements with `disabled` value', () => {
             const selectInputComponent = mount(<SelectInput {...props} disabled />);
             expect(selectInputComponent.find('div')).toHaveLength(1);
             expect(selectInputComponent.find('div').hasClass('Input SelectInput block disabled')).toBe(true);
-            expect(selectInputComponent.find('div').find('select').props().disabled).toBe(true);
+            expect(
+                selectInputComponent
+                    .find('div')
+                    .find('select')
+                    .props().disabled,
+            ).toBe(true);
+        });
+
+        it('should render with `placeholder`', () => {
+            const component = mount(<SelectInput {...REQUIRED_PROPS} placeholder="My placeholder" />);
+
+            expect(component.find('.SelectInput__Placeholder')).toHaveLength(1);
+            expect(component.find('.SelectInput__Placeholder').text()).toEqual('My placeholder');
         });
     });
 });

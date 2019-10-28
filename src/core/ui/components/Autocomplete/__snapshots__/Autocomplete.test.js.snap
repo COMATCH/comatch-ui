@@ -2,7 +2,7 @@
 
 exports[`Autocomplete should render an Autocomplete 1`] = `
 <div
-  className="Input Autocomplete block sc-htpNat hYwOeZ"
+  className="sc-htpNat hYwOeZ Input Autocomplete block"
   id={null}
 >
   

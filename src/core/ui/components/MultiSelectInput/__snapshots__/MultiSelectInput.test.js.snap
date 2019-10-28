@@ -116,7 +116,7 @@ exports[`MultiSelectInput should render correctly (with inputError) 1`] = `
     </div>
   </div>
   <span
-    className="InputError sc-bwzfXH bZudyR"
+    className="sc-bwzfXH bZudyR InputError"
   >
     error-sample
   </span>
@@ -129,7 +129,7 @@ exports[`MultiSelectInput should render correctly (with label and required *) 1`
   id={null}
 >
   <label
-    className="InputLabel sc-bdVaJa iThGRf"
+    className="sc-bdVaJa iThGRf InputLabel"
     htmlFor={null}
     id={null}
   >
@@ -255,7 +255,7 @@ exports[`MultiSelectInput should render correctly (with label) 1`] = `
   id={null}
 >
   <label
-    className="InputLabel sc-bdVaJa iThGRf"
+    className="sc-bdVaJa iThGRf InputLabel"
     htmlFor={null}
     id={null}
   >

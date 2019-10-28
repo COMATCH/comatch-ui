@@ -5,7 +5,7 @@ exports[`ProgressBar should render correctly 1`] = `
   className="sc-bwzfXH gJKGMk"
 >
   <label
-    className="InputLabel ProgressBar__label sc-bdVaJa iThGRf"
+    className="sc-bdVaJa iThGRf InputLabel ProgressBar__label"
     htmlFor={null}
     id={null}
   >

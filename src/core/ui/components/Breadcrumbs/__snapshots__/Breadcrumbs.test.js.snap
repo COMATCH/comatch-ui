@@ -2,15 +2,15 @@
 
 exports[`Breadcrumbs should render breadcrumbs correctly 1`] = `
 <ul
-  className="Breadcrumbs sc-bwzfXH cwIifb"
+  className="sc-bwzfXH cwIifb Breadcrumbs"
 >
   <li
-    className="list-item sc-bdVaJa ebFJnS"
+    className="sc-bdVaJa ebFJnS list-item"
   >
     Item 1
   </li>
   <li
-    className="list-item sc-bdVaJa ebFJnS"
+    className="sc-bdVaJa ebFJnS list-item"
   >
     &gt; Item 2
   </li>

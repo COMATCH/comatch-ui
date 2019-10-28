@@ -1,9 +1,4 @@
-
 ## NotificationsComponent
-
-From [`Notifications.js`](Notifications.js)
-
-
 
 prop | type | default | required | description
 ---- | :----: | :-------: | :--------: | -----------
@@ -12,6 +7,4 @@ prop | type | default | required | description
 **notifications.message** | `String` |  | :x: | Message to be displayed in the `Notifications` component
 **notifications.timeout** | `Number` |  | :x: | Defined in ms. When expired it the `Notifications` component will slide out
 **notifications.type** | `String` |  | :x: | Notification type can be 'danger', 'info', 'success', 'warning'
-
-
 
