@@ -12,14 +12,14 @@ jobs:
     steps:
       - restore_cache:
           keys:
-            - source-{{ .Branch }}-{{ .Revision }}
-            - source-{{ .Branch }}-
-            - source-
+            - source-v2-{{ .Branch }}-{{ .Revision }}
+            - source-v2-{{ .Branch }}-
+            - source-v2-
 
       - checkout
 
       - save_cache:
-          key: source-{{ .Branch }}-{{ .Revision }}
+          key: source-v2-{{ .Branch }}-{{ .Revision }}
           paths:
             - "~/repo"
 
@@ -27,41 +27,41 @@ jobs:
     <<: *defaults
     steps:
       - restore_cache:
-          key: source-{{ .Branch }}-{{ .Revision }}
+          key: source-v2-{{ .Branch }}-{{ .Revision }}
       - restore_cache:
           keys:
-            - depens-{{ checksum "package.json" }}
-            - depens-
+            - depens-v2-{{ checksum "package.json" }}
+            - depens-v2-
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: depens-{{ checksum "package.json" }}
+          key: depens-v2-{{ checksum "package.json" }}
   test:
     <<: *defaults
     steps:
       - restore_cache:
-          key: source-{{ .Branch }}-{{ .Revision }}
+          key: source-v2-{{ .Branch }}-{{ .Revision }}
       - restore_cache:
-          key: depens-{{ checksum "package.json" }}
+          key: depens-v2-{{ checksum "package.json" }}
       - run: yarn test
 
   lint:
     <<: *defaults
     steps:
       - restore_cache:
-          key: source-{{ .Branch }}-{{ .Revision }}
+          key: source-v2-{{ .Branch }}-{{ .Revision }}
       - restore_cache:
-          key: depens-{{ checksum "package.json" }}
+          key: depens-v2-{{ checksum "package.json" }}
       - run: yarn lint
 
   build:
     <<: *defaults
     steps:
       - restore_cache:
-          key: source-{{ .Branch }}-{{ .Revision }}
+          key: source-v2-{{ .Branch }}-{{ .Revision }}
       - restore_cache:
-          key: depens-{{ checksum "package.json" }}
+          key: depens-v2-{{ checksum "package.json" }}
 
       - run: yarn build
 
