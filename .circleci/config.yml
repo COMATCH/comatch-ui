@@ -5,7 +5,7 @@ defaults: &defaults
   environment:
     NODE_PATH: src/
   working_directory: ~/repo
-  resource_class: medium+
+  resource_class: medium
 version: 2
 jobs:
   checkout_code:
