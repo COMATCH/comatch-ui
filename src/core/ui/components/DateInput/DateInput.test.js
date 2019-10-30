@@ -134,4 +134,19 @@ describe('DateInput', () => {
         expect(console.error).toHaveBeenCalledTimes(0);
         /* eslint-enable no-console */
     });
+
+    it('should throw a propType exception if locale is not (en|de|fr)', () => {
+        /* eslint-disable no-console */
+        console.error = jest.fn();
+
+        const props = {
+            ...REQUIRED_PROPS,
+            locale: 'abc',
+        };
+
+        mount(<DateInput {...props} value={moment()} />);
+
+        expect(console.error).toHaveBeenCalledTimes(1);
+        /* eslint-enable no-console */
+    });
 });

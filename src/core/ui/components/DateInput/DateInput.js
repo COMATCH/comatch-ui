@@ -2,13 +2,26 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import noop from 'lodash/noop';
-import DatePicker from 'react-datepicker';
+import DatePicker, { registerLocale } from 'react-datepicker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons/faCalendarAlt';
 import { getSafeDateValue, isValidDateValue } from './helpers';
 import { TextInput } from '../TextInput';
+import { enGB, de, fr } from 'date-fns/locale';
 
 import './DateInput.scss';
+
+const locales = {
+    en: enGB,
+    de: de,
+    fr: fr,
+};
+
+export function applyLocale(locale) {
+    if (locales[locale]) {
+        registerLocale(locale, locales[locale]);
+    }
+}
 
 /**
  * A convenience wrapper around the DatePicker component of the react-datepicker package.
@@ -28,7 +41,8 @@ const propTypes = {
     /**
      * Needed by the DatePicker
      */
-    locale: PropTypes.string.isRequired,
+    locale: PropTypes.oneOf(['en', 'de', 'fr']).isRequired,
+    // locale: PropTypes.string.isRequired,
     /**
      * `Date` or `moment` or `null`
      */
@@ -99,6 +113,8 @@ export const DateInput = ({
             setMinDate(getSafeDateValue(minDate));
         }
     }, [value, maxDate, minDate]);
+
+    applyLocale(locale);
 
     return (
         <DatePicker
