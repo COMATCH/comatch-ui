@@ -42,7 +42,6 @@ const propTypes = {
      * Needed by the DatePicker
      */
     locale: PropTypes.oneOf(['en', 'de', 'fr']).isRequired,
-    // locale: PropTypes.string.isRequired,
     /**
      * `Date` or `moment` or `null`
      */
