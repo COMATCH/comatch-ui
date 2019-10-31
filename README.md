@@ -37,13 +37,13 @@ To run this project, after cloning it, follow these steps:
 
 To make a new release you need to:
 
-1. Run `yarn generate-docs`
-2. Run `yarn test-and-coverage`
-3. [Run `npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
-4. Run `npm publish` (or `yarn release`), which will publish the new version of the package to the npm registry.
-5. Run `yarn deploy-storybook`
-
-> **NOTE:** Don't forget to merge `develop` into `master`! :)
+1. Run `yarn deploy-storybook`
+2. Run `yarn generate-docs`
+3. Run `yarn test-and-coverage`
+4. Push (make PR) changes - docs & coverage
+5. Run [`npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
+6. Run `npm publish` - which will publish the new version of the package to the npm registry.
+7. Make PR `develop` into `master`.
 
 ### Structure of the project
 

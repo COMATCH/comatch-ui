@@ -1,6 +1,6 @@
 {
     "name": "@comatch/ui",
-    "version": "0.22.0",
+    "version": "0.23.1",
     "main": "dist/react-core.js",
     "scripts": {
         "start": "start-storybook -p 9001 -c .storybook",
@@ -8,6 +8,7 @@
         "generate-docs": "node generateDocs.js",
         "deploy-storybook": "storybook-to-ghpages",
         "test": "jest",
+        "test:watch": "jest --watchAll",
         "test-and-coverage": "jest --collectCoverage && jest-coverage-badges --output .badges",
         "update-snapshots": "jest --updateSnapshot",
         "lint": "./node_modules/.bin/eslint .",
@@ -24,6 +25,7 @@
         "@fortawesome/free-solid-svg-icons": "^5.11.2",
         "@fortawesome/react-fontawesome": "^0.1.6",
         "classnames": "^2.2.6",
+        "date-fns": "^2.6.0",
         "lodash": "^4.17.15",
         "moment": "^2.24.0",
         "node-sass": "^4.12.0",

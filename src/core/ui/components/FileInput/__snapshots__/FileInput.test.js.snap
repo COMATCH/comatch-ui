@@ -11,7 +11,7 @@ exports[`FileInput should render correctly 1`] = `
     type="file"
   />
   <button
-    className="sc-htpNat gpVMmM Button rectangle full"
+    className="sc-htpNat jllYnJ Button rectangle full"
     disabled={false}
     id={null}
     onClick={[Function]}

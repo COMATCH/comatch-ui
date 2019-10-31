@@ -11,7 +11,7 @@ const minDate = moment().subtract(5, 'days');
 const maxDate = moment().add(5, 'days');
 
 storiesOf('DateInput', module)
-    .add('with basic style', () => (
+    .add('with basic style and English locale', () => (
         <>
             <div style={{ width: '250px' }}>
                 <DateInput locale="en" name="field" onChange={action('changed')} />
@@ -94,6 +94,26 @@ storiesOf('DateInput', module)
                     '\n\tmaxDate={maxDate}' +
                     '\n\tname="field"' +
                     "\n\tonChange={action('changed')} />"}
+            </Highlight>
+        </>
+    ))
+    .add('with German locale', () => (
+        <>
+            <div style={{ width: '250px' }}>
+                <DateInput locale="de" name="field" onChange={action('changed')} />
+            </div>
+            <Highlight className="html">
+                {`<DateInput locale="de" name="field" onChange={action('changed')} />`}
+            </Highlight>
+        </>
+    ))
+    .add('with French locale', () => (
+        <>
+            <div style={{ width: '250px' }}>
+                <DateInput locale="fr" name="field" onChange={action('changed')} />
+            </div>
+            <Highlight className="html">
+                {`<DateInput locale="fr" name="field" onChange={action('changed')} />`}
             </Highlight>
         </>
     ));
