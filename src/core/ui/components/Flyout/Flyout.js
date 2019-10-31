@@ -64,7 +64,7 @@ export class Flyout extends Component {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
             const { closeOnClickOutside, onClickOutside } = this.props;
 
-            if (closeOnClickOutside) {
+            if (closeOnClickOutside && this.state.isOpen) {
                 this.close();
             }
 
