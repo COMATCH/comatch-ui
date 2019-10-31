@@ -203,6 +203,7 @@ export const StyledWrapper = styled(
     display: inline-block;
     outline: 0 !important;
     font-size: ${typography.fontSm};
+    font-weight: bold;
     line-height: ${typography.lineHeightSm};
     touch-action: manipulation;
     cursor: pointer;
