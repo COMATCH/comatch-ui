@@ -139,6 +139,9 @@ describe('DateInput', () => {
         /* eslint-disable no-console */
         console.error = jest.fn();
 
+        // ignore expected warning in the console
+        console.warn = jest.fn();
+
         const props = {
             ...REQUIRED_PROPS,
             locale: 'abc',
