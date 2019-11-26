@@ -37,17 +37,17 @@ To run this project, after cloning it, follow these steps:
 
 When you need to make a change to comatch-ui, you should also update the docs/badges, increase the version, publish it and redeploy storybook. Follow these steps:
 
-1. Create a feature branch from develop with you changes, create a PR to develop and get these changes reviewed.
-2. Once approved, run the following commands on your branch:
+1. Create a feature branch from develop with your changes, then run the following commands:
     - `yarn generate-docs`
     - `yarn test-and-coverage`
-3. Commit your changes, push again and merge your branch.
-4. Checkout the develop branch and pull the updated changes.
-5. Create a **new** feature branch and run the following commands:
+2. Commit your changes, push again, get this reviewed and merge your branch.
+3. Checkout the develop branch and pull the updated changes.
+4. Create a **new** feature branch and run the following commands:
+    - `git push --set-upstream origin [branch name]`
     - [`npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
     - `npm publish` - which will publish the new version of the package to the public npm registry.
     - `yarn deploy-storybook`
-6. Finally, create a PR to develop **and** master, get this reviewed and merge it into both branches.
+5. Finally, create a PR to develop **and** master, get this reviewed and merge it into both branches.
 
 ### Structure of the project
 
