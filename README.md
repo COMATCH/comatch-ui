@@ -18,13 +18,13 @@ A preview of all the components can be seen on the deployed version of our Story
 
 **Contents**
 
-- [<img src="./comatchUiLogo.svg" width="350" alt="COMATCH UI">](#img-src%22comatchuilogosvg%22-width%22350%22-alt%22comatch-ui%22)
-  - [Description](#description)
-  - [Documentation](#documentation)
-    - [Setting up the project](#setting-up-the-project)
-    - [Making a new release](#making-a-new-release)
-    - [Structure of the project](#structure-of-the-project)
-    - [PropTypes documentation](#proptypes-documentation)
+-   [<img src="./comatchUiLogo.svg" width="350" alt="COMATCH UI">](#img-src%22comatchuilogosvg%22-width%22350%22-alt%22comatch-ui%22)
+    -   [Description](#description)
+    -   [Documentation](#documentation)
+        -   [Setting up the project](#setting-up-the-project)
+        -   [Making a new release](#making-a-new-release)
+        -   [Structure of the project](#structure-of-the-project)
+        -   [PropTypes documentation](#proptypes-documentation)
 
 ### Setting up the project
 
@@ -33,17 +33,21 @@ To run this project, after cloning it, follow these steps:
 1. `cd` to the directory of the project.
 2. Run `yarn install && yarn start`
 
-### Making a new release
+### Making changes and creating a new release
 
-To make a new release you need to:
+When you need to make a change to comatch-ui, you should also update the docs/badges, increase the version, publish it and redeploy storybook. Follow these steps:
 
-1. Run `yarn deploy-storybook`
-2. Run `yarn generate-docs`
-3. Run `yarn test-and-coverage`
-4. Push (make PR) changes - docs & coverage
-5. Run [`npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
-6. Run `npm publish` - which will publish the new version of the package to the npm registry.
-7. Make PR `develop` into `master`.
+1. Create a feature branch from develop with you changes, create a PR to develop and get these changes reviewed.
+2. Once approved, run the following commands on your branch:
+    - `yarn generate-docs`
+    - `yarn test-and-coverage`
+3. Commit your changes, push again and merge your branch.
+4. Checkout the develop branch and pull the updated changes.
+5. Create a **new** feature branch and run the following commands:
+    - [`npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
+    - `npm publish` - which will publish the new version of the package to the public npm registry.
+    - `yarn deploy-storybook`
+6. Finally, create a PR to develop **and** master, get this reviewed and merge it into both branches.
 
 ### Structure of the project
 
