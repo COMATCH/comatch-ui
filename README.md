@@ -44,6 +44,7 @@ When you need to make a change to comatch-ui, you should also update the docs/ba
 3. Commit your changes, push again and merge your branch.
 4. Checkout the develop branch and pull the updated changes.
 5. Create a **new** feature branch and run the following commands:
+    - `git push --set-upstream origin [branch name]`
     - [`npm version major|minor|patch`](https://docs.npmjs.com/cli/version).
     - `npm publish` - which will publish the new version of the package to the public npm registry.
     - `yarn deploy-storybook`
