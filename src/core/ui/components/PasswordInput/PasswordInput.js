@@ -19,7 +19,7 @@ export class PasswordInput extends Component {
         const type = this.state.show ? 'text' : 'password';
         const icon = (
             <span onClick={this.handleIconClick} className="TextInput__icon clickable">
-                <FontAwesomeIcon icon={this.state.show ? faEye : faEyeSlash} />
+                <FontAwesomeIcon icon={this.state.show ? faEyeSlash : faEye} />
             </span>
         );
 
