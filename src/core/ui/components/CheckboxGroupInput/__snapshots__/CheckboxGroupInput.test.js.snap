@@ -2,12 +2,12 @@
 
 exports[`CheckboxGroupInput should render the options correctly 1`] = `
 <div
-  className="sc-ifAKCX hkLpQG Input CheckboxGroupInput per-row-1"
+  className="sc-EHOje eBszcE Input CheckboxGroupInput per-row-1"
   id={null}
 >
   
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -50,7 +50,7 @@ exports[`CheckboxGroupInput should render the options correctly 1`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -98,7 +98,7 @@ exports[`CheckboxGroupInput should render the options correctly 1`] = `
 
 exports[`CheckboxGroupInput should render the options correctly 2`] = `
 <div
-  className="sc-ifAKCX hkLpQG Input CheckboxGroupInput per-row-1"
+  className="sc-EHOje eBszcE Input CheckboxGroupInput per-row-1"
   id={null}
 >
   
@@ -117,7 +117,7 @@ exports[`CheckboxGroupInput should render the options correctly 2`] = `
     />
   </header>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -160,7 +160,7 @@ exports[`CheckboxGroupInput should render the options correctly 2`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -208,12 +208,12 @@ exports[`CheckboxGroupInput should render the options correctly 2`] = `
 
 exports[`CheckboxGroupInput should render with checkboxesPerRow correctly 1`] = `
 <div
-  className="sc-ifAKCX kaoULA Input CheckboxGroupInput per-row-2"
+  className="sc-EHOje fZcDHA Input CheckboxGroupInput per-row-2"
   id={null}
 >
   
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -256,7 +256,7 @@ exports[`CheckboxGroupInput should render with checkboxesPerRow correctly 1`] = 
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -304,12 +304,12 @@ exports[`CheckboxGroupInput should render with checkboxesPerRow correctly 1`] = 
 
 exports[`CheckboxGroupInput should render with display inline correctly 1`] = `
 <div
-  className="sc-ifAKCX hJBCfa Input CheckboxGroupInput per-row-1 inline"
+  className="sc-EHOje eWJafO Input CheckboxGroupInput per-row-1 inline"
   id={null}
 >
   
   <div
-    className="sc-bxivhb hkoirp Input CheckboxInput inline"
+    className="sc-bxivhb dUCuqG Input CheckboxInput inline"
     id={null}
   >
     <label>
@@ -352,7 +352,7 @@ exports[`CheckboxGroupInput should render with display inline correctly 1`] = `
     
   </div>
   <div
-    className="sc-bxivhb hkoirp Input CheckboxInput inline"
+    className="sc-bxivhb dUCuqG Input CheckboxInput inline"
     id={null}
   >
     <label>
@@ -400,12 +400,12 @@ exports[`CheckboxGroupInput should render with display inline correctly 1`] = `
 
 exports[`CheckboxGroupInput should render with inputError correctly 1`] = `
 <div
-  className="sc-ifAKCX bRgrpd Input CheckboxGroupInput per-row-1 has-error"
+  className="sc-EHOje dprPtN Input CheckboxGroupInput per-row-1 has-error"
   id={null}
 >
   
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -448,7 +448,7 @@ exports[`CheckboxGroupInput should render with inputError correctly 1`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -500,12 +500,12 @@ exports[`CheckboxGroupInput should render with inputError correctly 1`] = `
 
 exports[`CheckboxGroupInput should render with inputError correctly 2`] = `
 <div
-  className="sc-ifAKCX bRgrpd Input CheckboxGroupInput per-row-1 has-error"
+  className="sc-EHOje dprPtN Input CheckboxGroupInput per-row-1 has-error"
   id={null}
 >
   
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -548,7 +548,7 @@ exports[`CheckboxGroupInput should render with inputError correctly 2`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -600,7 +600,7 @@ exports[`CheckboxGroupInput should render with inputError correctly 2`] = `
 
 exports[`CheckboxGroupInput should render with label/title correctly 1`] = `
 <div
-  className="sc-ifAKCX hkLpQG Input CheckboxGroupInput per-row-1"
+  className="sc-EHOje eBszcE Input CheckboxGroupInput per-row-1"
   id={null}
 >
   <label
@@ -611,7 +611,7 @@ exports[`CheckboxGroupInput should render with label/title correctly 1`] = `
     sample-label
   </label>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -654,7 +654,7 @@ exports[`CheckboxGroupInput should render with label/title correctly 1`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -702,12 +702,12 @@ exports[`CheckboxGroupInput should render with label/title correctly 1`] = `
 
 exports[`CheckboxGroupInput should render with label/title correctly 2`] = `
 <div
-  className="sc-ifAKCX hkLpQG Input CheckboxGroupInput per-row-1"
+  className="sc-EHOje eBszcE Input CheckboxGroupInput per-row-1"
   id={null}
 >
   
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -750,7 +750,7 @@ exports[`CheckboxGroupInput should render with label/title correctly 2`] = `
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -798,7 +798,7 @@ exports[`CheckboxGroupInput should render with label/title correctly 2`] = `
 
 exports[`CheckboxGroupInput should render with with label/title and required '*' correctly 1`] = `
 <div
-  className="sc-ifAKCX hkLpQG Input CheckboxGroupInput per-row-1"
+  className="sc-EHOje eBszcE Input CheckboxGroupInput per-row-1"
   id={null}
 >
   <label
@@ -810,7 +810,7 @@ exports[`CheckboxGroupInput should render with with label/title and required '*'
     *
   </label>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>
@@ -853,7 +853,7 @@ exports[`CheckboxGroupInput should render with with label/title and required '*'
     
   </div>
   <div
-    className="sc-bxivhb bJyOBc Input CheckboxInput block"
+    className="sc-bxivhb fufTYF Input CheckboxInput block"
     id={null}
   >
     <label>

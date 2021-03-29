@@ -41,11 +41,8 @@ export const StyledCheckboxInput = styled.div`
     }
 `;
 
-export const StyledWrapper = styled(forwardRef(({ display, ...rest }, ref) => (
-    <div ref={ref} {...rest} />
-)))`
+export const StyledWrapper = styled(forwardRef(({ display, ...rest }, ref) => <div ref={ref} {...rest} />))`
     ${generateDisplayStyling}
-
     & ~ & {
         margin-top: 5px;
     }
@@ -55,7 +52,7 @@ export const StyledWrapper = styled(forwardRef(({ display, ...rest }, ref) => (
         margin-left: 30px;
     }
 
-    input {
+    input:not(.ToggleSwitch) {
         display: none;
 
         // When actually input has state :checked
@@ -100,5 +97,46 @@ export const StyledWrapper = styled(forwardRef(({ display, ...rest }, ref) => (
 
     ${StyledCheckboxInput} ~ .CheckboxInput__label {
         margin-left: 10px;
+    }
+`;
+
+export const StyledToggleSwitchInput = styled.main`
+    .ToggleSwitch {
+        width: 30px;
+        height: 10px;
+        background-color: #dce2e2;
+        color: #0095b3;
+        border-radius: 7.5px;
+        appearance: none;
+    }
+
+    .ToggleSwitch:before,
+    .ToggleSwitch:after {
+        content: '';
+        display: block;
+    }
+
+    .ToggleSwitch:before {
+        background-color: #ffffff;
+        border-radius: 50%;
+        width: 1.2em;
+        height: 1.2em;
+        margin: -3px;
+        box-shadow: 0 1px 2px 0 rgba(62, 62, 62, 0.2);
+        border: solid 1px #dce2e2;
+    }
+
+    .ToggleSwitch:checked {
+        background-color: rgba(0, 149, 179, 0.3);
+    }
+
+    .ToggleSwitch:checked:before {
+        background-color: currentColor;
+        transform: translateX(125%);
+        border: none;
+    }
+
+    .ToggleSwitch:focus {
+        outline: 0;
     }
 `;
