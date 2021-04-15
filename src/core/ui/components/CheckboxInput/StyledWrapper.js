@@ -103,11 +103,12 @@ export const StyledWrapper = styled(forwardRef(({ display, ...rest }, ref) => <d
 export const StyledToggleSwitchInput = styled.main`
     .ToggleSwitch {
         width: 30px;
-        height: 10px;
+        height: 15px;
         background-color: #dce2e2;
         color: #0095b3;
         border-radius: 7.5px;
         appearance: none;
+        margin: 5px 15px 0 10px;
     }
 
     .ToggleSwitch:before,
@@ -119,9 +120,9 @@ export const StyledToggleSwitchInput = styled.main`
     .ToggleSwitch:before {
         background-color: #ffffff;
         border-radius: 50%;
-        width: 1.2em;
-        height: 1.2em;
-        margin: -3px;
+        width: 25px;
+        height: 25px;
+        margin: -5px 0 0 -15px;
         box-shadow: 0 1px 2px 0 rgba(62, 62, 62, 0.2);
         border: solid 1px #dce2e2;
     }
@@ -134,6 +135,7 @@ export const StyledToggleSwitchInput = styled.main`
         background-color: currentColor;
         transform: translateX(125%);
         border: none;
+        margin: -5px 0 0 -15px;
     }
 
     .ToggleSwitch:focus {
