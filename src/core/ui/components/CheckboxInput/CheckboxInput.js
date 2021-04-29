@@ -18,7 +18,7 @@ const propTypes = {
     onChange: PropTypes.func,
     checked: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     value: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-    isToggleSwitch: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    isToggleSwitch: PropTypes.bool,
 };
 
 const defaultProps = {

@@ -104,11 +104,11 @@ export const StyledToggleSwitchInput = styled.main`
     .ToggleSwitch {
         width: 40px;
         height: 15px;
-        background-color: #dce2e2;
-        color: #0095b3;
+        background-color: ${palette.neutralLight};
+        color: ${palette.primary};
         border-radius: 7.5px;
         appearance: none;
-        margin: 5px 15px 0 10px;
+        margin: 3px 15px 0 10px;
     }
 
     .ToggleSwitch:before,
@@ -118,11 +118,11 @@ export const StyledToggleSwitchInput = styled.main`
     }
 
     .ToggleSwitch:before {
-        background-color: #ffffff;
+        background-color: ${palette.white};;
         border-radius: 50%;
         width: 25px;
         height: 25px;
-        margin: -5px 0 0 -5px;
+        margin: -6px 0 0 -2px;
         box-shadow: 0 1px 2px 0 rgba(62, 62, 62, 0.2);
         border: solid 1px #dce2e2;
     }
@@ -135,7 +135,7 @@ export const StyledToggleSwitchInput = styled.main`
         background-color: currentColor;
         transform: translateX(125%);
         border: none;
-        margin: -5px 0 0 -15px;
+        margin: -5px 0 0 -16px;
     }
 
     .ToggleSwitch:focus {
